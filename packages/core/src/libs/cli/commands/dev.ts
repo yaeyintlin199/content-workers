@@ -13,253 +13,258 @@ import copyPublicAssets from "../services/copy-public-assets.js";
 import validateEnvVars from "../services/validate-env-vars.js";
 import migrateCommand from "./migrate.js";
 import updateAvailable from "../services/update-available.js";
-import checkAllPluginsCompatibility from "../../plugins/check-all-plugins-compatibility.js";
+import { PluginManager } from "../../plugins/plugin-manager.js";
+import type { LucidPluginManifest } from "../../plugins/types.js";
 
 const devCommand = async (options?: { watch?: string | boolean }) => {
-	const configPath = getConfigPath(process.cwd());
+    const configPath = getConfigPath(process.cwd());
 
-	const coreUpdateAvailable = updateAvailable();
+    const coreUpdateAvailable = updateAvailable();
 
-	let serverDestroy: (() => Promise<void>) | undefined;
-	let rebuilding = false;
-	let isInitialRun = true;
+    let serverDestroy: (() => Promise<void>) | undefined;
+    let rebuilding = false;
+    let isInitialRun = true;
 
-	const currentConfig = await loadConfigFile({ path: configPath });
+    const currentConfig = await loadConfigFile({ path: configPath });
 
-	const startServer = async () => {
-		if (rebuilding) return;
-		rebuilding = true;
+    const startServer = async () => {
+        if (rebuilding) return;
+        rebuilding = true;
 
-		logger.setBuffering(true);
+        logger.setBuffering(true);
 
-		try {
-			await serverDestroy?.();
+        try {
+            await serverDestroy?.();
 
-			const configResult = await loadConfigFile({ path: configPath });
+            const configResult = await loadConfigFile({ path: configPath });
 
-			if (!configResult.adapter) {
-				cliLogger.error("No runtime adapter found");
-				logger.setBuffering(false);
-				rebuilding = false;
-				return;
-			}
+            if (!configResult.adapter) {
+                cliLogger.error("No runtime adapter found");
+                logger.setBuffering(false);
+                rebuilding = false;
+                return;
+            }
 
-			const envValid = await validateEnvVars({
-				envSchema: configResult.envSchema,
-				env: configResult.env,
-			});
+            const envValid = await validateEnvVars({
+                envSchema: configResult.envSchema,
+                env: configResult.env,
+            });
 
-			generateTypes({
-				envSchema: configResult.envSchema,
-				configPath: configPath,
-			});
+            generateTypes({
+                envSchema: configResult.envSchema,
+                configPath: configPath,
+            });
 
-			if (!envValid) {
-				logger.setBuffering(false);
-				process.exit(1);
-			}
+            if (!envValid) {
+                logger.setBuffering(false);
+                process.exit(1);
+            }
 
-			const migrateResult = await migrateCommand({
-				config: configResult.config,
-				mode: "return",
-			})({
-				skipSyncSteps: !isInitialRun,
-				skipEnvValidation: true,
-			});
+            const migrateResult = await migrateCommand({
+                config: configResult.config,
+                mode: "return",
+            })({
+                skipSyncSteps: !isInitialRun,
+                skipEnvValidation: true,
+            });
 
-			if (!migrateResult) {
-				logger.setBuffering(false);
-				process.exit(2);
-			}
+            if (!migrateResult) {
+                logger.setBuffering(false);
+                process.exit(2);
+            }
 
-			const viteBuildRes = await vite.buildApp(configResult.config);
-			if (viteBuildRes.error) {
-				cliLogger.error(viteBuildRes.error.message ?? "Failed to build app");
-				logger.setBuffering(false);
-				rebuilding = false;
-				return;
-			}
+            const viteBuildRes = await vite.buildApp(configResult.config);
+            if (viteBuildRes.error) {
+                cliLogger.error(viteBuildRes.error.message ?? "Failed to build app");
+                logger.setBuffering(false);
+                rebuilding = false;
+                return;
+            }
 
-			const [mjmlTemplatesRes, publicAssetsRes] = await Promise.all([
-				prerenderMjmlTemplates({
-					config: configResult.config,
-					silent: false,
-				}),
-				copyPublicAssets({
-					config: configResult.config,
-					silent: false,
-				}),
-			]);
-			if (mjmlTemplatesRes.error) {
-				cliLogger.error(
-					mjmlTemplatesRes.error.message ??
-						"Failed to pre-render MJML templates",
-				);
-				logger.setBuffering(false);
-				rebuilding = false;
-				return;
-			}
-			if (publicAssetsRes.error) {
-				cliLogger.error(
-					publicAssetsRes.error.message ?? "Failed to copy public assets",
-				);
-				logger.setBuffering(false);
-				rebuilding = false;
-				return;
-			}
+            const [mjmlTemplatesRes, publicAssetsRes] = await Promise.all([
+                prerenderMjmlTemplates({
+                    config: configResult.config,
+                    silent: false,
+                }),
+                copyPublicAssets({
+                    config: configResult.config,
+                    silent: false,
+                }),
+            ]);
+            if (mjmlTemplatesRes.error) {
+                cliLogger.error(
+                    mjmlTemplatesRes.error.message ??
+                        "Failed to pre-render MJML templates",
+                );
+                logger.setBuffering(false);
+                rebuilding = false;
+                return;
+            }
+            if (publicAssetsRes.error) {
+                cliLogger.error(
+                    publicAssetsRes.error.message ?? "Failed to copy public assets",
+                );
+                logger.setBuffering(false);
+                rebuilding = false;
+                return;
+            }
 
-			process.stdout.write("\x1B[2J\x1B[3J\x1B[H");
+            process.stdout.write("\x1B[2J\x1B[3J\x1B[H");
 
-			const serverRes = await configResult.adapter.cli.serve({
-				config: configResult.config,
-				logger: {
-					instance: cliLogger,
-					silent: false,
-				},
-				onListening: async (props) => {
-					const serverUrl =
-						typeof props.address === "string"
-							? props.address
-							: props.address
-								? `http://${props.address.address === "::" ? "localhost" : props.address.address}:${props.address.port}`
-								: "unknown";
+            const serverRes = await configResult.adapter.cli.serve({
+                config: configResult.config,
+                logger: {
+                    instance: cliLogger,
+                    silent: false,
+                },
+                onListening: async (props) => {
+                    const serverUrl =
+                        typeof props.address === "string"
+                            ? props.address
+                            : props.address
+                                ? `http://${props.address.address === "::" ? "localhost" : props.address.address}:${props.address.port}`
+                                : "unknown";
 
-					const coreUpdateAvailabeRes = await coreUpdateAvailable;
-					coreUpdateAvailabeRes.renderUpdateBox();
+                    const coreUpdateAvailabeRes = await coreUpdateAvailable;
+                    coreUpdateAvailabeRes.renderUpdateBox();
 
-					cliLogger.log(
-						cliLogger.createBadge("LUCID CMS"),
-						"Development server ready",
-						{
-							spaceBefore: !coreUpdateAvailabeRes.show,
-							spaceAfter: true,
-						},
-					);
+                    cliLogger.log(
+                        cliLogger.createBadge("LUCID CMS"),
+                        "Development server ready",
+                        {
+                            spaceBefore: !coreUpdateAvailabeRes.show,
+                            spaceAfter: true,
+                        },
+                    );
 
-					cliLogger.log(
-						"🔐 Admin panel      ",
-						cliLogger.color.blue(`${serverUrl}/admin`),
-						{ symbol: "line" },
-					);
+                    cliLogger.log(
+                        "🔐 Admin panel      ",
+                        cliLogger.color.blue(`${serverUrl}/admin`),
+                        { symbol: "line" },
+                    );
 
-					cliLogger.log(
-						"📖 Documentation    ",
-						cliLogger.color.blue(constants.documentation),
-						{ symbol: "line" },
-					);
+                    cliLogger.log(
+                        "📖 Documentation    ",
+                        cliLogger.color.blue(constants.documentation),
+                        { symbol: "line" },
+                    );
 
-					cliLogger.log(
-						cliLogger.color.gray("Press CTRL-C to stop the server"),
-						{ spaceBefore: true, spaceAfter: true },
-					);
+                    cliLogger.log(
+                        cliLogger.color.gray("Press CTRL-C to stop the server"),
+                        { spaceBefore: true, spaceAfter: true },
+                    );
 
-					logger.setBuffering(false);
-				},
-			});
-			serverDestroy = serverRes?.destroy;
+                    logger.setBuffering(false);
+                },
+            });
+            serverDestroy = serverRes?.destroy;
 
-			if (isInitialRun) {
-				await checkAllPluginsCompatibility({
-					runtimeContext: serverRes.runtimeContext,
-					config: configResult.config,
-				});
-			}
+            if (isInitialRun) {
+                const pluginManager = new PluginManager(
+                    configResult.config.plugins as LucidPluginManifest[],
+                );
 
-			await serverRes?.onComplete?.();
-			isInitialRun = false;
-		} catch (error) {
-			await serverDestroy?.();
-			if (error instanceof Error) {
-				cliLogger.errorInstance(error);
-			}
-			cliLogger.error("Failed to start the server");
-			logger.setBuffering(false);
-			process.exit(1);
-		} finally {
-			rebuilding = false;
-		}
-	};
+                await pluginManager.checkCompatibility({
+                    runtimeContext: serverRes.runtimeContext,
+                    config: configResult.config,
+                });
+            }
 
-	await startServer();
+            await serverRes?.onComplete?.();
+            isInitialRun = false;
+        } catch (error) {
+            await serverDestroy?.();
+            if (error instanceof Error) {
+                cliLogger.errorInstance(error);
+            }
+            cliLogger.error("Failed to start the server");
+            logger.setBuffering(false);
+            process.exit(1);
+        } finally {
+            rebuilding = false;
+        }
+    };
 
-	let restartTimer: NodeJS.Timeout | undefined;
+    await startServer();
 
-	const watchPath =
-		typeof options?.watch === "string" ? options?.watch : process.cwd();
+    let restartTimer: NodeJS.Timeout | undefined;
 
-	const distPath = path.join(
-		process.cwd(),
-		currentConfig.config.compilerOptions.paths.outDir,
-	);
+    const watchPath =
+        typeof options?.watch === "string" ? options?.watch : process.cwd();
 
-	const ignorePatterns = [
-		"**/node_modules/**",
-		"**/.git/**",
-		"**/.lucid/**",
-		distPath,
-		"**/*.log",
-		"**/.DS_Store",
-		"**/Thumbs.db",
-		"*.sqlite",
-		"*.sqlite-shm",
-		"*.sqlite-wal",
-		"**/*.sqlite",
-		"**/*.sqlite-shm",
-		"**/*.sqlite-wal",
-		`${constants.defaultUploadDirectory}/**`,
-		...(currentConfig.config.compilerOptions.watch?.ignore ?? []),
-	];
+    const distPath = path.join(
+        process.cwd(),
+        currentConfig.config.compilerOptions.paths.outDir,
+    );
 
-	const isIgnoredFile = (filePath: string) => {
-		const relativePath = path.relative(watchPath, filePath);
-		return ignorePatterns.some((pattern) => minimatch(relativePath, pattern));
-	};
+    const ignorePatterns = [
+        "**/node_modules/**",
+        "**/.git/**",
+        "**/.lucid/**",
+        distPath,
+        "**/*.log",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "*.sqlite",
+        "*.sqlite-shm",
+        "*.sqlite-wal",
+        "**/*.sqlite",
+        "**/*.sqlite-shm",
+        "**/*.sqlite-wal",
+        `${constants.defaultUploadDirectory}/**`,
+        ...(currentConfig.config.compilerOptions.watch?.ignore ?? []),
+    ];
 
-	const watcher = chokidar
-		.watch([watchPath, configPath], {
-			ignored: ignorePatterns,
-			ignoreInitial: true,
-			persistent: true,
-			usePolling: false,
-			awaitWriteFinish: {
-				stabilityThreshold: 100,
-			},
-		})
-		.on("change", (changedPath) => {
-			if (changedPath === configPath) {
-				cliLogger.info("Config file changed, reloading...");
-			}
-			if (isIgnoredFile(changedPath)) return;
-			startServer();
-		})
-		.on("add", (addedPath) => {
-			if (isIgnoredFile(addedPath)) return;
-			startServer();
-		})
-		.on("unlink", (deletedPath) => {
-			if (isIgnoredFile(deletedPath)) return;
-			startServer();
-		});
+    const isIgnoredFile = (filePath: string) => {
+        const relativePath = path.relative(watchPath, filePath);
+        return ignorePatterns.some((pattern) => minimatch(relativePath, pattern));
+    };
 
-	const shutdown = async () => {
-		try {
-			if (restartTimer) clearTimeout(restartTimer);
-			await watcher?.close();
-			await serverDestroy?.();
-		} catch (error) {
-			cliLogger.error("Error during shutdown");
-			if (error instanceof Error) {
-				cliLogger.error(error.message);
-			}
-		} finally {
-			logger.setBuffering(false);
-			process.exit(0);
-		}
-	};
+    const watcher = chokidar
+        .watch([watchPath, configPath], {
+            ignored: ignorePatterns,
+            ignoreInitial: true,
+            persistent: true,
+            usePolling: false,
+            awaitWriteFinish: {
+                stabilityThreshold: 100,
+            },
+        })
+        .on("change", (changedPath) => {
+            if (changedPath === configPath) {
+                cliLogger.info("Config file changed, reloading...");
+            }
+            if (isIgnoredFile(changedPath)) return;
+            startServer();
+        })
+        .on("add", (addedPath) => {
+            if (isIgnoredFile(addedPath)) return;
+            startServer();
+        })
+        .on("unlink", (deletedPath) => {
+            if (isIgnoredFile(deletedPath)) return;
+            startServer();
+        });
 
-	process.on("SIGINT", shutdown);
-	process.on("SIGTERM", shutdown);
-	process.on("SIGHUP", shutdown);
+    const shutdown = async () => {
+        try {
+            if (restartTimer) clearTimeout(restartTimer);
+            await watcher?.close();
+            await serverDestroy?.();
+        } catch (error) {
+            cliLogger.error("Error during shutdown");
+            if (error instanceof Error) {
+                cliLogger.error(error.message);
+            }
+        } finally {
+            logger.setBuffering(false);
+            process.exit(0);
+        }
+    };
+
+    process.on("SIGINT", shutdown);
+    process.on("SIGTERM", shutdown);
+    process.on("SIGHUP", shutdown);
 };
 
 export default devCommand;

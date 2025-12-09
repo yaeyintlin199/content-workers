@@ -8,8 +8,8 @@ import CustomFieldSchema from "../custom-fields/schema.js";
 import { initializeLogger } from "../logger/index.js";
 import type { Config, LucidConfig } from "../../types/config.js";
 import { produce } from "immer";
-import LucidError from "../../utils/errors/lucid-error.js";
-import T from "../../translations/index.js";
+import { PluginManager } from "../plugins/plugin-manager.js";
+import type { LucidPluginManifest } from "../plugins/types.js";
 
 let cachedConfig: Config | undefined;
 
@@ -20,97 +20,94 @@ let cachedConfig: Config | undefined;
  * - validation & checks
  */
 const processConfig = async (
-	config: LucidConfig,
-	options?: {
-		bypassCache?: boolean;
-	},
+    config: LucidConfig,
+    options?: {
+        bypassCache?: boolean;
+    },
 ): Promise<Config> => {
-	if (cachedConfig !== undefined && !options?.bypassCache) {
-		return cachedConfig;
-	}
+    if (cachedConfig !== undefined && !options?.bypassCache) {
+        return cachedConfig;
+    }
 
-	let configRes = mergeConfig(config, defaultConfig);
+    let configRes = mergeConfig(config, defaultConfig);
 
-	// merge plugin config
-	if (Array.isArray(configRes.plugins)) {
-		for (const pluginDef of configRes.plugins) {
-			checks.checkPluginVersion({
-				key: pluginDef.key,
-				requiredVersions: pluginDef.lucid,
-			});
-			if (pluginDef.hooks?.init) {
-				const res = await pluginDef.hooks.init();
-				if (res.error) {
-					//* will get caught by the CLI
-					throw new LucidError({
-						scope: pluginDef.key,
-						message: res.error.message ?? T("plugin_init_error"),
-					});
-				}
-			}
+    // merge plugin config
+    if (Array.isArray(configRes.plugins)) {
+        const pluginManager = new PluginManager(
+            configRes.plugins as LucidPluginManifest[],
+        );
 
-			configRes = produce(configRes, pluginDef.recipe);
-		}
-	}
+        pluginManager.validatePlugins();
+        await pluginManager.executeInitHooks();
 
-	// validate config
-	configRes = ConfigSchema.parse(configRes) as Config;
+        configRes = pluginManager.applyRecipes(configRes);
+    }
 
-	// localization checks
-	checks.checkLocales(configRes.localization);
+    // validate config
+    configRes = ConfigSchema.parse(configRes) as Config;
 
-	// collection checks
-	checks.checkDuplicateBuilderKeys(
-		"collections",
-		configRes.collections.map((c) => c.getData.key),
-	);
+    if (Array.isArray(configRes.plugins)) {
+        const pluginManager = new PluginManager(
+            configRes.plugins as LucidPluginManifest[],
+        );
+        await pluginManager.executeAfterConfigHooks(configRes);
+    }
 
-	for (const collection of configRes.collections) {
-		CollectionConfigSchema.parse(collection.config);
+    // localization checks
+    checks.checkLocales(configRes.localization);
 
-		for (const field of collection.flatFields) {
-			CustomFieldSchema.parse(field);
-			checks.checkField(field, configRes);
-		}
+    // collection checks
+    checks.checkDuplicateBuilderKeys(
+        "collections",
+        configRes.collections.map((c) => c.getData.key),
+    );
 
-		checks.checkDuplicateBuilderKeys(
-			"bricks",
-			collection.builderBricks.map((b) => b.key),
-		);
+    for (const collection of configRes.collections) {
+        CollectionConfigSchema.parse(collection.config);
 
-		checks.checkDuplicateFieldKeys(
-			"collection",
-			collection.key,
-			collection.meta.fieldKeys,
-		);
+        for (const field of collection.flatFields) {
+            CustomFieldSchema.parse(field);
+            checks.checkField(field, configRes);
+        }
 
-		checks.checkRepeaterDepth(
-			"collection",
-			collection.key,
-			collection.meta.repeaterDepth,
-		);
+        checks.checkDuplicateBuilderKeys(
+            "bricks",
+            collection.builderBricks.map((b) => b.key),
+        );
 
-		for (const brick of collection.brickInstances) {
-			BrickConfigSchema.parse(brick.config);
-			for (const field of brick.flatFields) {
-				CustomFieldSchema.parse(field);
-				checks.checkField(field, configRes);
-			}
+        checks.checkDuplicateFieldKeys(
+            "collection",
+            collection.key,
+            collection.meta.fieldKeys,
+        );
 
-			checks.checkDuplicateFieldKeys("brick", brick.key, brick.meta.fieldKeys);
-			checks.checkRepeaterDepth("brick", brick.key, brick.meta.repeaterDepth);
-		}
-	}
+        checks.checkRepeaterDepth(
+            "collection",
+            collection.key,
+            collection.meta.repeaterDepth,
+        );
 
-	initializeLogger({
-		transport: configRes.logger.transport,
-		level: configRes.logger.level,
-		force: true,
-	});
+        for (const brick of collection.brickInstances) {
+            BrickConfigSchema.parse(brick.config);
+            for (const field of brick.flatFields) {
+                CustomFieldSchema.parse(field);
+                checks.checkField(field, configRes);
+            }
 
-	cachedConfig = configRes;
+            checks.checkDuplicateFieldKeys("brick", brick.key, brick.meta.fieldKeys);
+            checks.checkRepeaterDepth("brick", brick.key, brick.meta.repeaterDepth);
+        }
+    }
 
-	return configRes;
+    initializeLogger({
+        transport: configRes.logger.transport,
+        level: configRes.logger.level,
+        force: true,
+    });
+
+    cachedConfig = configRes;
+
+    return configRes;
 };
 
 export default processConfig;
