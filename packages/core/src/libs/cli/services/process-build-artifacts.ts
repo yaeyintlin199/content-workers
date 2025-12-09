@@ -1,15 +1,16 @@
 import type {
-	RuntimeBuildArtifact,
-	RuntimeBuildArtifactCompile,
-	RuntimeBuildArtifactCustom,
-	RuntimeBuildArtifactFile,
-	RuntimeBuildArtifacts,
+    RuntimeBuildArtifact,
+    RuntimeBuildArtifactCompile,
+    RuntimeBuildArtifactCustom,
+    RuntimeBuildArtifactFile,
+    RuntimeBuildArtifacts,
 } from "../../runtime-adapter/types.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 import cliLogger from "../logger.js";
 
 export const CORE_ARTIFACT_TYPES = ["file", "compile"];
+export const PLUGIN_ARTIFACT_TYPES = ["plugin-bundle", "plugin-manifest"];
 
 /**
  * Responsible for processing the artifacts collected from the plugins.
@@ -17,70 +18,96 @@ export const CORE_ARTIFACT_TYPES = ["file", "compile"];
  * Returns the artifacts formatted for the runtime adapter.
  */
 const processBuildArtifacts = async (props: {
-	artifacts: RuntimeBuildArtifact[];
-	outDir: string;
-	silent: boolean;
-	customArtifactTypes?: string[];
+    artifacts: RuntimeBuildArtifact[];
+    outDir: string;
+    silent: boolean;
+    customArtifactTypes?: string[];
 }): Promise<RuntimeBuildArtifacts> => {
-	const result: RuntimeBuildArtifacts = {
-		compile: {},
-		custom: [],
-	};
+    const result: RuntimeBuildArtifacts = {
+        compile: {},
+        custom: [],
+    };
 
-	await Promise.all(
-		props.artifacts.map(async (artifact) => {
-			if (props.customArtifactTypes?.includes(artifact.type)) {
-				result.custom.push(artifact as RuntimeBuildArtifactCustom);
-				return;
-			}
+    await Promise.all(
+        props.artifacts.map(async (artifact) => {
+            // Handle plugin-specific artifacts
+            if (PLUGIN_ARTIFACT_TYPES.includes(artifact.type)) {
+                if (artifact.type === "plugin-bundle") {
+                    // Plugin bundles are already processed by build-app.ts
+                    // Just log that they were found
+                    cliLogger.info(
+                        "Plugin bundle found:",
+                        cliLogger.color.green(artifact.path),
+                        {
+                            silent: props.silent,
+                        },
+                    );
+                } else if (artifact.type === "plugin-manifest") {
+                    // Plugin manifests are already processed by build-app.ts
+                    // Just log that they were found
+                    cliLogger.info(
+                        "Plugin manifest found:",
+                        cliLogger.color.green(artifact.path),
+                        {
+                            silent: props.silent,
+                        },
+                    );
+                }
+                return;
+            }
 
-			if (!CORE_ARTIFACT_TYPES.includes(artifact.type)) {
-				return;
-			}
+            if (props.customArtifactTypes?.includes(artifact.type)) {
+                result.custom.push(artifact as RuntimeBuildArtifactCustom);
+                return;
+            }
 
-			let artifactPathData: { path: string; content: string };
+            if (!CORE_ARTIFACT_TYPES.includes(artifact.type)) {
+                return;
+            }
 
-			if (artifact.type === "compile") {
-				const compileArtifact = artifact as RuntimeBuildArtifactCompile;
-				const dirname = path.dirname(compileArtifact.path);
-				const filename = path.basename(compileArtifact.path);
-				artifactPathData = {
-					path: path.join(dirname, `temp-${filename}`),
-					content: compileArtifact.content,
-				};
-			} else if (artifact.type === "file") {
-				artifactPathData = {
-					path: (artifact as RuntimeBuildArtifactFile).path,
-					content: (artifact as RuntimeBuildArtifactFile).content,
-				};
-			} else {
-				return;
-			}
+            let artifactPathData: { path: string; content: string };
 
-			const relativePath = artifactPathData.path.replace(/^[/\\]+/, "");
-			const artifactPath = path.join(props.outDir, relativePath);
-			await fs.mkdir(path.dirname(artifactPath), { recursive: true });
-			await fs.writeFile(artifactPath, artifactPathData.content);
-			cliLogger.info(
-				"Plugin artifact built:",
-				cliLogger.color.green(`./${relativePath}`),
-				{
-					silent: props.silent,
-				},
-			);
+            if (artifact.type === "compile") {
+                const compileArtifact = artifact as RuntimeBuildArtifactCompile;
+                const dirname = path.dirname(compileArtifact.path);
+                const filename = path.basename(compileArtifact.path);
+                artifactPathData = {
+                    path: path.join(dirname, `temp-${filename}`),
+                    content: compileArtifact.content,
+                };
+            } else if (artifact.type === "file") {
+                artifactPathData = {
+                    path: (artifact as RuntimeBuildArtifactFile).path,
+                    content: (artifact as RuntimeBuildArtifactFile).content,
+                };
+            } else {
+                return;
+            }
 
-			if (artifact.type === "compile") {
-				const compileArtifact = artifact as RuntimeBuildArtifactCompile;
-				const ext = path.extname(compileArtifact.path);
-				const nameWithoutExt = path.basename(compileArtifact.path, ext);
-				const dir = path.dirname(compileArtifact.path);
-				const key = path.join(dir, nameWithoutExt);
-				result.compile[key] = artifactPath;
-			}
-		}),
-	);
+            const relativePath = artifactPathData.path.replace(/^[/\\]+/, "");
+            const artifactPath = path.join(props.outDir, relativePath);
+            await fs.mkdir(path.dirname(artifactPath), { recursive: true });
+            await fs.writeFile(artifactPath, artifactPathData.content);
+            cliLogger.info(
+                "Plugin artifact built:",
+                cliLogger.color.green(`./${relativePath}`),
+                {
+                    silent: props.silent,
+                },
+            );
 
-	return result;
+            if (artifact.type === "compile") {
+                const compileArtifact = artifact as RuntimeBuildArtifactCompile;
+                const ext = path.extname(compileArtifact.path);
+                const nameWithoutExt = path.basename(compileArtifact.path, ext);
+                const dir = path.dirname(compileArtifact.path);
+                const key = path.join(dir, nameWithoutExt);
+                result.compile[key] = artifactPath;
+            }
+        }),
+    );
+
+    return result;
 };
 
 export default processBuildArtifacts;
