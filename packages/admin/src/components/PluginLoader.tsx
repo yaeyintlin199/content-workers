@@ -1,36 +1,39 @@
-import { createResource, Suspense } from "solid-js";
+import { onMount, createEffect } from "solid-js";
+import { loadPluginManifest } from "@/utils/plugin-manifest";
+import { pluginStoreActions } from "@/store/pluginStore";
+import api from "@/services/api";
 
 /**
- * Proof of concept for runtime plugin loading.
- * This demonstrates that we can dynamically import and render
- * SolidJS components at runtime for future plugin support.
+ * PluginLoader initializes plugin system when the app starts
  */
-function PluginTest() {
-	const [PluginComponent] = createResource(async () => {
-		const module = await import(
-			/* @vite-ignore */
-			`${window.location.origin}/admin/plugins/test-component.js`
-		);
-		return module.default;
+const PluginLoader: Component = () => {
+	const pluginManifestsQuery = api.settings.useGetPluginManifests({
+		enabled: () => true,
+		onSuccess: (manifests) => {
+			console.log(`Loaded ${manifests.length} plugin manifests`);
+		},
 	});
 
-	return (
-		<div style={{ padding: "20px" }}>
-			<h2>Dynamic Component Loading Test</h2>
-			<p>
-				This route demonstrates runtime plugin loading for future component
-				plugin support.
-			</p>
+	onMount(() => {
+		// Auto-load plugin manifests if not already loaded by the API hook
+		if (pluginManifestsQuery.data.length === 0) {
+			loadPluginManifest()
+				.then((manifests) => {
+					console.log(`Auto-loaded ${manifests.length} plugin manifests`);
+				})
+				.catch((error) => {
+					console.warn("Failed to auto-load plugin manifests:", error);
+				});
+		}
+	});
 
-			<Suspense fallback={<div>Loading plugin...</div>}>
-				{(() => {
-					const Component = PluginComponent();
-					if (!Component) return <div>Failed to load plugin</div>;
-					return <Component message="Props work correctly!" />;
-				})()}
-			</Suspense>
-		</div>
-	);
-}
+	createEffect(() => {
+		if (pluginManifestsQuery.error) {
+			console.warn("Plugin manifest loading error:", pluginManifestsQuery.error);
+		}
+	});
 
-export default PluginTest;
+	return null; // This component doesn't render anything
+};
+
+export default PluginLoader;
