@@ -1,5 +1,5 @@
 {
-	"name": "@lucidcms/config",
+	"name": "@content-workers/config",
 	"private": true,
 	"license": "UNLICENSED",
 	"publishConfig": {

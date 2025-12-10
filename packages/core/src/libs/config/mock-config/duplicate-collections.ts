@@ -1,8 +1,8 @@
-import SQLiteAdapter from "@lucidcms/sqlite-adapter";
-import { CollectionBuilder } from "@lucidcms/core/builders";
+import SQLiteAdapter from "@content-workers/sqlite-adapter";
+import { CollectionBuilder } from "@content-workers/core/builders";
 import Database from "better-sqlite3";
 import testingConstants from "../../../constants/testing-constants.js";
-import { nodeAdapter, defineConfig } from "@lucidcms/node-adapter";
+import { nodeAdapter, defineConfig } from "@content-workers/node-adapter";
 
 export const adapter = nodeAdapter();
 

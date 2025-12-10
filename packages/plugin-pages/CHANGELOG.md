@@ -1,4 +1,4 @@
-# @lucidcms/plugin-pages
+# @content-workers/plugin-pages
 
 ## 0.3.3
 

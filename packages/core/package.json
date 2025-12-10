@@ -1,6 +1,6 @@
 {
-    "name": "@lucidcms/core",
-    "version": "0.12.0-alpha.1",
+    "name": "@content-workers/core",
+    "version": "0.12.1-alpha.1",
     "description": "The core of the Lucid CMS. It's responsible for spinning up the API and serving the CMS.",
     "type": "module",
     "types": "./dist/index.d.ts",
@@ -90,7 +90,7 @@
     ],
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
-        "@lucidcms/config": "*",
+        "@content-workers/config": "*",
         "@types/lodash.merge": "^4.6.9",
         "@types/mime-types": "^2.1.4",
         "@types/mjml": "^4.7.4",

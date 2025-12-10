@@ -1,4 +1,4 @@
-import { DatabaseAdapter } from "@lucidcms/core/db-adapter";
+import { DatabaseAdapter } from "@content-workers/core/db-adapter";
 import type {
 	DatabaseConfig,
 	KyselyDB,
@@ -6,7 +6,7 @@ import type {
 	OnUpdate,
 	OnDelete,
 	InferredColumn,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import { sql, ParseJSONResultsPlugin, type ColumnDataType } from "kysely";
 import { PostgresJSDialect } from "kysely-postgres-js";
 import postgres from "postgres";

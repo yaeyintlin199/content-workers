@@ -1,4 +1,13 @@
-# @lucidcms/core
+# @content-workers/core
+## v0.12.1-alpha.1
+
+### Changes:
+
+- Migrated every package in the workspace to the new `@content-workers/*` npm scope and bumped patch versions across core, admin, adapters, auth providers, and plugins.
+- Updated all internal dependency declarations, workspace scripts, and playground imports to target the new scope while keeping runtime behavior unchanged.
+- Added repository-wide npm configuration for the `@content-workers` scope and refreshed documentation/install instructions to describe the new packages.
+- Verified the plugin SDK exports against the renamed core types to keep the fluent builder API working with the new scope.
+
 
 ## v0.12.0-alpha.1
 
@@ -40,7 +49,7 @@
 ### Bug Fixes:
 
 - Video streaming is now correctly setup with range headers so you can scrub the timeline on video playback correctly. ([dfe1b64](https://github.com/buildlucid/lucid-cms/commit/dfe1b64e49e647639a8582d1c03e353264e3c6bb))
-- @lucidcms/plugin-local-storage now correctly infers the mimetype based on the file, instead of doing a lookup based on the extension. This means video/mp4 is now correctly inferred instead of it being returned as application/mp4 which subsequently sets the wrong media type. ([dfe1b64](https://github.com/buildlucid/lucid-cms/commit/dfe1b64e49e647639a8582d1c03e353264e3c6bb))
+- @content-workers/plugin-local-storage now correctly infers the mimetype based on the file, instead of doing a lookup based on the extension. This means video/mp4 is now correctly inferred instead of it being returned as application/mp4 which subsequently sets the wrong media type. ([dfe1b64](https://github.com/buildlucid/lucid-cms/commit/dfe1b64e49e647639a8582d1c03e353264e3c6bb))
 - Fixed bug where onError callback wasn't being fired when uploading a piece of media that exceeds the allowed file size. This meant it wasn't being removed from storage. ([d467abc](https://github.com/buildlucid/lucid-cms/commit/d467abcf6d2f24b5a8992c96a7d7fc69a6b15466))
 - Fixed issue with nested repeater priority not being dropped. This meant for the PostreSQL adapter collection migrations partially failed. ([3058bf9](https://github.com/buildlucid/lucid-cms/commit/3058bf9fbd252e27dad940f4d799e08f0a2e7320))
 - Fixed bug where on document create the redirect didn't take into account the version type. Creating a draft would take you to a published version that didn't exist. ([bab1523](https://github.com/buildlucid/lucid-cms/commit/bab152305c691358e563c6b1b4b33906671754bb))

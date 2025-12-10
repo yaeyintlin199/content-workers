@@ -1,4 +1,4 @@
-# @lucidcms/auth-microsoft
+# @content-workers/auth-microsoft
 
 ## 1.0.0
 

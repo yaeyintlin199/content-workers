@@ -1,4 +1,4 @@
-import type { RuntimeBuildArtifactCustom } from "@lucidcms/core/types";
+import type { RuntimeBuildArtifactCustom } from "@content-workers/core/types";
 import type {
 	CloudflareWorkerImport,
 	CloudflareWorkerExport,
@@ -22,15 +22,15 @@ const prepareMainWorkerEntry = (
 			default: "config",
 		},
 		{
-			path: "@lucidcms/core",
+			path: "@content-workers/core",
 			default: "lucid",
 		},
 		{
-			path: "@lucidcms/core/kv-adapter",
+			path: "@content-workers/core/kv-adapter",
 			exports: ["passthroughKVAdapter"],
 		},
 		{
-			path: "@lucidcms/core/helpers",
+			path: "@content-workers/core/helpers",
 			exports: ["processConfig"],
 		},
 		{
@@ -38,7 +38,7 @@ const prepareMainWorkerEntry = (
 			default: "emailTemplates",
 		},
 		{
-			path: "@lucidcms/cloudflare-adapter",
+			path: "@content-workers/cloudflare-adapter",
 			exports: ["getRuntimeContext"],
 		},
 	];

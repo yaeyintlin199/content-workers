@@ -15,7 +15,7 @@ import {
 import fieldResToSchema from "../../utils/field-res-to-schema.js";
 import afterUpsertHandler from "./after-upsert-handler.js";
 import type { PluginOptionsInternal } from "../../types/types.js";
-import type { LucidHookDocuments } from "@lucidcms/core/types";
+import type { LucidHookDocuments } from "@content-workers/core/types";
 import type { ParentPageQueryResponse } from "../get-parent-fields.js";
 
 const versionPromoteHandler =

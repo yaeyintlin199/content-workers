@@ -1,4 +1,4 @@
-# @lucidcms/plugin-resend
+# @content-workers/plugin-resend
 
 ## 1.1.0 (UNRELEASED)
 

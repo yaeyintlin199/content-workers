@@ -1,4 +1,4 @@
-import type { KVAdapterInstance, KVSetOptions } from "@lucidcms/core/types";
+import type { KVAdapterInstance, KVSetOptions } from "@content-workers/core/types";
 import type { PluginOptions } from "./types.js";
 
 const MILLISECONDS_PER_SECOND = 1000;

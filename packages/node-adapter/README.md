@@ -9,7 +9,7 @@ Using this adapter is the most flexible way to run Lucid CMS. Out of the box, it
 ## Installation
 
 ```bash
-npm install @lucidcms/node-adapter
+npm install @content-workers/node-adapter
 ```
 
 ## Setup
@@ -17,7 +17,7 @@ npm install @lucidcms/node-adapter
 To use the Node adapter, you must export the adapter from your `lucid.config.ts` file as well as default exporting the config with the `defineConfig` function.
 
 ```typescript
-import { nodeAdapter, defineConfig } from "@lucidcms/node-adapter";
+import { nodeAdapter, defineConfig } from "@content-workers/node-adapter";
 
 export const adapter = nodeAdapter();
 

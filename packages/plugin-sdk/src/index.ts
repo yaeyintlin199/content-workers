@@ -1,4 +1,4 @@
-// Re-export types from @lucidcms/core for plugin development
+// Re-export types from @content-workers/core for plugin development
 export type {
     LucidPlugin,
     LucidPluginManifest,
@@ -10,7 +10,7 @@ export type {
     AdapterRuntimeContext,
     EmailAdapterInstance,
     LucidHonoGeneric,
-} from "@lucidcms/core/types.js";
+} from "@content-workers/core/types.js";
 
 // Plugin builder API
 export {

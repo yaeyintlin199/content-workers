@@ -1,10 +1,10 @@
-import { defineConfig } from "@lucidcms/core";
-import { nodeAdapter } from "@lucidcms/node-adapter";
-import { postgresAdapter } from "@lucidcms/postgres-adapter";
-import { nodemailerPlugin } from "@lucidcms/plugin-nodemailer";
-import { redisPlugin } from "@lucidcms/plugin-redis";
-import { s3Plugin } from "@lucidcms/plugin-s3";
-import { pagesPlugin } from "@lucidcms/plugin-pages";
+import { defineConfig } from "@content-workers/core";
+import { nodeAdapter } from "@content-workers/node-adapter";
+import { postgresAdapter } from "@content-workers/postgres-adapter";
+import { nodemailerPlugin } from "@content-workers/plugin-nodemailer";
+import { redisPlugin } from "@content-workers/plugin-redis";
+import { s3Plugin } from "@content-workers/plugin-s3";
+import { pagesPlugin } from "@content-workers/plugin-pages";
 import { testPlugin } from "./plugins/test-plugin.js";
 
 export default defineConfig({

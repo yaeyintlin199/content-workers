@@ -8,8 +8,8 @@ This repository is a monorepo that contains multiple packages, each potentially 
 
 The following packages are licensed under the **Business Source License 1.1 (BSL 1.1)**:
 
-- [`@lucidcms/core`](packages/core)
-- [`@lucidcms/admin`](packages/admin)
+- [`@content-workers/core`](packages/core)
+- [`@content-workers/admin`](packages/admin)
 
 Each of these packages includes its own `LICENSE` file with the full BSL 1.1 license text and relevant Change Dates.
 
@@ -22,12 +22,12 @@ BSL 1.1 allows non-production and limited use under specific conditions. After a
 
 The following packages are licensed under the **MIT License**, a permissive open source license:
 
-- `@lucidcms/plugin-s3`
-- `@lucidcms/plugin-nodemailer`
-- `@lucidcms/plugin-pages`
-- `@lucidcms/auth-github`
-- `@lucidcms/auth-google`
-- `@lucidcms/auth-microsoft`
+- `@content-workers/plugin-s3`
+- `@content-workers/plugin-nodemailer`
+- `@content-workers/plugin-pages`
+- `@content-workers/auth-github`
+- `@content-workers/auth-google`
+- `@content-workers/auth-microsoft`
 - All other packages in `packages/` that are prefixed with `plugin-`
 
 Each MIT-licensed package includes its own `LICENSE` file.
@@ -38,11 +38,11 @@ Each MIT-licensed package includes its own `LICENSE` file.
 
 Also MIT-licensed:
 
-- `@lucidcms/sqlite-adapter`
-- `@lucidcms/postgres-adapter`
-- `@lucidcms/libsql-adapter`
-- `@lucidcms/node-adapter`
-- `@lucidcms/cloudflare-adapter`
+- `@content-workers/sqlite-adapter`
+- `@content-workers/postgres-adapter`
+- `@content-workers/libsql-adapter`
+- `@content-workers/node-adapter`
+- `@content-workers/cloudflare-adapter`
 
 ---
 

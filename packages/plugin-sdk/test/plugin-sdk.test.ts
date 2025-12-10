@@ -22,7 +22,7 @@ describe("Plugin SDK", () => {
                         .name("Test Plugin")
                         .version("1.0.0")
                         .description("A test plugin")
-                        .lucid("^0.12.0")
+                        .lucid("^0.12.1")
                 )
                 .build();
 
@@ -33,7 +33,7 @@ describe("Plugin SDK", () => {
                 name: "Test Plugin",
                 version: "1.0.0",
                 description: "A test plugin",
-                lucid: "^0.12.0",
+                lucid: "^0.12.1",
             });
         });
 

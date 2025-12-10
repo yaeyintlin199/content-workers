@@ -9,7 +9,7 @@ import type {
     Config,
     ServiceResponse,
     LucidHonoGeneric,
-} from "@lucidcms/core/types.js";
+} from "@content-workers/core/types.js";
 
 /**
  * Simple plugin builder for creating Lucid plugins with a fluent API.

@@ -3,7 +3,7 @@ import type {
 	Config,
 	FieldInputSchema,
 	ServiceResponse,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import type { DescendantFieldsResponse } from "../services/get-descendant-fields.js";
 import type { CollectionConfig } from "../types/types.js";
 

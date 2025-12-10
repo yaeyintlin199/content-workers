@@ -3,7 +3,7 @@ import Database from "better-sqlite3";
 import BrickBuilder from "../../../libs/builders/brick-builder/index.js";
 import CollectionBuilder from "../../../libs/builders/collection-builder/index.js";
 import inferSchema from "./infer-schema.js";
-import SQLiteAdapter from "@lucidcms/sqlite-adapter";
+import SQLiteAdapter from "@content-workers/sqlite-adapter";
 
 // -----------------------------------------------
 // Setup and Teardown

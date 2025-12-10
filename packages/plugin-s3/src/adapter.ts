@@ -1,4 +1,4 @@
-import type { MediaAdapter } from "@lucidcms/core/types";
+import type { MediaAdapter } from "@content-workers/core/types";
 import getAwsClient from "./clients/aws-client.js";
 import deleteMultiple from "./services/delete-multiple.js";
 import deletSingle from "./services/delete-single.js";

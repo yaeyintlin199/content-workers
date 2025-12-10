@@ -1,6 +1,6 @@
 import type { Component } from "solid-js";
 import type { TableRowProps } from "@/types/components";
-import type { EmailDeliveryStatus, EmailResponse } from "@lucidcms/core/types";
+import type { EmailDeliveryStatus, EmailResponse } from "@content-workers/core/types";
 import { Tr } from "@/components/Groups/Table";
 import type { TableTheme } from "@/components/Groups/Table/Table";
 import TextCol from "@/components/Tables/Columns/TextCol";

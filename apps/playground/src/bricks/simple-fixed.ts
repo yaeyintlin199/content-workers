@@ -1,4 +1,4 @@
-import { BrickBuilder } from "@lucidcms/core/builders";
+import { BrickBuilder } from "@content-workers/core/builders";
 
 const SimpleFixedBrick = new BrickBuilder("simple-fixed").addText("heading", {
 	config: {

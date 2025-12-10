@@ -31,7 +31,7 @@ export const userResponseSchema = z.object({
 		.optional(),
 	email: z.email().meta({
 		description: "The user's email address",
-		example: "admin@lucidcms.io",
+		example: "admin@content-workers.io",
 	}),
 	username: z.string().meta({
 		description: "The user's username",
@@ -137,7 +137,7 @@ export const controllerSchemas = {
 		body: z.object({
 			email: z.email().meta({
 				description: "The user's email address",
-				example: "admin@lucidcms.io",
+				example: "admin@content-workers.io",
 			}),
 			username: z.string().meta({
 				description: "The user's username",

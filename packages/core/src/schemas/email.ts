@@ -28,7 +28,7 @@ const emailResponseSchema = z.object({
 		from: z.object({
 			address: z.email().meta({
 				description: "The sender's email address",
-				example: "admin@lucidcms.io",
+				example: "admin@content-workers.io",
 			}),
 			name: z.string().meta({
 				description: "The sender's name",
@@ -149,7 +149,7 @@ export const controllerSchemas = {
 			string: z
 				.object({
 					"filter[toAddress]": queryString.schema.filter(false, {
-						example: "admin@lucidcms.io",
+						example: "admin@content-workers.io",
 					}),
 					"filter[subject]": queryString.schema.filter(false, {
 						example: "Welcome To Lucid",

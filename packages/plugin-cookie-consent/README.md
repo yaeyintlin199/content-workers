@@ -1,1 +1,1 @@
-# @lucidcms/plugin-cookie-consent
+# @content-workers/plugin-cookie-consent

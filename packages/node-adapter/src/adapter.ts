@@ -1,11 +1,11 @@
 import { unlink, writeFile } from "node:fs/promises";
 import { serve } from "@hono/node-server";
-import lucid from "@lucidcms/core";
+import lucid from "@content-workers/core";
 import {
 	stripAdapterExportPlugin,
 	stripImportsPlugin,
-} from "@lucidcms/core/helpers";
-import type { RuntimeAdapter } from "@lucidcms/core/types";
+} from "@content-workers/core/helpers";
+import type { RuntimeAdapter } from "@content-workers/core/types";
 import { build } from "rolldown";
 import nodeExternals from "rollup-plugin-node-externals";
 import constants, { ADAPTER_KEY, LUCID_VERSION } from "./constants.js";
@@ -217,11 +217,11 @@ const nodeAdapter = (options?: {
 					const entry = /* ts */ `
 import "dotenv/config";
 import config from "./${constants.CONFIG_FILE}";
-import lucid from "@lucidcms/core";
-import { processConfig } from "@lucidcms/core/helpers";
+import lucid from "@content-workers/core";
+import { processConfig } from "@content-workers/core/helpers";
 import { serve } from "@hono/node-server";
 import cron from "node-cron";
-import { getRuntimeContext } from "@lucidcms/node-adapter";
+import { getRuntimeContext } from "@content-workers/node-adapter";
 
 const startServer = async () => {
 	try {

@@ -1,4 +1,4 @@
-# @lucidcms/auth-github
+# @content-workers/auth-github
 
 ## 1.0.0
 

@@ -732,7 +732,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"admin@lucidcms.io\",\r\n    \"username\": \"standard2\",\r\n    \"password\": \"password\",\r\n    \"passwordConfirmation\": \"password\",\r\n    \"firstName\": \"First2\",\r\n    \"lastName\": \"Last\",\r\n    \"superAdmin\": true,\r\n    \"roleIds\": [1]\r\n}",
+							"raw": "{\r\n    \"email\": \"admin@content-workers.io\",\r\n    \"username\": \"standard2\",\r\n    \"password\": \"password\",\r\n    \"passwordConfirmation\": \"password\",\r\n    \"firstName\": \"First2\",\r\n    \"lastName\": \"Last\",\r\n    \"superAdmin\": true,\r\n    \"roleIds\": [1]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

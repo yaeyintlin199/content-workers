@@ -1,4 +1,4 @@
-# @lucidcms/libsql-adapter
+# @content-workers/libsql-adapter
 
 ## 1.0.2
 

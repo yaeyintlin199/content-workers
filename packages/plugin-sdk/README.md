@@ -1,4 +1,4 @@
-# @lucidcms/plugin-sdk
+# @content-workers/plugin-sdk
 
 The official SDK for creating Lucid CMS plugins with a fluent builder API. This package provides a developer-friendly way to create plugins by using method chaining to configure all aspects of your plugin.
 
@@ -13,14 +13,14 @@ The official SDK for creating Lucid CMS plugins with a fluent builder API. This 
 ## Installation
 
 ```bash
-npm install @lucidcms/plugin-sdk @lucidcms/core
+npm install @content-workers/plugin-sdk @content-workers/core
 ```
 
 ## Basic Usage
 
 ```typescript
-import { createPlugin } from "@lucidcms/plugin-sdk";
-import type { LucidCMS } from "@lucidcms/core";
+import { createPlugin } from "@content-workers/plugin-sdk";
+import type { LucidCMS } from "@content-workers/core";
 
 const myPlugin = createPlugin()
   .metadata((metadata) =>
@@ -29,7 +29,7 @@ const myPlugin = createPlugin()
       .name("My Plugin")
       .description("A custom plugin for Lucid CMS")
       .version("1.0.0")
-      .lucid("^0.12.0")
+      .lucid("^0.12.1")
   )
   .recipe((draft) => {
     // Modify the Lucid CMS config here
@@ -74,7 +74,7 @@ Configures the plugin metadata.
     .name("Plugin Name")
     .description("Plugin description")
     .version("1.0.0")
-    .lucid("^0.12.0")
+    .lucid("^0.12.1")
 })
 ```
 
@@ -122,7 +122,7 @@ Adds backend API routes.
 
 ```typescript
 import { Hono } from "hono";
-import type { LucidHonoGeneric } from "@lucidcms/core";
+import type { LucidHonoGeneric } from "@content-workers/core";
 
 .routes((routes) => {
   routes.add(async (app: Hono<LucidHonoGeneric>, context) => {
@@ -243,7 +243,7 @@ If you have existing plugins using the legacy format, here's how to migrate:
 ### Before (Legacy)
 
 ```typescript
-import type { LucidPlugin } from "@lucidcms/core/types";
+import type { LucidPlugin } from "@content-workers/core/types";
 
 const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
   return {
@@ -262,7 +262,7 @@ const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
 ### After (SDK)
 
 ```typescript
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 
 const plugin = createPlugin<PluginOptions>()
   .metadata((metadata) =>
@@ -285,7 +285,7 @@ const plugin = createPlugin<PluginOptions>()
 ### Plugin with Options and Admin Interface
 
 ```typescript
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 import type { Hono } from "hono";
 
 interface S3PluginOptions {
@@ -303,7 +303,7 @@ const createS3Plugin = (options: S3PluginOptions) => {
         .name("S3 Storage")
         .description("Amazon S3 storage adapter")
         .version("1.0.0")
-        .lucid("^0.12.0")
+        .lucid("^0.12.1")
     )
     .recipe((draft) => {
       // Configure S3 adapter
@@ -333,7 +333,7 @@ export default createS3Plugin;
 ### Plugin with Hooks and Services
 
 ```typescript
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 
 const analyticsPlugin = createPlugin()
   .metadata((metadata) =>

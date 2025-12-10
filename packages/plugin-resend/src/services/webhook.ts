@@ -1,6 +1,6 @@
 import T from "../translations/index.js";
 import { Webhook } from "svix";
-import type { EmailDeliveryStatus, ServiceFn } from "@lucidcms/core/types";
+import type { EmailDeliveryStatus, ServiceFn } from "@content-workers/core/types";
 import type { PluginOptions } from "../types/types.js";
 import { controllerSchemas } from "../schema/webhook.js";
 

@@ -1,11 +1,11 @@
-import { prefixGeneratedColName } from "@lucidcms/core/helpers";
+import { prefixGeneratedColName } from "@content-workers/core/helpers";
 import type {
 	CollectionTableNames,
 	DocumentVersionType,
 	FieldError,
 	FieldInputSchema,
 	ServiceFn,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import constants from "../../constants.js";
 import T from "../../translations/index.js";
 

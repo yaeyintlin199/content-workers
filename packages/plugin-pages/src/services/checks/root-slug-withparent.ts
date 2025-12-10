@@ -2,7 +2,7 @@ import type {
 	FieldError,
 	FieldInputSchema,
 	ServiceResponse,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import constants from "../../constants.js";
 import T from "../../translations/index.js";
 import type { CollectionConfig } from "../../types/types.js";

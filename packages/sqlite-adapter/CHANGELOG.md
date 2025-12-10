@@ -1,4 +1,4 @@
-# @lucidcms/sqlite-adapter
+# @content-workers/sqlite-adapter
 
 ## 1.0.2
 

@@ -1,9 +1,9 @@
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 import T from "./translations/index.js";
 import verifyTransporter from "./utils/verify-transporter.js";
 import isValidData from "./utils/is-valid-data.js";
 import { PLUGIN_KEY, LUCID_VERSION, PLUGIN_IDENTIFIER } from "./constants.js";
-import type { EmailAdapterInstance, LucidPlugin } from "@lucidcms/core/types";
+import type { EmailAdapterInstance, LucidPlugin } from "@content-workers/core/types";
 import type { PluginOptions } from "./types/types.js";
 
 // Create a closure to capture the plugin options

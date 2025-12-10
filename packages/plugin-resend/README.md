@@ -7,7 +7,7 @@ The Lucid CMS Resend plugin registers the email strategy config and uses Resend'
 ## Installation
 
 ```bash
-npm install @lucidcms/plugin-resend
+npm install @content-workers/plugin-resend
 ```
 
 ## Setup
@@ -15,8 +15,8 @@ npm install @lucidcms/plugin-resend
 To use the Resend plugin, you need to add it to your Lucid CMS config file. You'll need to provide the from email configuration and your Resend API key.
 
 ```typescript
-import { nodeAdapter, defineConfig } from "@lucidcms/node-adapter";
-import LucidResend from "@lucidcms/plugin-resend";
+import { nodeAdapter, defineConfig } from "@content-workers/node-adapter";
+import LucidResend from "@content-workers/plugin-resend";
 
 export const adapter = nodeAdapter();
 

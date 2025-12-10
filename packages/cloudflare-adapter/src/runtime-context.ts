@@ -1,7 +1,7 @@
 import type {
 	LucidHonoContext,
 	AdapterRuntimeContext,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import { getConnInfo as getConnInfoNode } from "@hono/node-server/conninfo";
 import { getConnInfo as getConnInfoCloudflare } from "hono/cloudflare-workers";
 import { ADAPTER_KEY } from "./constants.js";
