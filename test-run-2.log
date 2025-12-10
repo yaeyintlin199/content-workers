@@ -1,0 +1,116 @@
+
+> test
+> vitest run --test-timeout=0 --hook-timeout=0 --silent
+
+
+ RUN  v3.1.2 /home/engine/project
+
+ ✓ |@lucidcms/core| src/services/documents-bricks/helpers/construct-brick-table.test.ts (2 tests) 13ms
+ ❯ |@lucidcms/plugin-sdk| test/plugin-sdk.test.ts (14 tests | 14 failed) 18ms
+   × Plugin SDK > createPlugin > should create a basic plugin 7ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with all metadata 0ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with a recipe 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with hooks 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with routes 0ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with middleware 2ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with services 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with admin configuration 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should create a plugin with compatibility checker 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should support plugin options 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should handle empty arrays and objects correctly 0ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should build fluent API correctly 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > createPlugin > should generate valid LucidPluginManifest 0ms
+     → (0 , createPlugin)(...).metadata is not a function
+   × Plugin SDK > type safety > should provide proper TypeScript types 1ms
+     → (0 , createPlugin)(...).metadata is not a function
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/media.test.ts (3 tests) 17ms
+ ✓ |@lucidcms/core| src/utils/helpers/group-document-filters.test.ts (10 tests) 10ms
+ ✓ |@lucidcms/core| src/libs/builders/field-builder/field-builder.test.ts (3 tests) 6ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/datetime.test.ts (3 tests) 13ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/text.test.ts (3 tests) 10ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/wysiwyg.test.ts (3 tests) 7ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/link.test.ts (3 tests) 11ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/textarea.test.ts (3 tests) 7ms
+ ❯ |@lucidcms/core| src/utils/services/service-wrapper.test.ts (5 tests | 5 skipped) 329ms
+   ↓ basic - one level deep service wrapper success and error
+   ↓ basic - two level deep service wrapper success and error
+   ↓ transaction - one level deep service wrapper success and error
+   ↓ transaction - two level deep service wrapper success and error
+   ↓ service wrapper schema validation
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/json.test.ts (3 tests) 9ms
+ ✓ |@lucidcms/core| src/services/documents-bricks/helpers/prepare-bricks-and-fields.test.ts (3 tests) 5ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/color.test.ts (3 tests) 7ms
+ ✓ |@lucidcms/core| src/services/documents-bricks/checks/check-validate-bricks-fields.test.ts (1 test) 8ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/select.test.ts (3 tests) 8ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/number.test.ts (3 tests) 7ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/document.test.ts (3 tests) 6ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/user.test.ts (3 tests) 7ms
+ ✓ |@lucidcms/core| src/services/documents-bricks/helpers/process-field-values.test.ts (6 tests) 5ms
+ ✓ |@lucidcms/core| src/libs/plugins/__tests__/plugin-manager.test.ts (6 tests) 12ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/checkbox.test.ts (3 tests) 8ms
+ ✓ |@lucidcms/core| src/libs/email-adapter/templates/replace-template-vars.test.ts (10 tests) 6ms
+ ✓ |@lucidcms/core| src/libs/builders/collection-builder/collection-builder.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/collection/schema/infer-schema.test.ts (5 tests) 8ms
+ ✓ |@lucidcms/plugin-pages| src/utils/build-fullslug-from-slugs.test.ts (2 tests) 3ms
+ ✓ |@lucidcms/core| src/libs/builders/brick-builder/brick-builder.test.ts (4 tests) 5ms
+ ✓ |@lucidcms/core| src/utils/client-integrations/encode-api-key.test.ts (3 tests) 5ms
+ ✓ |@lucidcms/core| src/libs/builders/collection-builder/schema.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/collection-migrations.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/client-integrations.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-awaiting-sync.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-auth-providers.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/email-transactions.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-translations.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/processed-images.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-share-links.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/role-permissions.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-folders.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/collections.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/auth-states.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-tokens.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-logins.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-roles.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/queue-jobs.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/options.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/locales.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/media.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/emails.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/roles.test.ts (1 test) 3ms
+ ✓ |@lucidcms/core| src/libs/repositories/users.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/repeater.test.ts (1 test) 3ms
+ ❯ |@lucidcms/core| src/libs/config/mock-config/check-plugin-semver.test.ts (1 test | 1 failed) 535ms
+   × should throw lucid version support error 532ms
+     → expected [Function] to throw error including 'This plugin does not support version …' but got 'No "exports" main defined in /home/en…'
+ ❯ |@lucidcms/core| src/libs/config/load-config-file.test.ts (2 tests | 2 failed) 707ms
+   × should return lucid config object 565ms
+     → No "exports" main defined in /home/engine/project/node_modules/@lucidcms/node-adapter/package.json
+   × should return lucid adapter object 140ms
+     → No "exports" main defined in /home/engine/project/node_modules/@lucidcms/node-adapter/package.json
+ ✓ |@lucidcms/core| src/libs/builders/brick-builder/schema.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/config/get-config-path.test.ts (2 tests) 5ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/tab.test.ts (1 test) 3ms
+ ❯ |@lucidcms/core| src/libs/config/mock-config/duplicate-collection-fields.test.ts (1 test | 1 failed) 692ms
+   × should throw duplicate collection field key error 691ms
+     → expected [Function] to throw error including 'Duplicate field keys found (title) in…' but got 'No "exports" main defined in /home/en…'
+ ❯ |@lucidcms/core| src/libs/config/mock-config/duplicate-collections.test.ts (1 test | 1 failed) 832ms
+   × should throw duplicate collection key error 831ms
+     → expected [Function] to throw error including 'Duplicate keys found for collections …' but got 'No "exports" main defined in /home/en…'
+ ✓ |@lucidcms/admin| src/utils/__tests__/plugin-manifest.test.ts (7 tests) 5ms
+
+ Test Files  6 failed | 54 passed (60)
+      Tests  19 failed | 130 passed | 5 skipped (154)
+   Start at  15:31:27
+   Duration  30.78s (transform 4.36s, setup 149ms, collect 34.24s, tests 3.42s, environment 1.03s, prepare 7.02s)
+

@@ -13,40 +13,41 @@ import authenticate from "../../middleware/authenticate.js";
 const factory = createFactory();
 
 const getSettingsController = factory.createHandlers(
-	describeRoute({
-		description: "Returns the site settings including meta data.",
-		tags: ["settings"],
-		summary: "Get Settings",
-		responses: honoOpenAPIResponse({
-			schema: z.toJSONSchema(controllerSchemas.getSettings.response),
-		}),
-		validateResponse: true,
-	}),
-	authenticate,
-	async (c) => {
-		const settings = await serviceWrapper(settingServices.getSettings, {
-			transaction: false,
-			defaultError: {
-				type: "basic",
-				name: T("route_settings_fetch_error_name"),
-				message: T("route_settings_fetch_error_message"),
-			},
-		})({
-			db: c.get("config").db.client,
-			config: c.get("config"),
-			queue: c.get("queue"),
-			env: c.get("env"),
-			kv: c.get("kv"),
-		});
-		if (settings.error) throw new LucidAPIError(settings.error);
+    describeRoute({
+        description: "Returns the site settings including meta data.",
+        tags: ["settings"],
+        summary: "Get Settings",
+        responses: honoOpenAPIResponse({
+            schema: z.toJSONSchema(controllerSchemas.getSettings.response),
+        }),
+        validateResponse: true,
+    }),
+    authenticate,
+    async (c) => {
+        const settings = await serviceWrapper(settingServices.getSettings, {
+            transaction: false,
+            defaultError: {
+                type: "basic",
+                name: T("route_settings_fetch_error_name"),
+                message: T("route_settings_fetch_error_message"),
+            },
+        })({
+            db: c.get("config").db.client,
+            config: c.get("config"),
+            queue: c.get("queue"),
+            env: c.get("env"),
+            kv: c.get("kv"),
+            runtimeContext: c.get("runtimeContext"),
+        });
+        if (settings.error) throw new LucidAPIError(settings.error);
 
-		c.status(200);
-		return c.json(
-			formatAPIResponse(c, {
-				data: settings.data,
-			}),
-		);
-	},
+        c.status(200);
+        return c.json(
+            formatAPIResponse(c, {
+                data: settings.data,
+            }),
+        );
+    },
 );
 
 export default getSettingsController;

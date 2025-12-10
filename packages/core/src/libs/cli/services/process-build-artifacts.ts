@@ -35,9 +35,10 @@ const processBuildArtifacts = async (props: {
                 if (artifact.type === "plugin-bundle") {
                     // Plugin bundles are already processed by build-app.ts
                     // Just log that they were found
+                    const customArtifact = artifact as RuntimeBuildArtifactCustom<{ path?: string }>;
                     cliLogger.info(
                         "Plugin bundle found:",
-                        cliLogger.color.green(artifact.path),
+                        cliLogger.color.green(customArtifact.custom?.path || "unknown"),
                         {
                             silent: props.silent,
                         },
@@ -45,9 +46,10 @@ const processBuildArtifacts = async (props: {
                 } else if (artifact.type === "plugin-manifest") {
                     // Plugin manifests are already processed by build-app.ts
                     // Just log that they were found
+                    const customArtifact = artifact as RuntimeBuildArtifactCustom<{ path?: string }>;
                     cliLogger.info(
                         "Plugin manifest found:",
-                        cliLogger.color.green(artifact.path),
+                        cliLogger.color.green(customArtifact.custom?.path || "unknown"),
                         {
                             silent: props.silent,
                         },

@@ -1,0 +1,1623 @@
+npm warn Unknown env config "python". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+
+> test
+> vitest run --test-timeout=0 --hook-timeout=0 --silent --coverage
+
+ DEPRECATED  The workspace file is deprecated and will be removed in the next major. Please, use the `test.projects` field in /home/engine/project/vitest.config.ts instead.
+
+ RUN  v3.2.4 /home/engine/project
+      Coverage enabled with v8
+
+ ✓ |@lucidcms/core| src/libs/config/mock-config/duplicate-collections.test.ts (1 test) 1516ms
+   ✓ should throw duplicate collection key error  1515ms
+ ✓ |@lucidcms/core| src/libs/config/load-config-file.test.ts (2 tests) 1703ms
+   ✓ should return lucid config object  1646ms
+ ✓ |@lucidcms/core| src/libs/config/mock-config/check-plugin-semver.test.ts (1 test) 1652ms
+   ✓ should throw lucid version support error  1651ms
+ ✓ |@lucidcms/core| src/libs/config/mock-config/duplicate-collection-fields.test.ts (1 test) 1798ms
+   ✓ should throw duplicate collection field key error  1797ms
+ ✓ |@lucidcms/core| src/libs/plugins/__tests__/plugin-manager.test.ts (6 tests) 18ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/number.test.ts (3 tests) 13ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/link.test.ts (3 tests) 11ms
+ ✓ |@lucidcms/core| src/utils/helpers/group-document-filters.test.ts (10 tests) 10ms
+ ✓ |@lucidcms/core| src/utils/services/service-wrapper.test.ts (5 tests) 1399ms
+ ✓ |@lucidcms/core| src/libs/builders/field-builder/field-builder.test.ts (3 tests) 7ms
+ ✓ |@lucidcms/core| src/libs/config/get-config-path.test.ts (2 tests) 7ms
+ ✓ |@lucidcms/core| src/services/documents-bricks/helpers/construct-brick-table.test.ts (2 tests) 10ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/text.test.ts (3 tests) 16ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/datetime.test.ts (3 tests) 13ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/json.test.ts (3 tests) 15ms
+ ✓ |@lucidcms/core| src/libs/collection/schema/infer-schema.test.ts (5 tests) 10ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/media.test.ts (3 tests) 12ms
+ ✓ |@lucidcms/plugin-pages| src/utils/build-fullslug-from-slugs.test.ts (2 tests) 3ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/checkbox.test.ts (3 tests) 15ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/select.test.ts (3 tests) 10ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/color.test.ts (3 tests) 11ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/wysiwyg.test.ts (3 tests) 11ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/textarea.test.ts (3 tests) 8ms
+ ✓ |@lucidcms/core| src/libs/repositories/client-integrations.test.ts (1 test) 6ms
+ ✓ |@lucidcms/core| src/services/documents-bricks/checks/check-validate-bricks-fields.test.ts (1 test) 8ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/user.test.ts (3 tests) 8ms
+ ✓ |@lucidcms/core| src/libs/repositories/queue-jobs.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/document.test.ts (3 tests) 8ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/repeater.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/builders/collection-builder/schema.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/builders/brick-builder/brick-builder.test.ts (4 tests) 9ms
+ ✓ |@lucidcms/core| src/libs/repositories/media.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-logins.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/utils/client-integrations/encode-api-key.test.ts (3 tests) 5ms
+ ✓ |@lucidcms/core| src/services/documents-bricks/helpers/prepare-bricks-and-fields.test.ts (3 tests) 8ms
+ ✓ |@lucidcms/core| src/services/documents-bricks/helpers/process-field-values.test.ts (6 tests) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/processed-images.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/email-adapter/templates/replace-template-vars.test.ts (10 tests) 5ms
+ ✓ |@lucidcms/core| src/libs/builders/collection-builder/collection-builder.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/users.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/roles.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/emails.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/email-transactions.test.ts (1 test) 6ms
+ ✓ |@lucidcms/core| src/libs/repositories/collections.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/auth-states.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-translations.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-share-links.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/locales.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/options.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-tokens.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-folders.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-auth-providers.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/collection-migrations.test.ts (1 test) 5ms
+ ✓ |@lucidcms/core| src/libs/repositories/role-permissions.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/user-roles.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/custom-fields/fields/tab.test.ts (1 test) 7ms
+ ✓ |@lucidcms/core| src/libs/builders/brick-builder/schema.test.ts (1 test) 4ms
+ ✓ |@lucidcms/core| src/libs/repositories/media-awaiting-sync.test.ts (1 test) 7ms
+ ✓ |@lucidcms/admin| src/utils/__tests__/plugin-manifest.test.ts (7 tests) 6ms
+3:50:36 PM [vite] (ssr) warning: Duplicate member "metadata" in class body
+290|      constructor(private pluginOptions?: Options) {}
+291|  
+292|      metadata(cb: (builder: PluginMetadataConfigurable) => void): PluginBuilder<Options> {
+   |      ^
+293|          const metadataBuilder = this.createMetadataBuilder();
+294|          cb(metadataBuilder);
+
+  Plugin: vite:esbuild
+  File: /home/engine/project/packages/plugin-sdk/src/builder.ts
+3:50:36 PM [vite] (ssr) warning: Duplicate member "recipe" in class body
+296|      }
+297|  
+298|      recipe(recipe: LucidPluginRecipe): PluginBuilder<Options> {
+   |      ^
+299|          this.recipe = recipe;
+300|          return this;
+
+  Plugin: vite:esbuild
+  File: /home/engine/project/packages/plugin-sdk/src/builder.ts
+3:50:36 PM [vite] (ssr) warning: Duplicate member "hooks" in class body
+301|      }
+302|  
+303|      hooks(cb: (builder: PluginHooksConfigurable) => void): PluginBuilder<Options> {
+   |      ^
+304|          const configBuilder = this.createHooksBuilder();
+305|          cb(configBuilder);
+
+  Plugin: vite:esbuild
+  File: /home/engine/project/packages/plugin-sdk/src/builder.ts
+3:50:36 PM [vite] (ssr) warning: Duplicate member "routes" in class body
+307|      }
+308|  
+309|      routes(cb: (builder: PluginRoutesConfigurable) => void): PluginBuilder<Options> {
+   |      ^
+310|          const configBuilder = this.createRoutesBuilder();
+311|          cb(configBuilder);
+
+  Plugin: vite:esbuild
+  File: /home/engine/project/packages/plugin-sdk/src/builder.ts
+3:50:36 PM [vite] (ssr) warning: Duplicate member "middleware" in class body
+313|      }
+314|  
+315|      middleware(cb: (builder: PluginMiddlewareConfigurable) => void): PluginBuilder<Options> {
+   |      ^
+316|          const configBuilder = this.createMiddlewareBuilder();
+317|          cb(configBuilder);
+
+  Plugin: vite:esbuild
+  File: /home/engine/project/packages/plugin-sdk/src/builder.ts
+3:50:36 PM [vite] (ssr) warning: Duplicate member "services" in class body
+319|      }
+320|  
+321|      services(cb: (builder: PluginServicesConfigurable) => void): PluginBuilder<Options> {
+   |      ^
+322|          const configBuilder = this.createServicesBuilder();
+323|          cb(configBuilder);
+
+  Plugin: vite:esbuild
+  File: /home/engine/project/packages/plugin-sdk/src/builder.ts
+3:50:36 PM [vite] (ssr) warning: Duplicate member "admin" in class body
+325|      }
+326|  
+327|      admin(cb: (builder: PluginAdminConfigurable) => void): PluginBuilder<Options> {
+   |      ^
+328|          const configBuilder = this.createAdminBuilder();
+329|          cb(configBuilder);
+
+  Plugin: vite:esbuild
+  File: /home/engine/project/packages/plugin-sdk/src/builder.ts
+
+ Test Files  59 passed (59)
+      Tests  140 passed (140)
+   Start at  15:49:54
+   Duration  46.80s (transform 4.42s, setup 163ms, collect 36.01s, tests 8.45s, environment 1.06s, prepare 8.46s)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   22.75 |    64.91 |   28.25 |   22.75 |                   
+ admin/src         |       0 |       40 |      40 |       0 |                   
+  App.tsx          |       0 |      100 |     100 |       0 | 2-44              
+  Router.tsx       |       0 |        0 |       0 |       0 | 1-225             
+  constants.ts     |       0 |        0 |       0 |       0 | 1-8               
+  index.ts         |       0 |        0 |       0 |       0 | 1-3               
+  index.tsx        |       0 |      100 |     100 |       0 | 2-14              
+ ...src/components |       0 |        0 |       0 |       0 |                   
+  ...nBoundary.tsx |       0 |        0 |       0 |       0 | 1-78              
+  PluginLoader.tsx |       0 |        0 |       0 |       0 | 1-39              
+ ...ponents/Blocks |       0 |        0 |       0 |       0 |                   
+  Alert.tsx        |       0 |        0 |       0 |       0 | 1-113             
+  InfoRow.tsx      |       0 |        0 |       0 |       0 | 1-81              
+  ...onHeading.tsx |       0 |        0 |       0 |       0 | 1-29              
+  ...ingPoints.tsx |       0 |        0 |       0 |       0 | 1-82              
+ ...mponents/Cards |       0 |       20 |      20 |       0 |                   
+  ...ctionCard.tsx |       0 |        0 |       0 |       0 | 1-74              
+  ...BasicCard.tsx |       0 |        0 |       0 |       0 | 1-73              
+  MediaCard.tsx    |       0 |        0 |       0 |       0 | 1-247             
+  ...olderCard.tsx |       0 |      100 |     100 |       0 | 3-134             
+  SkeletonCard.tsx |       0 |        0 |       0 |       0 | 1-26              
+ ...nts/Containers |       0 |       50 |      50 |       0 |                   
+  CardGrid.tsx     |       0 |        0 |       0 |       0 | 1-35              
+  InputGrid.tsx    |       0 |      100 |     100 |       0 | 2-23              
+ .../Forms/Account |       0 |        0 |       0 |       0 |                   
+  ...countForm.tsx |       0 |        0 |       0 |       0 | 1-120             
+ ...nts/Forms/Auth |       0 |        0 |       0 |       0 |                   
+  ...ationForm.tsx |       0 |        0 |       0 |       0 | 1-78              
+  ...swordForm.tsx |       0 |        0 |       0 |       0 | 1-71              
+  LoginForm.tsx    |       0 |        0 |       0 |       0 | 1-85              
+  ...swordForm.tsx |       0 |        0 |       0 |       0 | 1-74              
+  SetupForm.tsx    |       0 |        0 |       0 |       0 | 1-127             
+ ...s/Forms/System |       0 |        0 |       0 |       0 |                   
+  ...censeForm.tsx |       0 |        0 |       0 |       0 | 1-99              
+ ...Groups/Builder |       0 |        0 |       0 |       0 |                   
+  BrickBody.tsx    |       0 |        0 |       0 |       0 | 1-146             
+  ...iewButton.tsx |       0 |        0 |       0 |       0 | 1-46              
+  GroupBody.tsx    |       0 |        0 |       0 |       0 | 1-212             
+  index.tsx        |       0 |        0 |       0 |       0 | 1-3               
+ ...r/CustomFields |       0 |        0 |       0 |       0 |                   
+  ...kboxField.tsx |       0 |        0 |       0 |       0 | 1-103             
+  ColorField.tsx   |       0 |        0 |       0 |       0 | 1-100             
+  ...mentField.tsx |       0 |        0 |       0 |       0 | 1-106             
+  DynamicField.tsx |       0 |        0 |       0 |       0 | 1-396             
+  InputField.tsx   |       0 |        0 |       0 |       0 | 1-112             
+  JSONField.tsx    |       0 |        0 |       0 |       0 | 1-102             
+  LinkField.tsx    |       0 |        0 |       0 |       0 | 1-100             
+  MediaField.tsx   |       0 |        0 |       0 |       0 | 1-106             
+  ...aterField.tsx |       0 |        0 |       0 |       0 | 1-169             
+  SelectField.tsx  |       0 |        0 |       0 |       0 | 1-112             
+  TabField.tsx     |       0 |        0 |       0 |       0 | 1-56              
+  ...areaField.tsx |       0 |        0 |       0 |       0 | 1-100             
+  UserField.tsx    |       0 |        0 |       0 |       0 | 1-103             
+  WYSIWYGField.tsx |       0 |        0 |       0 |       0 | 1-99              
+  index.tsx        |       0 |        0 |       0 |       0 | 1-14              
+ ...Groups/Content |       0 |        0 |       0 |       0 |                   
+  Account.tsx      |       0 |        0 |       0 |       0 | 1-264             
+  ...tionsList.tsx |       0 |        0 |       0 |       0 | 1-61              
+  Dashboard.tsx    |       0 |        0 |       0 |       0 | 1-134             
+  ...mentsList.tsx |       0 |        0 |       0 |       0 | 1-412             
+  EmailsList.tsx   |       0 |        0 |       0 |       0 | 1-185             
+  JobsList.tsx     |       0 |        0 |       0 |       0 | 1-158             
+  License.tsx      |       0 |        0 |       0 |       0 | 1-106             
+  MediaList.tsx    |       0 |        0 |       0 |       0 | 1-453             
+  RolesList.tsx    |       0 |        0 |       0 |       0 | 1-148             
+  UserList.tsx     |       0 |        0 |       0 |       0 | 1-305             
+  index.tsx        |       0 |        0 |       0 |       0 | 1-10              
+ ...Groups/Footers |       0 |       50 |      50 |       0 |                   
+  Paginated.tsx    |       0 |      100 |     100 |       0 | 4-38              
+  index.tsx        |       0 |        0 |       0 |       0 | 1                 
+ ...ts/Groups/Form |       0 |     9.09 |    9.09 |       0 |                   
+  Checkbox.tsx     |       0 |        0 |       0 |       0 | 1-86              
+  ...boxButton.tsx |       0 |      100 |     100 |       0 | 2-74              
+  Color.tsx        |       0 |        0 |       0 |       0 | 1-133             
+  DescribedBy.tsx  |       0 |        0 |       0 |       0 | 1-19              
+  ...entSelect.tsx |       0 |        0 |       0 |       0 | 1-141             
+  ErrorMessage.tsx |       0 |        0 |       0 |       0 | 1-22              
+  Form.tsx         |       0 |        0 |       0 |       0 | 1-114             
+  Input.tsx        |       0 |        0 |       0 |       0 | 1-121             
+  InputFull.tsx    |       0 |        0 |       0 |       0 | 1-137             
+  JSONTextarea.tsx |       0 |        0 |       0 |       0 | 1-143             
+  Label.tsx        |       0 |        0 |       0 |       0 | 1-67              
+  LinkSelect.tsx   |       0 |        0 |       0 |       0 | 1-113             
+  MediaSelect.tsx  |       0 |      100 |     100 |       0 | 2-205             
+  Search.tsx       |       0 |        0 |       0 |       0 | 1-50              
+  Select.tsx       |       0 |        0 |       0 |       0 | 1-258             
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-170             
+  ...ileUpload.tsx |       0 |        0 |       0 |       0 | 1-371             
+  Switch.tsx       |       0 |        0 |       0 |       0 | 1-169             
+  Textarea.tsx     |       0 |        0 |       0 |       0 | 1-80              
+  Tooltip.tsx      |       0 |        0 |       0 |       0 | 1-37              
+  WYSIWYG.tsx      |       0 |        0 |       0 |       0 | 1-117             
+  index.tsx        |       0 |        0 |       0 |       0 | 1-22              
+ ...ts/Groups/Grid |       0 |        0 |       0 |       0 |                   
+  Grid.tsx         |       0 |        0 |       0 |       0 | 1-114             
+  index.tsx        |       0 |        0 |       0 |       0 | 1                 
+ ...Groups/Headers |       0 |        0 |       0 |       0 |                   
+  Standard.tsx     |       0 |        0 |       0 |       0 | 1-192             
+  index.tsx        |       0 |        0 |       0 |       0 | 1                 
+ .../Groups/Layout |       0 |    16.66 |   16.66 |       0 |                   
+  Breadcrumbs.tsx  |       0 |        0 |       0 |       0 | 1-60              
+  ...icContent.tsx |       0 |        0 |       0 |       0 | 1-133             
+  ...onSidebar.tsx |       0 |        0 |       0 |       0 | 1-296             
+  ...ationTabs.tsx |       0 |        0 |       0 |       0 | 1-37              
+  Wrapper.tsx      |       0 |      100 |     100 |       0 | 2-28              
+  index.tsx        |       0 |        0 |       0 |       0 | 1-5               
+ ...s/MediaLibrary |       0 |        0 |       0 |       0 |                   
+  Breadcrumbs.tsx  |       0 |        0 |       0 |       0 | 1-75              
+  ...ctionPill.tsx |       0 |        0 |       0 |       0 | 1-66              
+  index.tsx        |       0 |        0 |       0 |       0 | 1-2               
+ ...s/Groups/Modal |       0 |       25 |      25 |       0 |                   
+  Alert.tsx        |       0 |        0 |       0 |       0 | 1-48              
+  Confirmation.tsx |       0 |        0 |       0 |       0 | 1-106             
+  Modal.tsx        |       0 |      100 |     100 |       0 | 2-50              
+  index.tsx        |       0 |        0 |       0 |       0 | 1-3               
+ ...ups/Navigation |       0 |        0 |       0 |       0 |                   
+  IconLinkFull.tsx |       0 |        0 |       0 |       0 | 1-141             
+  index.tsx        |       0 |        0 |       0 |       0 | 1                 
+ ...ps/PageBuilder |       0 |       10 |      10 |       0 |                   
+  ...derBricks.tsx |       0 |        0 |       0 |       0 | 1-311             
+  ...eudoBrick.tsx |       0 |        0 |       0 |       0 | 1-59              
+  ...ntActions.tsx |       0 |        0 |       0 |       0 | 1-81              
+  FixedBricks.tsx  |       0 |        0 |       0 |       0 | 1-114             
+  HeaderBar.tsx    |       0 |        0 |       0 |       0 | 1-293             
+  Modals.tsx       |       0 |      100 |     100 |       0 | 2-58              
+  ...seTrigger.tsx |       0 |        0 |       0 |       0 | 1-156             
+  ...nsSidebar.tsx |       0 |        0 |       0 |       0 | 1-120             
+  ViewSelector.tsx |       0 |        0 |       0 |       0 | 1-154             
+  index.tsx        |       0 |        0 |       0 |       0 | 1-6               
+ ...s/Groups/Panel |       0 |        0 |       0 |       0 |                   
+  BottomPanel.tsx  |       0 |        0 |       0 |       0 | 1-324             
+  Panel.tsx        |       0 |        0 |       0 |       0 | 1-320             
+  index.tsx        |       0 |        0 |       0 |       0 | 1-2               
+ ...s/Groups/Query |       0 |        0 |       0 |       0 |                   
+  Filter.tsx       |       0 |        0 |       0 |       0 | 1-279             
+  Pagination.tsx   |       0 |        0 |       0 |       0 | 1-98              
+  PerPage.tsx      |       0 |        0 |       0 |       0 | 1-77              
+  Row.tsx          |       0 |        0 |       0 |       0 | 1-137             
+  ...agination.tsx |       0 |        0 |       0 |       0 | 1-85              
+  Sort.tsx         |       0 |        0 |       0 |       0 | 1-119             
+  index.tsx        |       0 |        0 |       0 |       0 | 1-6               
+ ...s/Groups/Table |       0 |        0 |       0 |       0 |                   
+  ColumnToggle.tsx |       0 |        0 |       0 |       0 | 1-55              
+  SelectAction.tsx |       0 |        0 |       0 |       0 | 1-179             
+  Table.tsx        |       0 |        0 |       0 |       0 | 1-269             
+  Td.tsx           |       0 |        0 |       0 |       0 | 1-49              
+  Th.tsx           |       0 |        0 |       0 |       0 | 1-134             
+  Tr.tsx           |       0 |        0 |       0 |       0 | 1-93              
+  index.tsx        |       0 |        0 |       0 |       0 | 1-6               
+ ...ponents/Modals |       0 |        0 |       0 |       0 |                   
+  ...tionGuard.tsx |       0 |        0 |       0 |       0 | 1-105             
+ .../Modals/Bricks |       0 |        0 |       0 |       0 |                   
+  AddBrick.tsx     |       0 |        0 |       0 |       0 | 1-172             
+  ImagePreview.tsx |       0 |        0 |       0 |       0 | 1-58              
+ ...ntIntegrations |       0 |        0 |       0 |       0 |                   
+  CopyAPIKey.tsx   |       0 |        0 |       0 |       0 | 1-36              
+  ...tegration.tsx |       0 |        0 |       0 |       0 | 1-61              
+  ...ateAPIKey.tsx |       0 |        0 |       0 |       0 | 1-61              
+ ...ls/CustomField |       0 |        0 |       0 |       0 |                   
+  LinkSelect.tsx   |       0 |        0 |       0 |       0 | 1-125             
+ ...dals/Documents |       0 |        0 |       0 |       0 |                   
+  ...eDocument.tsx |       0 |        0 |       0 |       0 | 1-78              
+  ...rmanently.tsx |       0 |        0 |       0 |       0 | 1-75              
+  ...entSelect.tsx |       0 |        0 |       0 |       0 | 1-283             
+  ...teToDraft.tsx |       0 |        0 |       0 |       0 | 1-85              
+  ...hDocument.tsx |       0 |        0 |       0 |       0 | 1-90              
+  ...eDocument.tsx |       0 |        0 |       0 |       0 | 1-63              
+ ...s/Modals/Email |       0 |        0 |       0 |       0 |                   
+  DeleteEmail.tsx  |       0 |        0 |       0 |       0 | 1-55              
+  ResendEmail.tsx  |       0 |        0 |       0 |       0 | 1-56              
+ ...s/Modals/Media |       0 |        0 |       0 |       0 |                   
+  ...sedImages.tsx |       0 |        0 |       0 |       0 | 1-52              
+  ...sedImages.tsx |       0 |        0 |       0 |       0 | 1-55              
+  ...reLinkURL.tsx |       0 |        0 |       0 |       0 | 1-63              
+  ...hareLinks.tsx |       0 |        0 |       0 |       0 | 1-55              
+  ...nksSystem.tsx |       0 |        0 |       0 |       0 | 1-52              
+  DeleteMedia.tsx  |       0 |        0 |       0 |       0 | 1-55              
+  ...ediaBatch.tsx |       0 |        0 |       0 |       0 | 1-91              
+  ...rmanently.tsx |       0 |        0 |       0 |       0 | 1-57              
+  ...ShareLink.tsx |       0 |        0 |       0 |       0 | 1-56              
+  MediaSelect.tsx  |       0 |        0 |       0 |       0 | 1-288             
+  MoveToFolder.tsx |       0 |        0 |       0 |       0 | 1-98              
+  RestoreMedia.tsx |       0 |        0 |       0 |       0 | 1-58              
+ ...ts/Modals/Role |       0 |        0 |       0 |       0 |                   
+  DeleteRole.tsx   |       0 |        0 |       0 |       0 | 1-55              
+ .../Modals/System |       0 |        0 |       0 |       0 |                   
+  ClearCache.tsx   |       0 |        0 |       0 |       0 | 1-50              
+ ...ts/Modals/User |       0 |        0 |       0 |       0 |                   
+  DeleteUser.tsx   |       0 |        0 |       0 |       0 | 1-55              
+  ...rmanently.tsx |       0 |        0 |       0 |       0 | 1-57              
+  ...nvitation.tsx |       0 |        0 |       0 |       0 | 1-53              
+  RestoreUser.tsx  |       0 |        0 |       0 |       0 | 1-63              
+  ...wordReset.tsx |       0 |        0 |       0 |       0 | 1-59              
+  ...ePassword.tsx |       0 |        0 |       0 |       0 | 1-119             
+ ...ntIntegrations |       0 |        0 |       0 |       0 |                   
+  ...tionPanel.tsx |       0 |        0 |       0 |       0 | 1-221             
+ ...s/Panels/Email |       0 |        0 |       0 |       0 |                   
+  ...mailPanel.tsx |       0 |        0 |       0 |       0 | 1-199             
+ ...nts/Panels/Job |       0 |        0 |       0 |       0 |                   
+  ViewJobPanel.tsx |       0 |        0 |       0 |       0 | 1-138             
+ ...s/Panels/Media |       0 |        0 |       0 |       0 |                   
+  ...lderPanel.tsx |       0 |        0 |       0 |       0 | 1-145             
+  ...ediaPanel.tsx |       0 |        0 |       0 |       0 | 1-399             
+  ...lderPanel.tsx |       0 |        0 |       0 |       0 | 1-152             
+  ...LinkPanel.tsx |       0 |        0 |       0 |       0 | 1-300             
+  ...ediaPanel.tsx |       0 |        0 |       0 |       0 | 1-226             
+  ...inksPanel.tsx |       0 |        0 |       0 |       0 | 1-325             
+ ...ts/Panels/Role |       0 |        0 |       0 |       0 |                   
+  ...RolePanel.tsx |       0 |        0 |       0 |       0 | 1-271             
+ ...ts/Panels/User |       0 |        0 |       0 |       0 |                   
+  ...UserPanel.tsx |       0 |        0 |       0 |       0 | 1-203             
+  ...UserPanel.tsx |       0 |        0 |       0 |       0 | 1-256             
+  ...ginsPanel.tsx |       0 |        0 |       0 |       0 | 1-247             
+  ...UserPanel.tsx |       0 |        0 |       0 |       0 | 1-199             
+ ...nents/Partials |       0 |    21.21 |   21.21 |       0 |                   
+  ...nDropdown.tsx |       0 |        0 |       0 |       0 | 1-158             
+  AspectRatio.tsx  |       0 |        0 |       0 |       0 | 1-29              
+  ...oviderRow.tsx |       0 |      100 |     100 |       0 | 2-112             
+  BrickPreview.tsx |       0 |      100 |     100 |       0 | 2-49              
+  Button.tsx       |       0 |        0 |       0 |       0 | 1-106             
+  ClickToCopy.tsx  |       0 |        0 |       0 |       0 | 1-51              
+  ...rationRow.tsx |       0 |        0 |       0 |       0 | 1-90              
+  ...aleSelect.tsx |       0 |        0 |       0 |       0 | 1-110             
+  CopyInput.tsx    |       0 |        0 |       0 |       0 | 1-59              
+  CustomToast.tsx  |       0 |        0 |       0 |       0 | 1-119             
+  DateText.tsx     |       0 |        0 |       0 |       0 | 1-29              
+  ...nceButton.tsx |       0 |        0 |       0 |       0 | 1-53              
+  DetailsList.tsx  |       0 |        0 |       0 |       0 | 1-75              
+  DragDrop.tsx     |       0 |        0 |       0 |       0 | 1-150             
+  ...wnContent.tsx |       0 |        0 |       0 |       0 | 1-45              
+  ErrorBlock.tsx   |       0 |        0 |       0 |       0 | 1-59              
+  ErrorMessage.tsx |       0 |        0 |       0 |       0 | 1-40              
+  ...dTypeIcon.tsx |       0 |        0 |       0 |       0 | 1-56              
+  ...geLoading.tsx |       0 |      100 |     100 |       0 | 2-14              
+  Image.tsx        |       0 |      100 |     100 |       0 | 2-32              
+  JSONPreview.tsx  |       0 |      100 |     100 |       0 | 8-18              
+  Link.tsx         |       0 |        0 |       0 |       0 | 1-78              
+  Loading.tsx      |       0 |        0 |       0 |       0 | 1-13              
+  MediaPreview.tsx |       0 |        0 |       0 |       0 | 1-103             
+  ...riesBlock.tsx |       0 |        0 |       0 |       0 | 1-58              
+  Pill.tsx         |       0 |        0 |       0 |       0 | 1-36              
+  ...avigation.tsx |       0 |        0 |       0 |       0 | 1-48              
+  ProgressBar.tsx  |       0 |        0 |       0 |       0 | 1-61              
+  ...derButton.tsx |       0 |      100 |     100 |       0 | 2-39              
+  Spinner.tsx      |       0 |        0 |       0 |       0 | 1-43              
+  Tooltip.tsx      |       0 |        0 |       0 |       0 | 1-32              
+  ...ipContent.tsx |       0 |      100 |     100 |       0 | 2-17              
+  UserDisplay.tsx  |       0 |        0 |       0 |       0 | 1-62              
+ .../SearchSelects |       0 |        0 |       0 |       0 |                   
+  ...rchSelect.tsx |       0 |        0 |       0 |       0 | 1-78              
+ ...Tables/Columns |       0 |    42.85 |   42.85 |       0 |                   
+  ...onMenuCol.tsx |       0 |        0 |       0 |       0 | 1-45              
+  AuthorCol.tsx    |       0 |        0 |       0 |       0 | 1-42              
+  CopyRow.tsx      |       0 |      100 |     100 |       0 | 3-52              
+  DateCol.tsx      |       0 |      100 |     100 |       0 | 2-28              
+  PillCol.tsx      |       0 |        0 |       0 |       0 | 1-34              
+  SelectCol.tsx    |       0 |        0 |       0 |       0 | 1-54              
+  TextCol.tsx      |       0 |      100 |     100 |       0 | 2-38              
+ ...ts/Tables/Rows |       0 |    22.22 |   22.22 |       0 |                   
+  DocumentRow.tsx  |       0 |        0 |       0 |       0 | 1-154             
+  EmailRow.tsx     |       0 |        0 |       0 |       0 | 1-109             
+  ...actionRow.tsx |       0 |      100 |     100 |       0 | 4-84              
+  JobRow.tsx       |       0 |        0 |       0 |       0 | 1-91              
+  LoadingRow.tsx   |       0 |        0 |       0 |       0 | 1-55              
+  RoleRow.tsx      |       0 |        0 |       0 |       0 | 1-64              
+  ShareLinkRow.tsx |       0 |        0 |       0 |       0 | 1-87              
+  UserLoginRow.tsx |       0 |      100 |     100 |       0 | 4-60              
+  UserRow.tsx      |       0 |        0 |       0 |       0 | 1-179             
+ admin/src/guards  |       0 |    66.66 |   66.66 |       0 |                   
+  AuthLocked.tsx   |       0 |      100 |     100 |       0 | 7-13              
+  ...enticated.tsx |       0 |      100 |     100 |       0 | 8-14              
+  Permission.tsx   |       0 |        0 |       0 |       0 | 1-26              
+ admin/src/hooks   |       0 |    33.33 |   33.33 |       0 |                   
+  ...servation.tsx |       0 |      100 |     100 |       0 | 5-40              
+  ...Shortcuts.tsx |       0 |        0 |       0 |       0 | 1-76              
+  useRowTarget.tsx |       0 |      100 |     100 |       0 | 5-33              
+  ...sLocation.tsx |       0 |        0 |       0 |       0 | 1-518             
+  ...ramsState.tsx |       0 |        0 |       0 |       0 | 1-201             
+  ...ileUpload.tsx |       0 |        0 |       0 |       0 | 1-177             
+ .../hooks/actions |       0 |    66.66 |   66.66 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-2               
+  ...eateMedia.tsx |       0 |      100 |     100 |       0 | 2-172             
+  ...dateMedia.tsx |       0 |      100 |     100 |       0 | 2-177             
+ ...hooks/document |       0 |        0 |       0 |       0 |                   
+  ...tAutoSave.tsx |       0 |        0 |       0 |       0 | 1-49              
+  ...Mutations.tsx |       0 |        0 |       0 |       0 | 1-186             
+  ...mentState.tsx |       0 |        0 |       0 |       0 | 1-86              
+  ...ntUIState.tsx |       0 |        0 |       0 |       0 | 1-294             
+  ...Mutations.tsx |       0 |        0 |       0 |       0 | 1-55              
+  ...ionsState.tsx |       0 |        0 |       0 |       0 | 1-224             
+ admin/src/layouts |       0 |        0 |       0 |       0 |                   
+  AuthRoutes.tsx   |       0 |        0 |       0 |       0 | 1-48              
+  Main.tsx         |       0 |        0 |       0 |       0 | 1-86              
+ admin/src/routes  |       0 |     12.5 |    12.5 |       0 |                   
+  ...nvitation.tsx |       0 |        0 |       0 |       0 | 1-186             
+  Account.tsx      |       0 |        0 |       0 |       0 | 1-46              
+  Components.tsx   |       0 |      100 |     100 |       0 | 2-522             
+  Dashboard.tsx    |       0 |        0 |       0 |       0 | 1-33              
+  ...tPassword.tsx |       0 |        0 |       0 |       0 | 1-76              
+  Login.tsx        |       0 |        0 |       0 |       0 | 1-168             
+  ...tPassword.tsx |       0 |        0 |       0 |       0 | 1-102             
+  Setup.tsx        |       0 |        0 |       0 |       0 | 1-72              
+ ...es/Collections |       0 |        0 |       0 |       0 |                   
+  List.tsx         |       0 |        0 |       0 |       0 | 1-37              
+ ...ions/Documents |       0 |        0 |       0 |       0 |                   
+  List.tsx         |       0 |        0 |       0 |       0 | 1-229             
+  PageBuilder.tsx  |       0 |        0 |       0 |       0 | 1-193             
+  Revisions.tsx    |       0 |        0 |       0 |       0 | 1-196             
+ .../routes/Emails |       0 |        0 |       0 |       0 |                   
+  List.tsx         |       0 |        0 |       0 |       0 | 1-175             
+ ...c/routes/Media |       0 |        0 |       0 |       0 |                   
+  List.tsx         |       0 |        0 |       0 |       0 | 1-289             
+ ...c/routes/Roles |       0 |        0 |       0 |       0 |                   
+  List.tsx         |       0 |        0 |       0 |       0 | 1-107             
+ ...ntIntegrations |       0 |        0 |       0 |       0 |                   
+  View.tsx         |       0 |        0 |       0 |       0 | 1-197             
+ ...System/License |       0 |        0 |       0 |       0 |                   
+  View.tsx         |       0 |        0 |       0 |       0 | 1-28              
+ ...ystem/Overview |       0 |        0 |       0 |       0 |                   
+  View.tsx         |       0 |        0 |       0 |       0 | 1-254             
+ ...eObservability |       0 |        0 |       0 |       0 |                   
+  View.tsx         |       0 |        0 |       0 |       0 | 1-160             
+ ...c/routes/Users |       0 |        0 |       0 |       0 |                   
+  List.tsx         |       0 |        0 |       0 |       0 | 1-148             
+ ...c/services/api |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-39              
+ ...es/api/account |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-17              
+  ...tPassword.tsx |       0 |        0 |       0 |       0 | 1-50              
+  ...catedUser.tsx |       0 |        0 |       0 |       0 | 1-55              
+  ...tPassword.tsx |       0 |        0 |       0 |       0 | 1-63              
+  ...hProvider.tsx |       0 |        0 |       0 |       0 | 1-40              
+  useUpdateMe.tsx  |       0 |        0 |       0 |       0 | 1-55              
+  ...esetToken.tsx |       0 |        0 |       0 |       0 | 1-41              
+ ...vices/api/auth |       0 |     9.09 |    9.09 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-22              
+  ...nvitation.tsx |       0 |        0 |       0 |       0 | 1-43              
+  useCsrf.tsx      |       0 |        0 |       0 |       0 | 1-50              
+  ...Providers.tsx |       0 |        0 |       0 |       0 | 1-28              
+  ...eProvider.tsx |       0 |      100 |     100 |       0 | 2-46              
+  useLogin.tsx     |       0 |        0 |       0 |       0 | 1-48              
+  useLogout.tsx    |       0 |        0 |       0 |       0 | 1-58              
+  ...reshToken.tsx |       0 |        0 |       0 |       0 | 1-54              
+  useSetup.tsx     |       0 |        0 |       0 |       0 | 1-51              
+  ...pRequired.tsx |       0 |        0 |       0 |       0 | 1-39              
+  ...nvitation.tsx |       0 |        0 |       0 |       0 | 1-38              
+ ...t-integrations |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-16              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-50              
+  ...eteSingle.tsx |       0 |        0 |       0 |       0 | 1-44              
+  useGetAll.tsx    |       0 |        0 |       0 |       0 | 1-35              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-36              
+  ...ateAPIKey.tsx |       0 |        0 |       0 |       0 | 1-46              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-53              
+ ...pi/collections |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-9               
+  useGetAll.tsx    |       0 |        0 |       0 |       0 | 1-34              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-37              
+ .../api/documents |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-31              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-66              
+  ...leVersion.tsx |       0 |        0 |       0 |       0 | 1-67              
+  ...eMultiple.tsx |       0 |        0 |       0 |       0 | 1-49              
+  ...eteSingle.tsx |       0 |        0 |       0 |       0 | 1-46              
+  ...rmanently.tsx |       0 |        0 |       0 |       0 | 1-46              
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-55              
+  ...Revisions.tsx |       0 |        0 |       0 |       0 | 1-46              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-49              
+  ...leVersion.tsx |       0 |        0 |       0 |       0 | 1-45              
+  ...oteSingle.tsx |       0 |        0 |       0 |       0 | 1-54              
+  useRestore.tsx   |       0 |        0 |       0 |       0 | 1-44              
+  ...eRevision.tsx |       0 |        0 |       0 |       0 | 1-47              
+  ...leVersion.tsx |       0 |        0 |       0 |       0 | 1-70              
+ ...ices/api/email |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-13              
+  ...eteSingle.tsx |       0 |        0 |       0 |       0 | 1-42              
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-43              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-36              
+  ...endSingle.tsx |       0 |        0 |       0 |       0 | 1-53              
+ ...vices/api/jobs |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-9               
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-42              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-36              
+ ...es/api/license |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-11              
+  useGetStatus.tsx |       0 |        0 |       0 |       0 | 1-33              
+  useUpdate.tsx    |       0 |        0 |       0 |       0 | 1-41              
+  useVerify.tsx    |       0 |        0 |       0 |       0 | 1-29              
+ ...es/api/locales |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-7               
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-44              
+ ...ices/api/media |       0 |    15.38 |   15.38 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-29              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-55              
+  ...sedImages.tsx |       0 |        0 |       0 |       0 | 1-38              
+  ...leteBatch.tsx |       0 |        0 |       0 |       0 | 1-48              
+  ...sedImages.tsx |       0 |        0 |       0 |       0 | 1-40              
+  ...eteSingle.tsx |       0 |        0 |       0 |       0 | 1-39              
+  ...rmanently.tsx |       0 |        0 |       0 |       0 | 1-40              
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-50              
+  ...signedUrl.tsx |       0 |      100 |     100 |       0 | 2-58              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-36              
+  ...oveFolder.tsx |       0 |        0 |       0 |       0 | 1-47              
+  useRestore.tsx   |       0 |        0 |       0 |       0 | 1-48              
+  ...ateSingle.tsx |       0 |      100 |     100 |       0 | 2-67              
+ .../media-folders |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-13              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-42              
+  ...Hierarchy.tsx |       0 |        0 |       0 |       0 | 1-34              
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-39              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-47              
+ ...ia-share-links |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-19              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-51              
+  ...lForMedia.tsx |       0 |        0 |       0 |       0 | 1-39              
+  ...AllSystem.tsx |       0 |        0 |       0 |       0 | 1-35              
+  ...eteSingle.tsx |       0 |        0 |       0 |       0 | 1-40              
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-43              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-37              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-47              
+ ...pi/permissions |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-6               
+  useGetAll.tsx    |       0 |        0 |       0 |       0 | 1-34              
+ ...ices/api/roles |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-15              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-42              
+  ...eteSingle.tsx |       0 |        0 |       0 |       0 | 1-40              
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-41              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-36              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-51              
+ ...s/api/settings |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-11              
+  useClearKV.tsx   |       0 |        0 |       0 |       0 | 1-34              
+  ...Manifests.tsx |       0 |        0 |       0 |       0 | 1-39              
+  ...tSettings.tsx |       0 |        0 |       0 |       0 | 1-33              
+ ...pi/user-logins |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-7               
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-41              
+ ...ices/api/users |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-23              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-48              
+  ...eteSingle.tsx |       0 |        0 |       0 |       0 | 1-40              
+  ...rmanently.tsx |       0 |        0 |       0 |       0 | 1-40              
+  ...tMultiple.tsx |       0 |        0 |       0 |       0 | 1-43              
+  useGetSingle.tsx |       0 |        0 |       0 |       0 | 1-36              
+  ...nvitation.tsx |       0 |        0 |       0 |       0 | 1-38              
+  useRestore.tsx   |       0 |        0 |       0 |       0 | 1-43              
+  ...hProvider.tsx |       0 |        0 |       0 |       0 | 1-41              
+  ...ateSingle.tsx |       0 |        0 |       0 |       0 | 1-48              
+ admin/src/store   |       0 |        0 |       0 |       0 |                   
+  brickStore.ts    |       0 |        0 |       0 |       0 | 1-515             
+  ...ocaleStore.ts |       0 |        0 |       0 |       0 | 1-54              
+  mediaStore.ts    |       0 |        0 |       0 |       0 | 1-72              
+  pluginStore.ts   |       0 |        0 |       0 |       0 | 1-132             
+  userStore.ts     |       0 |        0 |       0 |       0 | 1-40              
+ ...rc/store/forms |       0 |        0 |       0 |       0 |                   
+  ...electStore.ts |       0 |        0 |       0 |       0 | 1-25              
+  ...FieldStore.ts |       0 |        0 |       0 |       0 | 1-23              
+  ...electStore.ts |       0 |        0 |       0 |       0 | 1-25              
+ admin/src/types   |       0 |        0 |       0 |       0 |                   
+  components.d.ts  |       0 |        0 |       0 |       0 |                   
+  utils.d.ts       |       0 |        0 |       0 |       0 |                   
+ admin/src/utils   |       0 |    68.75 |   68.75 |       0 |                   
+  brick-helpers.ts |       0 |        0 |       0 |       0 | 1-215             
+  date-helpers.ts  |       0 |        0 |       0 |       0 | 1-42              
+  ...e-helpers.tsx |       0 |      100 |     100 |       0 | 2-69              
+  ...r-handling.ts |       0 |        0 |       0 |       0 | 1-42              
+  error-helpers.ts |       0 |      100 |     100 |       0 | 4-30              
+  helpers.ts       |       0 |      100 |     100 |       0 | 2-239             
+  is-mac.ts        |       0 |      100 |     100 |       0 | 4-8               
+  login-route.ts   |       0 |        0 |       0 |       0 | 1-18              
+  ...o-formdata.ts |       0 |      100 |     100 |       0 | 2-28              
+  ...n-manifest.ts |       0 |      100 |     100 |       0 | 2-102             
+  query-builder.ts |       0 |      100 |     100 |       0 | 14-65             
+  request.ts       |       0 |      100 |     100 |       0 | 2-117             
+  route-helpers.ts |       0 |      100 |     100 |       0 | 3-16              
+  ...ce-helpers.ts |       0 |      100 |     100 |       0 | 2-143             
+  spawn-toast.tsx  |       0 |        0 |       0 |       0 | 1-28              
+  ...te-helpers.ts |       0 |      100 |     100 |       0 | 13-220            
+ auth-github/src   |       0 |        0 |       0 |       0 |                   
+  constants.ts     |       0 |        0 |       0 |       0 | 1-3               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-44              
+ ...thub/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ auth-google/src   |       0 |        0 |       0 |       0 |                   
+  constants.ts     |       0 |        0 |       0 |       0 | 1-3               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-45              
+ ...ogle/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...-microsoft/src |       0 |        0 |       0 |       0 |                   
+  constants.ts     |       0 |        0 |       0 |       0 | 1-3               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-46              
+ ...soft/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...re-adapter/src |       0 |       50 |      50 |       0 |                   
+  adapter.ts       |       0 |        0 |       0 |       0 | 1-306             
+  constants.ts     |       0 |        0 |       0 |       0 | 1-9               
+  define-config.ts |       0 |      100 |     100 |       0 | 15-34             
+  index.ts         |       0 |        0 |       0 |       0 | 1-3               
+  ...me-context.ts |       0 |      100 |     100 |       0 | 5-64              
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...r/src/services |       0 |       50 |      50 |       0 |                   
+  ...rker-entry.ts |       0 |      100 |     100 |       0 | 9-67              
+  ...er-entries.ts |       0 |        0 |       0 |       0 | 1-41              
+  ...rker-entry.ts |       0 |      100 |     100 |       0 | 7-139             
+  ...er-entries.ts |       0 |        0 |       0 |       0 | 1-29              
+ core/src          |      60 |        0 |       0 |      60 |                   
+  api.ts           |     100 |      100 |     100 |     100 |                   
+  helpers.ts       |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 | 1-20              
+ .../src/constants |     100 |      100 |     100 |     100 |                   
+  constants.ts     |     100 |      100 |     100 |     100 |                   
+  ...ult-config.ts |     100 |      100 |     100 |     100 |                   
+  ...-constants.ts |     100 |      100 |     100 |     100 |                   
+ ...auth-providers |   57.62 |      100 |   33.33 |   57.62 |                   
+  get-adapter.ts   |   16.66 |      100 |       0 |   16.66 | 10-29             
+  ...-providers.ts |   28.57 |      100 |       0 |   28.57 | 7-11              
+  schema.ts        |     100 |      100 |     100 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...iders/adapters |    3.42 |      100 |       0 |    3.42 |                   
+  oidc-adapter.ts  |    3.42 |      100 |       0 |    3.42 | 8-190             
+ ...viders/helpers |   18.51 |      100 |       0 |   18.51 |                   
+  ...direct-url.ts |      50 |      100 |       0 |      50 | 5-6               
+  ...nfo-mapper.ts |   13.04 |      100 |       0 |   13.04 | 8-33              
+ .../libs/builders |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-3               
+ .../brick-builder |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  schema.ts        |     100 |      100 |     100 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...ection-builder |   91.47 |     97.5 |   88.88 |   91.47 |                   
+  index.ts         |   89.18 |    97.36 |    87.5 |   89.18 | 159-167,169-177   
+  schema.ts        |      96 |      100 |     100 |      96 | 48-50             
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ .../field-builder |     100 |    95.34 |     100 |     100 |                   
+  index.ts         |     100 |    95.23 |     100 |     100 | 105,113           
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ core/src/libs/cli |   34.22 |    46.66 |   26.66 |   34.22 |                   
+  index.ts         |       0 |      100 |     100 |       0 | 2-75              
+  logger.ts        |   46.95 |    42.85 |   21.42 |   46.95 | ...64-172,175-196 
+ ...s/cli/commands |       0 |        0 |       0 |       0 |                   
+  build.ts         |       0 |        0 |       0 |       0 | 1-283             
+  dev.ts           |       0 |        0 |       0 |       0 | 1-270             
+  migrate-fresh.ts |       0 |        0 |       0 |       0 | 1-84              
+  migrate-reset.ts |       0 |        0 |       0 |       0 | 1-131             
+  ...e-rollback.ts |       0 |        0 |       0 |       0 | 1-191             
+  migrate.ts       |       0 |        0 |       0 |       0 | 1-329             
+  serve.ts         |       0 |        0 |       0 |       0 | 1-177             
+ ...s/cli/services |    1.24 |       40 |   33.33 |    1.24 |                   
+  ...utdir-size.ts |       0 |        0 |       0 |       0 | 1-24              
+  ...lic-assets.ts |       0 |        0 |       0 |       0 | 1-163             
+  ...uild-paths.ts |   14.28 |      100 |       0 |   14.28 | 10-43             
+  ...-artifacts.ts |       0 |      100 |     100 |       0 | 8-115             
+  ...-available.ts |       0 |        0 |       0 |       0 | 1-174             
+  ...e-env-vars.ts |       0 |      100 |     100 |       0 | 2-27              
+ ...ibs/collection |   10.14 |      100 |       0 |   10.14 |                   
+  ...ion-status.ts |    9.37 |      100 |       0 |    9.37 | 25-94             
+  ...ollections.ts |   10.81 |      100 |       0 |   10.81 | 29-108            
+ ...ection/helpers |   31.34 |    81.81 |      20 |   31.34 |                   
+  ...table-name.ts |   70.49 |       80 |     100 |   70.49 | 38-46,56-64       
+  ...n-mod-type.ts |   16.66 |      100 |       0 |   16.66 | 14-24             
+  ...lues-equal.ts |     5.4 |      100 |       0 |     5.4 | 5-52              
+  ...ection-key.ts |      50 |      100 |       0 |      50 | 9-12              
+  ...keys-equal.ts |   15.38 |      100 |       0 |   15.38 | 8-22              
+  ...e-priority.ts |   30.76 |      100 |       0 |   30.76 | 22-53             
+  ...table-type.ts |     9.8 |      100 |       0 |     9.8 | 8-57              
+  ...ise-column.ts |    8.69 |      100 |       0 |    8.69 | 8-28              
+  ...olumn-name.ts |     100 |      100 |     100 |     100 |                   
+  ...umn-prefix.ts |      75 |      100 |       0 |      75 | 7                 
+ ...tion/migration |    8.73 |      100 |    7.69 |    8.73 |                   
+  ...migrations.ts |   11.53 |      100 |       0 |   11.53 | 18-70             
+  cache.ts         |   33.33 |      100 |       0 |   33.33 | 14-17,22-24,27-28 
+  ...mn-builder.ts |    3.75 |      100 |       0 |    3.75 | ...1,79-84,94-128 
+  ...able-query.ts |   18.18 |      100 |       0 |   18.18 | 15-45             
+  ...olumn-mods.ts |    8.69 |      100 |       0 |    8.69 | 11-58             
+  ...ation-plan.ts |    6.75 |      100 |       0 |    6.75 | 28-186            
+  ...able-query.ts |    5.82 |      100 |       0 |    5.82 | 19-125            
+  ...able-query.ts |   16.66 |      100 |       0 |   16.66 | 14-40             
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...lection/schema |   86.11 |       30 |     100 |   86.11 |                   
+  infer-schema.ts  |   86.11 |    22.22 |     100 |   86.11 | 81-90             
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...on/schema/live |   11.79 |      100 |       0 |   11.79 |                   
+  ...ll-schemas.ts |   16.66 |      100 |       0 |   16.66 | 18-60             
+  cache.ts         |   26.66 |      100 |       0 |   26.66 | 8-11,14-18,21-22  
+  ...ation-plan.ts |     5.4 |      100 |       0 |     5.4 | 9-53              
+  get-schema.ts    |   13.46 |      100 |       0 |   13.46 | 22-76             
+  ...ma-filters.ts |    8.43 |      100 |       0 |    8.43 | ...,79-93,102-137 
+ .../schema/tables |   96.01 |    59.25 |     100 |   96.01 |                   
+  ...ment-table.ts |     100 |       50 |     100 |     100 | 21                
+  fields-table.ts  |   92.12 |    63.63 |     100 |   92.12 | ...77-181,219-229 
+  ...ions-table.ts |     100 |    33.33 |     100 |     100 | 25-26             
+ ...rc/libs/config |   96.79 |    84.61 |      50 |   96.79 |                   
+  config-schema.ts |     100 |      100 |   14.28 |     100 |                   
+  ...onfig-path.ts |     100 |      100 |     100 |     100 |                   
+  ...onfig-file.ts |     100 |       50 |     100 |     100 | 26-50             
+  merge-config.ts  |     100 |      100 |     100 |     100 |                   
+  ...ess-config.ts |   85.89 |    77.77 |     100 |   85.89 | 29-30,91-100      
+ .../config/checks |   71.11 |    68.18 |   83.33 |   71.11 |                   
+  ...ilder-keys.ts |     100 |    83.33 |     100 |     100 | 7                 
+  ...field-keys.ts |     100 |      100 |     100 |     100 |                   
+  check-field.ts   |   43.47 |       50 |     100 |   43.47 | 10-24             
+  check-locales.ts |   65.21 |       50 |     100 |   65.21 | ...10,16-17,24-25 
+  ...in-version.ts |     100 |    66.66 |     100 |     100 | 12                
+  ...ater-depth.ts |   18.18 |      100 |       0 |   18.18 | 5-22              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ .../custom-fields |    92.1 |    84.61 |   91.66 |    92.1 |                   
+  ...-field-map.ts |     100 |      100 |     100 |     100 |                   
+  custom-field.ts  |   82.55 |    83.67 |   88.88 |   82.55 | 49-53,75-76,83-90 
+  schema.ts        |     100 |      100 |     100 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...-fields/fields |   68.89 |     98.6 |   55.85 |   68.89 |                   
+  checkbox.ts      |   70.23 |      100 |   66.66 |   70.23 | 47-65,67-70,95-96 
+  color.ts         |   67.64 |      100 |   57.14 |   67.64 | 42-57,59-62,78-79 
+  datetime.ts      |   71.42 |      100 |   57.14 |   71.42 | 44-59,61-64,87-88 
+  document.ts      |      50 |    92.85 |      50 |      50 | ...80-111,135-136 
+  json.ts          |   69.01 |      100 |   57.14 |   69.01 | 42-57,59-62,80-81 
+  link.ts          |   73.91 |      100 |   57.14 |   73.91 | ...,65-70,103-104 
+  media.ts         |   63.23 |    92.85 |      50 |   63.23 | ...92-196,228-229 
+  number.ts        |   67.64 |      100 |   57.14 |   67.64 | 42-57,59-62,77-78 
+  repeater.ts      |   44.59 |      100 |   28.57 |   44.59 | ...77,79-80,82-83 
+  select.ts        |      75 |      100 |    62.5 |      75 | 45-59,61-64,95-96 
+  tab.ts           |   62.22 |      100 |   28.57 |   62.22 | ...46,48-49,51-52 
+  text.ts          |   91.17 |      100 |   71.42 |   91.17 | 59-62,77-78       
+  textarea.ts      |   67.64 |      100 |   57.14 |   67.64 | 42-57,59-62,77-78 
+  user.ts          |   84.52 |    96.29 |    62.5 |   84.52 | 64-65,67-75,97-98 
+  wysiwyg.ts       |    91.3 |      100 |   71.42 |    91.3 | 59-62,79-80       
+ ...m-fields/utils |   96.87 |    77.77 |     100 |   96.87 |                   
+  key-to-title.ts  |     100 |    66.66 |     100 |     100 | 2                 
+  ...safe-parse.ts |   95.65 |    83.33 |     100 |   95.65 | 31                
+ ...ibs/db-adapter |       0 |    33.33 |   33.33 |       0 |                   
+  adapter-base.ts  |       0 |        0 |       0 |       0 | 1-257             
+  index.ts         |       0 |        0 |       0 |       0 | 1                 
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...kysely-helpers |       0 |        0 |       0 |       0 |                   
+  values.ts        |       0 |        0 |       0 |       0 | 1-39              
+ .../email-adapter |   12.82 |       50 |   33.33 |   12.82 |                   
+  get-adapter.ts   |   13.88 |      100 |       0 |   13.88 | 11-47             
+  index.ts         |       0 |        0 |       0 |       0 | 1-4               
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...apter/adapters |   11.11 |      100 |       0 |   11.11 |                   
+  passthrough.ts   |   11.11 |      100 |       0 |   11.11 | 4-19              
+ ...pter/templates |   14.54 |     87.5 |   33.33 |   14.54 |                   
+  ...-templates.ts |       0 |        0 |       0 |       0 | 1-118             
+  ...s-template.ts |   13.79 |      100 |       0 |   13.79 | 22-75             
+  ...plate-vars.ts |     100 |      100 |     100 |     100 |                   
+ ...ibs/formatters |   16.15 |      100 |       0 |   16.15 |                   
+  ...tegrations.ts |      28 |      100 |       0 |      28 | 17-23,27-37       
+  collections.ts   |    12.5 |      100 |       0 |    12.5 | 16-24,38-70,73-84 
+  ...ent-bricks.ts |    8.66 |      100 |       0 |    8.66 | ...97-132,146-188 
+  ...ent-fields.ts |    6.95 |      100 |       0 |    6.95 | ...10-269,275-294 
+  ...t-versions.ts |   13.72 |      100 |       0 |   13.72 | 13-20,25-64       
+  documents.ts     |    8.04 |      100 |       0 |    8.04 | ...01-226,233-262 
+  emails.ts        |      14 |      100 |       0 |      14 | 39-45,50-85       
+  index.ts         |   49.29 |      100 |       0 |   49.29 | ...50,53-55,59-80 
+  jobs.ts          |   20.58 |      100 |       0 |   20.58 | 27-32,35-55       
+  license.ts       |   38.88 |      100 |       0 |   38.88 | 14-21,24-26       
+  locales.ts       |   21.21 |      100 |       0 |   21.21 | 9-25,31-39        
+  media-folders.ts |   17.64 |      100 |       0 |   17.64 | 28-36,40-46,50-76 
+  ...hare-links.ts |   26.66 |      100 |       0 |   26.66 | 22-24,29-48       
+  media.ts         |   13.88 |      100 |       0 |   13.88 | ...3,59-67,73-112 
+  options.ts       |   38.88 |      100 |       0 |   38.88 | 7-9,13-20         
+  permissions.ts   |   57.14 |      100 |       0 |   57.14 | 5-7               
+  roles.ts         |   25.92 |      100 |       0 |   25.92 | 19-24,27-40       
+  settings.ts      |    14.7 |      100 |       0 |    14.7 | 16-44             
+  user-logins.ts   |   29.16 |      100 |       0 |   29.16 | 15-20,24-34       
+  ...ermissions.ts |   17.39 |      100 |       0 |   17.39 | 15-36             
+  users.ts         |   14.28 |      100 |       0 |   14.28 | 43-50,55-112      
+ .../src/libs/http |    6.44 |      100 |       0 |    6.44 |                   
+  app.ts           |    6.44 |      100 |       0 |    6.44 | 44-337            
+ ...ollers/account |   50.81 |      100 |     100 |   50.81 |                   
+  get-me.ts        |   48.14 |      100 |     100 |   48.14 | 28-56             
+  ...t-password.ts |   55.17 |      100 |     100 |   55.17 | 37-65             
+  ...t-password.ts |   54.41 |      100 |     100 |   54.41 | 42-75             
+  ...h-provider.ts |   51.51 |      100 |     100 |   51.51 | 38-71             
+  update-me.ts     |   45.07 |      100 |     100 |   45.07 | 37-78             
+  ...t-password.ts |   50.98 |      100 |     100 |   50.98 | 30-57             
+ ...ntrollers/auth |   52.09 |      100 |     100 |   52.09 |                   
+  get-csrf.ts      |   67.64 |      100 |     100 |   67.64 | 25-36             
+  login.ts         |   33.33 |      100 |     100 |   33.33 | 36-102            
+  logout.ts        |   71.05 |      100 |     100 |   71.05 | 31-43             
+  ...p-required.ts |   53.19 |      100 |     100 |   53.19 | 27-49             
+  setup.ts         |    49.2 |      100 |     100 |    49.2 | 36-69             
+  token.ts         |   69.44 |      100 |     100 |   69.44 | 29-42             
+ ...uth/invitation |      52 |      100 |     100 |      52 |                   
+  ...invitation.ts |   54.68 |      100 |     100 |   54.68 | 40-71             
+  ...invitation.ts |   49.18 |      100 |     100 |   49.18 | 34-66             
+ ...auth/providers |   34.18 |      100 |     100 |   34.18 |                   
+  get-providers.ts |   48.97 |      100 |     100 |   48.97 | 26-51             
+  initiate.ts      |   53.24 |      100 |     100 |   53.24 | 46-83             
+  oidc-callback.ts |   19.46 |      100 |     100 |   19.46 | 36-161            
+ ...ontrollers/cdn |   63.45 |      100 |     100 |   63.45 |                   
+  stream-single.ts |   63.45 |      100 |     100 |   63.45 | 133-210           
+ ...t-integrations |   54.49 |      100 |     100 |   54.49 |                   
+  create-single.ts |   54.05 |      100 |     100 |   54.05 | 45-80             
+  delete-single.ts |   57.81 |      100 |     100 |   57.81 | 41-69             
+  get-all.ts       |   54.16 |      100 |     100 |   54.16 | 27-49             
+  get-single.ts    |      50 |      100 |     100 |      50 | 35-67             
+  ...erate-keys.ts |   54.92 |      100 |     100 |   54.92 | 43-76             
+  update-single.ts |   55.71 |      100 |     100 |   55.71 | 44-76             
+ ...rs/collections |   50.89 |      100 |     100 |   50.89 |                   
+  get-all.ts       |   49.05 |      100 |     100 |   49.05 | 27-54             
+  get-single.ts    |   52.54 |      100 |     100 |   52.54 | 35-64             
+ ...lers/documents |   53.46 |      100 |     100 |   53.46 |                   
+  create-single.ts |   54.66 |      100 |     100 |   54.66 | 46-81             
+  ...te-version.ts |   54.54 |      100 |     100 |   54.54 | 47-83             
+  ...e-multiple.ts |   56.52 |      100 |     100 |   56.52 | 44-75             
+  ...ermanently.ts |   58.33 |      100 |     100 |   58.33 | 46-77             
+  delete-single.ts |   59.37 |      100 |     100 |   59.37 | 42-69             
+  ...-revisions.ts |   44.87 |      100 |     100 |   44.87 | 39-84             
+  get-multiple.ts  |      48 |      100 |     100 |      48 | 40-80             
+  get-single.ts    |   47.88 |      100 |     100 |   47.88 | 39-78             
+  ...te-version.ts |   54.79 |      100 |     100 |   54.79 | 45-79             
+  ...e-multiple.ts |   58.73 |      100 |     100 |   58.73 | 42-69             
+  ...e-revision.ts |   54.41 |      100 |     100 |   54.41 | 41-73             
+  ...te-version.ts |   51.85 |      100 |     100 |   51.85 | 47-87             
+ ...cuments/client |   50.64 |      100 |     100 |   50.64 |                   
+  get-multiple.ts  |   48.78 |      100 |     100 |   48.78 | 53-96             
+  get-single.ts    |   52.77 |      100 |     100 |   52.77 | 51-86             
+ ...trollers/email |   55.17 |      100 |     100 |   55.17 |                   
+  delete-single.ts |   59.32 |      100 |     100 |   59.32 | 39-64             
+  get-multiple.ts  |      50 |      100 |     100 |      50 | 40-77             
+  get-single.ts    |   53.96 |      100 |     100 |   53.96 | 38-68             
+  resend-single.ts |    58.2 |      100 |     100 |    58.2 | 43-72             
+ ...controllers/fs |   42.02 |      100 |     100 |   42.02 |                   
+  upload-media.ts  |   42.02 |      100 |     100 |   42.02 | 33-75             
+ ...ntrollers/jobs |   52.23 |      100 |     100 |   52.23 |                   
+  get-multiple.ts  |      50 |      100 |     100 |      50 | 40-77             
+  get-single.ts    |   54.83 |      100 |     100 |   54.83 | 38-67             
+ ...ollers/license |   57.33 |      100 |     100 |   57.33 |                   
+  status.ts        |   54.16 |      100 |     100 |   54.16 | 27-49             
+  update.ts        |   57.89 |      100 |     100 |   57.89 | 38-63             
+  verify.ts        |      60 |      100 |     100 |      60 | 31-49             
+ ...ollers/locales |    53.7 |      100 |     100 |    53.7 |                   
+  get-all.ts       |    55.1 |      100 |     100 |    55.1 | 28-50             
+  get-single.ts    |   52.54 |      100 |     100 |   52.54 | 35-64             
+ ...locales/client |   64.51 |      100 |     100 |   64.51 |                   
+  get-all.ts       |   64.51 |      100 |     100 |   64.51 | 44-66             
+ ...trollers/media |   55.84 |      100 |     100 |   55.84 |                   
+  ...-processed.ts |   61.81 |      100 |     100 |   61.81 | 38-59             
+  ...-processed.ts |   58.46 |      100 |     100 |   58.46 | 42-70             
+  create-single.ts |   51.38 |      100 |     100 |   51.38 | 42-78             
+  delete-batch.ts  |   57.81 |      100 |     100 |   57.81 | 41-69             
+  ...ermanently.ts |   57.57 |      100 |     100 |   57.57 | 42-71             
+  delete-single.ts |   59.67 |      100 |     100 |   59.67 | 41-67             
+  get-multiple.ts  |   48.71 |      100 |     100 |   48.71 | 42-83             
+  ...signed-url.ts |   56.52 |      100 |     100 |   56.52 | 44-75             
+  get-single.ts    |   52.54 |      100 |     100 |   52.54 | 35-64             
+  move-folder.ts   |    59.7 |      100 |     100 |    59.7 | 45-73             
+  ...e-multiple.ts |   59.32 |      100 |     100 |   59.32 | 40-65             
+  update-single.ts |   50.63 |      100 |     100 |   50.63 | 45-85             
+ .../media-folders |    53.7 |      100 |     100 |    53.7 |                   
+  create-single.ts |   56.71 |      100 |     100 |   56.71 | 43-73             
+  delete-single.ts |   56.92 |      100 |     100 |   56.92 | 41-70             
+  get-hierarchy.ts |   54.16 |      100 |     100 |   54.16 | 27-49             
+  get-multiple.ts  |   45.83 |      100 |     100 |   45.83 | 37-77             
+  update-single.ts |   55.55 |      100 |     100 |   55.55 | 45-78             
+ ...ia-share-links |   52.72 |      100 |     100 |   52.72 |                   
+  create-single.ts |   53.42 |      100 |     100 |   53.42 | 44-79             
+  delete-all.ts    |   59.09 |      100 |     100 |   59.09 | 27-45             
+  ...e-multiple.ts |      55 |      100 |     100 |      55 | 37-65             
+  delete-single.ts |   54.09 |      100 |     100 |   54.09 | 37-66             
+  get-multiple.ts  |   47.94 |      100 |     100 |   47.94 | 39-78             
+  get-single.ts    |   51.66 |      100 |     100 |   51.66 | 35-65             
+  update-single.ts |   50.72 |      100 |     100 |   50.72 | 40-75             
+ ...s/media/client |   57.45 |      100 |       0 |   57.45 |                   
+  get-multiple.ts  |   55.05 |      100 |     100 |   55.05 | 53-94             
+  get-single.ts    |   59.72 |      100 |       0 |   59.72 | 45,48-77          
+  process-media.ts |    58.2 |      100 |     100 |    58.2 | 44-72             
+ ...rs/permissions |   72.72 |      100 |     100 |   72.72 |                   
+  get-all.ts       |   72.72 |      100 |     100 |   72.72 | 25-33             
+ ...trollers/roles |   49.31 |      100 |     100 |   49.31 |                   
+  create-single.ts |   44.44 |      100 |     100 |   44.44 | 46-98             
+  delete-single.ts |   60.65 |      100 |     100 |   60.65 | 42-67             
+  get-multiple.ts  |   47.82 |      100 |     100 |   47.82 | 37-74             
+  get-single.ts    |   52.54 |      100 |     100 |   52.54 | 35-64             
+  update-single.ts |   45.45 |      100 |     100 |   45.45 | 45-95             
+ ...llers/settings |   64.47 |      100 |     100 |   64.47 |                   
+  clear-kv.ts      |   85.18 |      100 |     100 |   85.18 | 27-31             
+  get-settings.ts  |   53.06 |      100 |     100 |   53.06 | 27-50             
+ ...trollers/share |   36.14 |      100 |     100 |   36.14 |                   
+  ...ize-stream.ts |   45.31 |      100 |     100 |   45.31 | 39-76             
+  stream-media.ts  |   30.39 |      100 |     100 |   30.39 | 45-122            
+ ...rs/user-logins |   47.94 |      100 |     100 |   47.94 |                   
+  get-multiple.ts  |   47.94 |      100 |     100 |   47.94 | 39-78             
+ ...trollers/users |   54.74 |      100 |     100 |   54.74 |                   
+  ...ermanently.ts |   55.88 |      100 |     100 |   55.88 | 42-73             
+  delete-single.ts |   59.37 |      100 |     100 |   59.37 | 42-69             
+  get-multiple.ts  |   47.82 |      100 |     100 |   47.82 | 37-74             
+  get-single.ts    |   51.66 |      100 |     100 |   51.66 | 35-65             
+  invite-single.ts |    52.3 |      100 |     100 |    52.3 | 38-70             
+  ...invitation.ts |      60 |      100 |     100 |      60 | 40-65             
+  ...e-multiple.ts |   60.65 |      100 |     100 |   60.65 | 42-67             
+  ...h-provider.ts |   53.62 |      100 |     100 |   53.62 | 41-74             
+  update-single.ts |    52.7 |      100 |     100 |    52.7 | 44-80             
+ ...ttp/middleware |   23.57 |      100 |   30.76 |   23.57 |                   
+  authenticate.ts  |   35.29 |      100 |       0 |   35.29 | 7-14,17-19        
+  ...vate-media.ts |   43.47 |      100 |     100 |   43.47 | 16-32             
+  cache.ts         |   11.62 |      100 |   33.33 |   11.62 | ...3,69-84,91-135 
+  ...thenticate.ts |   19.04 |      100 |     100 |   19.04 | 16-73             
+  ...ent-locale.ts |   25.92 |      100 |     100 |   25.92 | 9-31              
+  log-route.ts     |   13.04 |      100 |       0 |   13.04 | 6-11,14-18,21-53  
+  permissions.ts   |   29.62 |      100 |      50 |   29.62 | 9-24,28-30        
+  ...thenticate.ts |   57.14 |      100 |     100 |   57.14 | 11-13             
+  validate-csrf.ts |   55.55 |      100 |     100 |   55.55 | 7-11              
+  validate.ts      |      50 |      100 |     100 |      50 | 12-19             
+  z-validator.ts   |   22.91 |      100 |      25 |   22.91 | ...26,131,134,137 
+ ...bs/http/routes |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ .../routes/api/v1 |     100 |      100 |     100 |     100 |                   
+  ...unt.routes.ts |     100 |      100 |     100 |     100 |                   
+  auth.routes.ts   |     100 |      100 |     100 |     100 |                   
+  ...ons.routes.ts |     100 |      100 |     100 |     100 |                   
+  ...ons.routes.ts |     100 |      100 |     100 |     100 |                   
+  ...ent.routes.ts |     100 |      100 |     100 |     100 |                   
+  email.routes.ts  |     100 |      100 |     100 |     100 |                   
+  fs.routes.ts     |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  jobs.routes.ts   |     100 |      100 |     100 |     100 |                   
+  ...nse.routes.ts |     100 |      100 |     100 |     100 |                   
+  ...les.routes.ts |     100 |      100 |     100 |     100 |                   
+  media.routes.ts  |     100 |      100 |     100 |     100 |                   
+  ...ons.routes.ts |     100 |      100 |     100 |     100 |                   
+  roles.routes.ts  |     100 |      100 |     100 |     100 |                   
+  ...ngs.routes.ts |     100 |      100 |     100 |     100 |                   
+  users.routes.ts  |     100 |      100 |     100 |     100 |                   
+ .../api/v1/client |     100 |      100 |     100 |     100 |                   
+  ...nts.routes.ts |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...les.routes.ts |     100 |      100 |     100 |     100 |                   
+  media.routes.ts  |     100 |      100 |     100 |     100 |                   
+ ...ttp/routes/cdn |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...p/routes/share |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...ibs/http/utils |    8.43 |      100 |       0 |    8.43 |                   
+  ...-error-url.ts |   18.18 |      100 |       0 |   18.18 | 7-17              
+  ...tted-query.ts |   11.81 |      100 |       0 |   11.81 | ...,89-99,102-133 
+  ...d-response.ts |    5.76 |      100 |       0 |    5.76 | ...70-117,122-148 
+  ...ort-checks.ts |       5 |      100 |       0 |       5 | 8-83              
+  streaming.ts     |    8.57 |      100 |       0 |    8.57 | 4-17,20-36,39-47  
+ ...mage-processor |   19.23 |        0 |       0 |   19.23 |                   
+  get-processor.ts |   22.72 |      100 |       0 |   22.72 | 10-27             
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+ ...sor/processors |    3.84 |        0 |       0 |    3.84 |                   
+  passthrough.ts   |    8.57 |      100 |       0 |    8.57 | 11-46             
+  sharp.ts         |       0 |        0 |       0 |       0 | 1-56              
+ ...ibs/kv-adapter |   33.72 |       50 |    9.09 |   33.72 |                   
+  cache-keys.ts    |   95.23 |      100 |       0 |   95.23 | 27                
+  get-adapter.ts   |   17.85 |      100 |       0 |   17.85 | 11-35             
+  http-cache.ts    |    12.5 |      100 |       0 |    12.5 | 8-23,29-37,43-47  
+  index.ts         |       0 |        0 |       0 |       0 | 1-6               
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...apter/adapters |   13.18 |       50 |   14.28 |   13.18 |                   
+  better-sqlite.ts |       0 |        0 |       0 |       0 | 1-109             
+  passthrough.ts   |     100 |      100 |   16.66 |     100 |                   
+ ...rc/libs/logger |    72.9 |       50 |   34.78 |    72.9 |                   
+  ...ransporter.ts |   77.77 |    14.28 |     100 |   77.77 | ...51,53-54,62-63 
+  index.ts         |   66.66 |       80 |      30 |   66.66 | ...,94-97,103-104 
+  schema.ts        |     100 |      100 |       0 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ .../media-adapter |   10.86 |       50 |   33.33 |   10.86 |                   
+  get-adapter.ts   |   11.62 |      100 |       0 |   11.62 | 11-63             
+  index.ts         |       0 |        0 |       0 |       0 | 1-4               
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...rs/file-system |    7.31 |      100 |      50 |    7.31 |                   
+  helpers.ts       |      20 |      100 |       0 |      20 | 6-20              
+  index.ts         |       0 |      100 |     100 |       0 | 5-32              
+ ...ystem/services |       0 |        0 |       0 |       0 |                   
+  ...e-multiple.ts |       0 |        0 |       0 |       0 | 1-34              
+  delete-single.ts |       0 |        0 |       0 |       0 | 1-40              
+  get-metadata.ts  |       0 |        0 |       0 |       0 | 1-65              
+  ...signed-url.ts |       0 |        0 |       0 |       0 | 1-38              
+  rename.ts        |       0 |        0 |       0 |       0 | 1-34              
+  stream.ts        |       0 |        0 |       0 |       0 | 1-101             
+  upload-single.ts |       0 |        0 |       0 |       0 | 1-39              
+ ...ibs/permission |   86.84 |      100 |      50 |   86.84 |                   
+  definitions.ts   |     100 |      100 |     100 |     100 |                   
+  has-access.ts    |   11.76 |      100 |       0 |   11.76 | 15-33             
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...c/libs/plugins |   72.72 |       84 |      75 |   72.72 |                   
+  ...in-manager.ts |   72.72 |    83.33 |   73.33 |   72.72 | ...13-114,170-171 
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ .../query-builder |   20.61 |      100 |       0 |   20.61 |                   
+  ...ry-builder.ts |   18.18 |      100 |       0 |   18.18 | 6-16              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  query-builder.ts |     7.4 |      100 |       0 |     7.4 | 11-91             
+  ...ry-builder.ts |   18.18 |      100 |       0 |   18.18 | 6-16              
+  ...ry-builder.ts |   18.18 |      100 |       0 |   18.18 | 10-20             
+ ...-builder/utils |   19.04 |      100 |       0 |   19.04 |                   
+  ...r-operator.ts |   18.18 |      100 |       0 |   18.18 | 5-13              
+  ...-key-value.ts |      20 |      100 |       0 |      20 | 4-11              
+ .../queue-adapter |   15.67 |       50 |   16.66 |   15.67 |                   
+  ...single-job.ts |    5.91 |      100 |       0 |    5.91 | 22-92,112-222     
+  get-adapter.ts   |    14.7 |      100 |       0 |    14.7 | 9-40              
+  index.ts         |       0 |        0 |       0 |       0 | 1-6               
+  job-handlers.ts  |   78.57 |      100 |       0 |   78.57 | 29-34             
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...apter/adapters |    9.31 |      100 |      20 |    9.31 |                   
+  passthrough.ts   |    9.31 |      100 |      20 |    9.31 | ...43-131,133-285 
+ ...dapters/worker |       0 |        0 |       0 |       0 |                   
+  consumer.ts      |       0 |        0 |       0 |       0 | 1-183             
+  index.ts         |       0 |        0 |       0 |       0 | 1-186             
+ ...s/repositories |   33.57 |    93.75 |   64.28 |   33.57 |                   
+  auth-states.ts   |   43.42 |      100 |   66.66 |   43.42 | 41-90             
+  ...tegrations.ts |     100 |      100 |     100 |     100 |                   
+  ...migrations.ts |     100 |      100 |     100 |     100 |                   
+  collections.ts   |     100 |      100 |     100 |     100 |                   
+  ...ent-bricks.ts |    1.75 |        0 |       0 |    1.75 | 20-166            
+  ...t-versions.ts |    2.12 |        0 |       0 |    2.12 | 40-327            
+  documents.ts     |    0.85 |        0 |       0 |    0.85 | 55-762            
+  ...ansactions.ts |     100 |      100 |     100 |     100 |                   
+  emails.ts        |   53.28 |      100 |   66.66 |   53.28 | 87-164            
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  locales.ts       |     100 |      100 |     100 |     100 |                   
+  ...iting-sync.ts |     100 |      100 |     100 |     100 |                   
+  media-folders.ts |   20.81 |      100 |   33.33 |   20.81 | ...74-209,211-246 
+  ...hare-links.ts |   50.47 |      100 |   66.66 |   50.47 | 61-114            
+  ...anslations.ts |   37.09 |      100 |   66.66 |   37.09 | 38-85             
+  media.ts         |   29.24 |      100 |      40 |   29.24 | ...01-282,284-415 
+  options.ts       |   42.42 |      100 |   66.66 |   42.42 | 43-92             
+  ...sed-images.ts |     100 |      100 |     100 |     100 |                   
+  queue-jobs.ts    |   76.52 |      100 |   66.66 |   76.52 | 95-131            
+  ...ermissions.ts |     100 |      100 |     100 |     100 |                   
+  roles.ts         |   30.62 |      100 |      50 |   30.62 | 56-107,109-184    
+  types.ts         |       0 |        0 |       0 |       0 |                   
+  ...-providers.ts |    51.3 |      100 |   66.66 |    51.3 | 67-130            
+  user-logins.ts   |     100 |      100 |     100 |     100 |                   
+  user-roles.ts    |     100 |      100 |     100 |     100 |                   
+  user-tokens.ts   |   49.45 |      100 |   66.66 |   49.45 | 53-105            
+  users.ts         |   30.04 |      100 |   28.57 |   30.04 | ...32-369,371-466 
+ ...tories/parents |    6.74 |      100 |    4.16 |    6.74 |                   
+  ...repository.ts |   10.52 |      100 |   14.28 |   10.52 | ...53-204,210-290 
+  ...repository.ts |    5.34 |      100 |       0 |    5.34 | ...69-320,325-366 
+  ...repository.ts |    5.51 |      100 |       0 |    5.51 | ...99-442,444-487 
+ ...untime-adapter |    5.75 |       50 |   33.33 |    5.75 |                   
+  schema.ts        |       0 |        0 |       0 |       0 | 1-43              
+  ...-cron-jobs.ts |     7.4 |      100 |       0 |     7.4 | 15-121            
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...dapter/plugins |    5.05 |      100 |       0 |    5.05 |                   
+  ...ort-plugin.ts |    4.61 |      100 |       0 |    4.61 | 7-91              
+  ...rts-plugin.ts |    5.88 |      100 |       0 |    5.88 | 5-45              
+ ...ype-generation |       0 |      100 |     100 |       0 |                   
+  env-type.ts      |       0 |      100 |     100 |       0 | 3-24              
+  index.ts         |       0 |      100 |     100 |       0 | 2-63              
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ .../src/libs/vite |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-7               
+ .../vite/services |       0 |        0 |       0 |       0 |                   
+  build-app.ts     |       0 |        0 |       0 |       0 | 1-123             
+ core/src/schemas  |     100 |      100 |   63.15 |     100 |                   
+  account.ts       |     100 |      100 |     100 |     100 |                   
+  auth.ts          |     100 |      100 |     100 |     100 |                   
+  cdn.ts           |     100 |      100 |     100 |     100 |                   
+  ...tegrations.ts |     100 |      100 |     100 |     100 |                   
+  ...ion-bricks.ts |     100 |      100 |     100 |     100 |                   
+  ...ion-fields.ts |     100 |      100 |     100 |     100 |                   
+  collections.ts   |     100 |      100 |     100 |     100 |                   
+  ...t-versions.ts |     100 |      100 |     100 |     100 |                   
+  documents.ts     |     100 |      100 |       0 |     100 |                   
+  email.ts         |     100 |      100 |     100 |     100 |                   
+  fs.ts            |     100 |      100 |     100 |     100 |                   
+  jobs.ts          |     100 |      100 |     100 |     100 |                   
+  license.ts       |     100 |      100 |     100 |     100 |                   
+  locales.ts       |     100 |      100 |     100 |     100 |                   
+  media-folders.ts |     100 |      100 |     100 |     100 |                   
+  ...hare-links.ts |     100 |      100 |     100 |     100 |                   
+  media.ts         |     100 |      100 |       0 |     100 |                   
+  options.ts       |     100 |      100 |     100 |     100 |                   
+  permissions.ts   |     100 |      100 |     100 |     100 |                   
+  roles.ts         |     100 |      100 |     100 |     100 |                   
+  settings.ts      |     100 |      100 |     100 |     100 |                   
+  share.ts         |     100 |      100 |     100 |     100 |                   
+  user-logins.ts   |     100 |      100 |     100 |     100 |                   
+  users.ts         |     100 |      100 |     100 |     100 |                   
+ ...chemas/helpers |   91.48 |      100 |      75 |   91.48 |                   
+  querystring.ts   |   91.48 |      100 |      75 |   91.48 | 52-59             
+ core/src/services |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...rvices/account |    9.38 |      100 |       0 |    9.38 |                   
+  ...cated-user.ts |   16.21 |      100 |       0 |   16.21 | 17-49             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...t-password.ts |       9 |      100 |       0 |       9 | 21-119            
+  ...t-password.ts |   11.94 |      100 |       0 |   11.94 | 18-82             
+  update-me.ts     |    4.26 |      100 |       0 |    4.26 | 23-189            
+ ...account/checks |    8.84 |      100 |       0 |    8.84 |                   
+  ...e-password.ts |    8.03 |      100 |       0 |    8.03 | 9-10,29-143       
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ .../services/auth |   17.18 |      100 |       0 |   17.18 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  login.ts         |   11.25 |      100 |       0 |   11.25 | 20-98             
+  ...p-required.ts |   14.63 |      100 |       0 |   14.63 | 8-46              
+ ...h/access-token |   17.21 |      100 |       0 |   17.21 |                   
+  clear-token.ts   |   33.33 |      100 |       0 |   33.33 | 7-14              
+  ...rate-token.ts |   11.59 |      100 |       0 |   11.59 | 13-79             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  verify-token.ts  |   15.78 |      100 |       0 |   15.78 | 9-43              
+ ...ices/auth/csrf |   25.37 |      100 |       0 |   25.37 |                   
+  clear-token.ts   |   33.33 |      100 |       0 |   33.33 | 7-15              
+  ...rate-token.ts |   27.77 |      100 |       0 |   27.77 | 8-22              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  verify-token.ts  |    14.7 |      100 |       0 |    14.7 | 8-38              
+ ...uth/invitation |    8.59 |      100 |       0 |    8.59 |                   
+  ...invitation.ts |    7.37 |      100 |       0 |    7.37 | 24-145            
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...invitation.ts |    8.24 |      100 |       0 |    8.24 | 23-115            
+ ...auth/providers |   10.97 |      100 |       0 |   10.97 |                   
+  ...direct-url.ts |    9.52 |      100 |       0 |    9.52 | 22-106            
+  get-providers.ts |      15 |      100 |       0 |      15 | 6-24              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  initiate.ts      |    9.67 |      100 |       0 |    9.67 | 32-155            
+  oidc-callback.ts |    9.37 |      100 |       0 |    9.37 | 29-125            
+ ...viders/helpers |    2.87 |      100 |       0 |    2.87 |                   
+  ...vider-auth.ts |    2.87 |      100 |       0 |    2.87 | 36-343            
+ .../refresh-token |    12.9 |      100 |       0 |    12.9 |                   
+  clear-token.ts   |    15.9 |      100 |       0 |    15.9 | 10-54             
+  ...rate-token.ts |   14.51 |      100 |       0 |   14.51 | 12-72             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  verify-token.ts  |    8.33 |      100 |       0 |    8.33 | 12-125            
+ ...c/services/cdn |    9.55 |      100 |       0 |    9.55 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...rror-image.ts |   11.11 |      100 |       0 |   11.11 | 18-60             
+  stream-media.ts  |    6.74 |      100 |       0 |    6.74 | 41-137            
+ ...es/cdn/helpers |    5.12 |      100 |       0 |    5.12 |                   
+  ...remote-url.ts |    5.12 |      100 |       0 |    5.12 | 7-53              
+ ...t-integrations |   14.02 |      100 |       0 |   14.02 |                   
+  create-single.ts |   11.86 |      100 |       0 |   11.86 | 19-75             
+  delete-single.ts |   12.24 |      100 |       0 |   12.24 | 14-60             
+  get-all.ts       |    12.9 |      100 |       0 |    12.9 | 7-35              
+  get-single.ts    |   13.95 |      100 |       0 |   13.95 | 15-53             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...erate-keys.ts |   13.11 |      100 |       0 |   13.11 | 18-75             
+  update-single.ts |    10.9 |      100 |       0 |    10.9 | 17-69             
+  ...fy-api-key.ts |    12.5 |      100 |       0 |    12.5 | 19-96             
+ ...es/collections |   12.96 |      100 |      25 |   12.96 |                   
+  get-all.ts       |   12.28 |      100 |       0 |   12.28 | 16-72             
+  ...e-instance.ts |    12.5 |      100 |       0 |    12.5 | 9-34              
+  get-single.ts    |   10.25 |      100 |       0 |   10.25 | 20-96             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  schemas.ts       |       0 |        0 |       0 |       0 |                   
+ ...llections/jobs |   16.66 |      100 |       0 |   16.66 |                   
+  delete-single.ts |   16.66 |      100 |       0 |   16.66 | 15-36             
+ ...services/crons |   11.23 |      100 |       0 |   11.23 |                   
+  ...ollections.ts |     9.3 |      100 |       0 |     9.3 | 9-52              
+  ...ed-locales.ts |     9.3 |      100 |       0 |     9.3 | 9-52              
+  ...red-tokens.ts |    8.33 |      100 |       0 |    8.33 | 8-44              
+  ...-documents.ts |    7.14 |      100 |       0 |    7.14 | 10-81             
+  ...eted-media.ts |     9.3 |      100 |       0 |     9.3 | 9-52              
+  ...eted-users.ts |     9.3 |      100 |       0 |     9.3 | 9-52              
+  ...nced-media.ts |    10.2 |      100 |       0 |    10.2 | 10-57             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...ia-storage.ts |   16.66 |      100 |       0 |   16.66 | 7-17              
+ .../crons/helpers |      25 |      100 |       0 |      25 |                   
+  ...ntion-days.ts |      25 |      100 |       0 |      25 | 12-20             
+ ...ices/documents |       9 |      100 |       0 |       9 |                   
+  ...e-multiple.ts |       5 |      100 |       0 |       5 | 18-182            
+  ...ermanently.ts |    6.72 |      100 |       0 |    6.72 | 18-135            
+  delete-single.ts |    5.71 |      100 |       0 |    5.71 | 18-157            
+  ...field-meta.ts |   12.12 |      100 |       0 |   12.12 | 28-93             
+  ...-revisions.ts |    12.9 |      100 |       0 |    12.9 | 28-88             
+  get-multiple.ts  |   12.98 |      100 |       0 |   12.98 | 30-105            
+  get-single.ts    |      10 |      100 |       0 |      10 | 23-103            
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...references.ts |     5.6 |      100 |       0 |     5.6 | 29-147            
+  ...e-multiple.ts |    9.33 |      100 |       0 |    9.33 | 16-91             
+  upsert-single.ts |    7.14 |      100 |       0 |    7.14 | 23-148            
+ ...cuments-bricks |   11.27 |      100 |       0 |   11.27 |                   
+  ...e-multiple.ts |   13.63 |      100 |       0 |   13.63 | 24-72             
+  ...e-multiple.ts |   11.36 |      100 |       0 |   11.36 | 15-57             
+  get-multiple.ts  |   12.04 |      100 |       0 |   12.04 | 42-122            
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...ick-tables.ts |    5.05 |      100 |       0 |    5.05 | 18-135            
+ ...-bricks/checks |   26.59 |     87.5 |   33.33 |   26.59 |                   
+  ...cate-order.ts |   10.34 |      100 |       0 |   10.34 | 6-34              
+  ...cks-fields.ts |   27.96 |     87.5 |      40 |   27.96 | ...44-248,300,322 
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...bricks/helpers |   42.99 |    82.35 |   33.33 |   42.99 |                   
+  ...ick-tables.ts |     100 |    42.85 |     100 |     100 | 50-65             
+  ...rick-table.ts |     100 |    86.66 |     100 |     100 | ...79,207,216-217 
+  ...entity-ids.ts |    6.66 |      100 |       0 |    6.66 | 40-90             
+  ...ation-data.ts |    4.93 |      100 |       0 |    4.93 | 35-120            
+  ...ation-data.ts |    5.76 |      100 |       0 |    5.76 | ...07-332,338-401 
+  ...and-fields.ts |   79.31 |       75 |     100 |   79.31 | 39,42-50,59,66-73 
+  ...eld-values.ts |     100 |      100 |     100 |     100 |                   
+ ...ments-versions |    5.96 |      100 |       0 |    5.96 |                   
+  create-single.ts |     5.4 |      100 |       0 |     5.4 | 26-182            
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...te-version.ts |    3.92 |      100 |       0 |    3.92 | 31-324            
+  ...e-revision.ts |    14.7 |      100 |       0 |    14.7 | 16-47             
+  update-single.ts |    5.84 |      100 |       0 |    5.84 | 26-217            
+ ...cuments/checks |   13.58 |      100 |       0 |   13.58 |                   
+  ...collection.ts |   18.18 |      100 |       0 |   18.18 | 13-32             
+  ...ment-count.ts |    8.77 |      100 |       0 |    8.77 | 21-76             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...cuments/client |      14 |      100 |       0 |      14 |                   
+  get-multiple.ts  |   12.98 |      100 |       0 |   12.98 | 32-107            
+  get-single.ts    |   12.67 |      100 |       0 |   12.67 | 25-94             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...documents/jobs |    6.72 |      100 |       0 |    6.72 |                   
+  delete-single.ts |    6.72 |      100 |       0 |    6.72 | 21-138            
+ ...services/email |   11.47 |      100 |       0 |   11.47 |                   
+  delete-single.ts |   14.81 |      100 |       0 |   14.81 | 12-36             
+  get-multiple.ts  |   12.82 |      100 |       0 |   12.82 | 18-53             
+  get-single.ts    |    17.5 |      100 |       0 |    17.5 | 17-53             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  resend-single.ts |    5.45 |      100 |       0 |    5.45 | 19-126            
+  send-email.ts    |    5.94 |      100 |       0 |    5.94 | 28-127            
+  send-external.ts |   29.41 |      100 |       0 |   29.41 | 25-36             
+ ...ces/email/jobs |    4.76 |      100 |       0 |    4.76 |                   
+  send-email.ts    |    4.76 |      100 |       0 |    4.76 | 20-166            
+ ...rc/services/fs |   23.68 |      100 |       0 |   23.68 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  upload-single.ts |   21.62 |      100 |       0 |   21.62 | 21-49             
+ ...ices/fs/checks |   23.33 |      100 |       0 |   23.33 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...gned-token.ts |   20.68 |      100 |       0 |   20.68 | 17-41             
+ .../services/jobs |   13.54 |      100 |       0 |   13.54 |                   
+  get-multiple.ts  |   11.62 |      100 |       0 |   11.62 | 18-57             
+  get-single.ts    |   11.76 |      100 |       0 |   11.76 | 15-61             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...rvices/license |   10.37 |      100 |       0 |   10.37 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  status.ts        |   10.14 |      100 |       0 |   10.14 | 10-78             
+  update.ts        |   17.14 |      100 |       0 |   17.14 | 14-46             
+  verify.ts        |    6.71 |      100 |       0 |    6.71 | 39-173            
+ ...rvices/locales |   16.34 |      100 |       0 |   16.34 |                   
+  get-all.ts       |   14.81 |      100 |       0 |   14.81 | 7-31              
+  ...e-fallback.ts |   14.28 |      100 |       0 |   14.28 | 13-32             
+  get-single.ts    |   11.53 |      100 |       0 |   11.53 | 15-64             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...locales/checks |   11.32 |      100 |       0 |   11.32 |                   
+  ...ales-exist.ts |    9.61 |      100 |       0 |    9.61 | 13-64             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...s/locales/jobs |   19.23 |      100 |       0 |   19.23 |                   
+  delete-single.ts |   19.23 |      100 |       0 |   19.23 | 16-39             
+ ...services/media |   11.13 |      100 |       0 |   11.13 |                   
+  create-single.ts |    9.73 |      100 |       0 |    9.73 | 40-152            
+  delete-batch.ts  |    7.95 |      100 |       0 |    7.95 | 21-110            
+  ...ermanently.ts |    9.19 |      100 |       0 |    9.19 | 20-104            
+  delete-single.ts |   18.42 |      100 |       0 |   18.42 | 16-49             
+  ...field-meta.ts |   17.39 |      100 |       0 |   17.39 | 13-34             
+  get-multiple.ts  |   19.23 |      100 |       0 |   19.23 | 19-41             
+  ...signed-url.ts |   11.42 |      100 |       0 |   11.42 | 25-92             
+  get-single.ts    |   22.22 |      100 |       0 |   22.22 | 15-37             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  move-folder.ts   |   11.29 |      100 |       0 |   11.29 | 17-76             
+  process-media.ts |    5.55 |      100 |       0 |    5.55 | 20-133            
+  ...e-multiple.ts |   10.29 |      100 |       0 |   10.29 | 15-81             
+  update-single.ts |    6.25 |      100 |       0 |    6.25 | 44-249            
+ .../media-folders |   13.59 |      100 |       0 |   13.59 |                   
+  create-single.ts |      16 |      100 |       0 |      16 | 14-36             
+  delete-single.ts |   14.81 |      100 |       0 |   14.81 | 12-36             
+  get-hierarchy.ts |   15.62 |      100 |       0 |   15.62 | 8-37              
+  get-multiple.ts  |    11.9 |      100 |       0 |    11.9 | 20-59             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  update-single.ts |    6.66 |      100 |       0 |    6.66 | 16-90             
+ ...olders/helpers |    6.66 |      100 |       0 |    6.66 |                   
+  ...d-hierachy.ts |    6.66 |      100 |       0 |    6.66 | 10-44             
+ ...ia-share-links |   16.34 |      100 |       0 |   16.34 |                   
+  ...rize-share.ts |   10.71 |      100 |       0 |   10.71 | 25-109            
+  create-single.ts |   13.55 |      100 |       0 |   13.55 | 24-78             
+  delete-all.ts    |   18.75 |      100 |       0 |   18.75 | 5-19              
+  ...e-multiple.ts |   23.52 |      100 |       0 |   23.52 | 12-26             
+  delete-single.ts |   18.18 |      100 |       0 |   18.18 | 13-32             
+  get-multiple.ts  |   12.19 |      100 |       0 |   12.19 | 21-58             
+  get-single.ts    |    12.5 |      100 |       0 |    12.5 | 15-51             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  stream-media.ts  |   16.66 |      100 |       0 |   16.66 | 33-54             
+  update-single.ts |   16.32 |      100 |       0 |   16.32 | 22-65             
+ ...s/media/checks |   12.37 |      100 |       0 |   12.37 |                   
+  ...iting-sync.ts |      14 |      100 |       0 |      14 | 20-65             
+  ...tore-media.ts |    7.69 |      100 |       0 |    7.69 | 16-79             
+  ...date-media.ts |    8.33 |      100 |       0 |    8.33 | 16-74             
+  ...a-strategy.ts |   17.39 |      100 |       0 |   17.39 | 10-30             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ .../media/helpers |    9.52 |      100 |       0 |    9.52 |                   
+  ...anslations.ts |    9.52 |      100 |       0 |    9.52 | 13-34             
+ ...ces/media/jobs |    9.24 |      100 |       0 |    9.24 |                   
+  ...iting-sync.ts |   17.85 |      100 |       0 |   17.85 | 16-42             
+  ...ete-single.ts |    8.98 |      100 |       0 |    8.98 | 19-105            
+  ...te-storage.ts |    5.35 |      100 |       0 |    5.35 | 12-68             
+ ...dia/strategies |   12.98 |      100 |       0 |   12.98 |                   
+  delete.ts        |   15.38 |      100 |       0 |   15.38 | 14-39             
+  ...signed-url.ts |   11.11 |      100 |       0 |   11.11 | 17-51             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  rename.ts        |    12.9 |      100 |       0 |    12.9 | 13-41             
+  sync-media.ts    |   11.62 |      100 |       0 |   11.62 | 23-65             
+  update.ts        |    7.46 |      100 |       0 |    7.46 | 29-100            
+ ...rvices/options |   19.79 |      100 |       0 |   19.79 |                   
+  get-multiple.ts  |   18.75 |      100 |       0 |   18.75 | 16-43             
+  get-single.ts    |   18.75 |      100 |       0 |   18.75 | 16-43             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  update-single.ts |   13.79 |      100 |       0 |   13.79 | 16-42             
+ ...es/permissions |   38.46 |      100 |       0 |   38.46 |                   
+  get-all.ts       |   33.33 |      100 |       0 |   33.33 | 7-15              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...ocessed-images |   11.04 |      100 |       0 |   11.04 |                   
+  clear-all.ts     |     7.4 |      100 |       0 |     7.4 | 7-62              
+  clear-single.ts  |    6.02 |      100 |       0 |    6.02 | 17-102            
+  get-count.ts     |   23.52 |      100 |       0 |   23.52 | 6-20              
+  ...ngle-count.ts |   18.51 |      100 |       0 |   18.51 | 13-36             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...mize-image.ts |   57.14 |      100 |       0 |   57.14 | 18-20             
+  process-image.ts |    4.91 |      100 |       0 |    4.91 | 26-158            
+ ...-images/checks |   16.21 |      100 |       0 |   16.21 |                   
+  ...-can-store.ts |   13.88 |      100 |       0 |   13.88 | 15-49             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...services/roles |   11.98 |      100 |       0 |   11.98 |                   
+  create-single.ts |    8.69 |      100 |       0 |    8.69 | 19-86             
+  delete-single.ts |   12.12 |      100 |       0 |   12.12 | 12-43             
+  get-multiple.ts  |   21.73 |      100 |       0 |   21.73 | 18-37             
+  get-single.ts    |      24 |      100 |       0 |      24 | 15-35             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  update-single.ts |    5.88 |      100 |       0 |    5.88 | 20-121            
+  ...ermissions.ts |    8.47 |      100 |       0 |    8.47 | 17-80             
+ .../services/seed |      14 |      100 |       0 |      14 |                   
+  ...lt-options.ts |    8.69 |      100 |       0 |    8.69 | 6-50              
+  default-roles.ts |   15.38 |      100 |       0 |   15.38 | 10-57             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...vices/settings |   12.04 |      100 |       0 |   12.04 |                   
+  ...-manifests.ts |    6.97 |      100 |       0 |    6.97 | 9-59              
+  get-settings.ts  |   15.38 |      100 |       0 |   15.38 | 9-44              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ .../services/sync |    6.88 |      100 |       0 |    6.88 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...ollections.ts |     5.6 |      100 |       0 |     5.6 | 13-122            
+  sync-locales.ts  |    6.42 |      100 |       0 |    6.42 | 12-124            
+ ...es/user-logins |   16.92 |      100 |       0 |   16.92 |                   
+  create-single.ts |   16.66 |      100 |       0 |   16.66 | 16-37             
+  get-multiple.ts  |   12.82 |      100 |       0 |   12.82 | 19-54             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...es/user-tokens |   17.64 |      100 |       0 |   17.64 |                   
+  create-single.ts |   18.51 |      100 |       0 |   18.51 | 18-42             
+  get-single.ts    |   12.82 |      100 |       0 |   12.82 | 18-53             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...er-tokens/jobs |      20 |      100 |       0 |      20 |                   
+  delete-single.ts |      20 |      100 |       0 |      20 | 15-32             
+ ...services/users |   10.78 |      100 |       0 |   10.78 |                   
+  ...tial-admin.ts |      18 |      100 |       0 |      18 | 21-66             
+  ...ermanently.ts |   10.34 |      100 |       0 |   10.34 | 15-71             
+  delete-single.ts |   13.33 |      100 |       0 |   13.33 | 15-57             
+  ...field-meta.ts |   11.42 |      100 |       0 |   11.42 | 13-46             
+  get-multiple.ts  |   21.73 |      100 |       0 |   21.73 | 18-37             
+  get-single.ts    |      15 |      100 |       0 |      15 | 20-56             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  invite-single.ts |    8.03 |      100 |       0 |    8.03 | 26-141            
+  ...invitation.ts |   10.58 |      100 |       0 |   10.58 | 23-105            
+  ...e-multiple.ts |   11.42 |      100 |       0 |   11.42 | 12-45             
+  ...h-provider.ts |    4.47 |      100 |       0 |    4.47 | 26-159            
+  ...iple-roles.ts |      10 |      100 |       0 |      10 | 14-63             
+  update-single.ts |    5.48 |      100 |       0 |    5.48 | 31-194            
+ ...s/users/checks |      15 |      100 |       0 |      15 |                   
+  ...-last-user.ts |   15.62 |      100 |       0 |   15.62 | 7-36              
+  ...oles-exist.ts |   10.86 |      100 |       0 |   10.86 | 13-56             
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...ces/users/jobs |   22.72 |      100 |       0 |   22.72 |                   
+  delete-single.ts |   22.72 |      100 |       0 |   22.72 | 16-35             
+ core/src/types    |       0 |        0 |       0 |       0 |                   
+  config.ts        |       0 |        0 |       0 |       0 |                   
+  errors.ts        |       0 |        0 |       0 |       0 |                   
+  hono.ts          |       0 |        0 |       0 |       0 |                   
+  hooks.ts         |       0 |        0 |       0 |       0 |                   
+  query-params.ts  |       0 |        0 |       0 |       0 |                   
+  response.ts      |       0 |        0 |       0 |       0 |                   
+  schema.ts        |       0 |        0 |       0 |       0 |                   
+  shared.ts        |       0 |        0 |       0 |       0 |                   
+ ...t-integrations |   48.14 |      100 |   66.66 |   48.14 |                   
+  ...de-api-key.ts |     100 |      100 |     100 |     100 |                   
+  generate-keys.ts |      30 |      100 |       0 |      30 | 7-27              
+ ...c/utils/errors |   44.88 |    66.66 |   66.66 |   44.88 |                   
+  decode-error.ts  |   16.66 |      100 |       0 |   16.66 | 7-34              
+  ...e-defaults.ts |    64.7 |       60 |     100 |    64.7 | 14-19,21-26       
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...-api-error.ts |    8.33 |      100 |       0 |    8.33 | 33-77             
+  lucid-error.ts   |     100 |    66.66 |     100 |     100 | 37                
+  ...zod-errors.ts |     100 |      100 |     100 |     100 |                   
+ .../utils/helpers |      75 |    97.56 |   22.22 |      75 |                   
+  ...pt-decrypt.ts |      20 |      100 |       0 |      20 | 6-10,13-19,22-33  
+  ...ate-secret.ts |   33.33 |      100 |       0 |   33.33 | 5-16              
+  get-dir-name.ts  |     100 |      100 |     100 |     100 |                   
+  ...nt-filters.ts |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...-directory.ts |       0 |        0 |       0 |       0 | 1-19              
+  time.ts          |     100 |      100 |       0 |     100 |                   
+  url-add-path.ts  |   33.33 |      100 |       0 |   33.33 | 5-9               
+ ...rc/utils/hooks |   10.71 |      100 |       0 |   10.71 |                   
+  execute-hooks.ts |   10.71 |      100 |       0 |   10.71 | 14-51             
+ ...rc/utils/media |   26.62 |      100 |       0 |   26.62 |                   
+  ...visibility.ts |   26.66 |      100 |       0 |   26.66 | 10-20             
+  ...der-format.ts |   16.66 |      100 |       0 |   16.66 | 2-13              
+  ...-media-url.ts |      20 |      100 |       0 |      20 | 12-19             
+  ...e-link-url.ts |      50 |      100 |       0 |      50 | 5-6               
+  generate-key.ts  |   14.28 |      100 |       0 |   14.28 | 12-38             
+  ...rocess-key.ts |   22.22 |      100 |       0 |   22.22 | 12-30             
+  ...e-metadata.ts |   15.15 |      100 |       0 |   15.15 | 19-49             
+  ...visibility.ts |   42.85 |      100 |       0 |   42.85 | 10-13             
+  ...media-type.ts |   18.18 |      100 |       0 |   18.18 | 7-15              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...-image-key.ts |      50 |      100 |       0 |      50 | 7-9               
+ ...utils/open-api |   99.55 |    95.45 |     100 |   99.55 |                   
+  ...paramaters.ts |     100 |      100 |     100 |     100 |                   
+  ...quest-body.ts |     100 |      100 |     100 |     100 |                   
+  ...i-response.ts |   99.23 |    88.88 |     100 |   99.23 | 111               
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...utils/services |   76.13 |    82.35 |     100 |   76.13 |                   
+  ...ce-wrapper.ts |   76.13 |    81.25 |     100 |   76.13 | 68-74,83-97       
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...services/utils |     100 |    42.85 |     100 |     100 |                   
+  merge-errors.ts  |     100 |    33.33 |     100 |     100 | 15-16,19-22       
+  ...tion-error.ts |     100 |      100 |     100 |     100 |                   
+ ...ils/share-link |      50 |      100 |       0 |      50 |                   
+  auth-cookie.ts   |      50 |      100 |       0 |      50 | 5-6               
+  ...rate-token.ts |      60 |      100 |       0 |      60 | 7-8               
+  renderers.ts     |   42.85 |      100 |       0 |   42.85 | 8-9,16-17         
+ ...s/test-helpers |     100 |      100 |     100 |     100 |                   
+  ...est-config.ts |     100 |      100 |     100 |     100 |                   
+ ...helpers/config |    90.9 |       75 |     100 |    90.9 |                   
+  lucid.config.ts  |    90.9 |       75 |     100 |    90.9 | 2-3               
+ ...ql-adapter/src |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-252             
+ ...dapter/src/lib |       0 |        0 |       0 |       0 |                   
+  kysely-libsql.ts |       0 |        0 |       0 |       0 | 1-158             
+ ...pter/src/utils |       0 |      100 |     100 |       0 |                   
+  ...ault-value.ts |       0 |      100 |     100 |       0 | 3-36              
+  ...-on-delete.ts |       0 |      100 |     100 |       0 | 3-7               
+  ...-on-update.ts |       0 |      100 |     100 |       0 | 3-7               
+  format-type.ts   |       0 |      100 |     100 |       0 | 3-7               
+ node-adapter/src  |       0 |       20 |      20 |       0 |                   
+  adapter.ts       |       0 |        0 |       0 |       0 | 1-326             
+  constants.ts     |       0 |        0 |       0 |       0 | 1-7               
+  define-config.ts |       0 |        0 |       0 |       0 | 1-44              
+  index.ts         |       0 |        0 |       0 |       0 | 1-3               
+  ...me-context.ts |       0 |      100 |     100 |       0 | 5-27              
+ ...udflare-kv/src |       0 |       40 |      40 |       0 |                   
+  adapter.ts       |       0 |      100 |     100 |       0 | 4-60              
+  constants.ts     |       0 |        0 |       0 |       0 | 1-2               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-22              
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...are-queues/src |       0 |       20 |      20 |       0 |                   
+  adapter.ts       |       0 |        0 |       0 |       0 | 1-278             
+  constants.ts     |       0 |        0 |       0 |       0 | 1-7               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-198             
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...ie-consent/src |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+ ...sent/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ plugin-forms/src  |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 |                   
+ ...orms/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...nodemailer/src |       0 |        0 |       0 |       0 |                   
+  constants.ts     |       0 |        0 |       0 |       0 | 1-3               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-73              
+ ...iler/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...iler/src/utils |       0 |        0 |       0 |       0 |                   
+  is-valid-data.ts |       0 |        0 |       0 |       0 | 1-11              
+  ...ransporter.ts |       0 |        0 |       0 |       0 | 1-25              
+ plugin-pages/src  |       0 |        0 |       0 |       0 |                   
+  constants.ts     |       0 |        0 |       0 |       0 | 1-17              
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-71              
+ ...s/src/services |       0 |    18.18 |   18.18 |       0 |                   
+  ...-fullslugs.ts |       0 |        0 |       0 |       0 | 1-86              
+  ...t-fullslug.ts |       0 |        0 |       0 |       0 | 1-57              
+  ...ant-fields.ts |       0 |        0 |       0 |       0 | 1-149             
+  ...ion-fields.ts |       0 |        0 |       0 |       0 | 1-90              
+  ...ent-fields.ts |       0 |        0 |       0 |       0 | 1-104             
+  ...collection.ts |       0 |        0 |       0 |       0 | 1-38              
+  index.ts         |       0 |        0 |       0 |       0 | 1-10              
+  ...in-options.ts |       0 |      100 |     100 |       0 | 3-14              
+  ...ter-fields.ts |       0 |        0 |       0 |       0 | 1-59              
+  set-full-slug.ts |       0 |      100 |     100 |       0 | 7-27              
+  ...lug-fields.ts |       0 |        0 |       0 |       0 | 1-80              
+ ...ervices/checks |       0 |       50 |      50 |       0 |                   
+  ...elds-exist.ts |       0 |      100 |     100 |       0 | 6-72              
+  ...ar-parents.ts |       0 |        0 |       0 |       0 | 1-124             
+  ...ug-parents.ts |       0 |        0 |       0 |       0 | 1-151             
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  ...nt-of-self.ts |       0 |      100 |     100 |       0 | 2-44              
+  ...withparent.ts |       0 |      100 |     100 |       0 | 6-70              
+ ...services/hooks |       0 |        0 |       0 |       0 |                   
+  ...rt-handler.ts |       0 |        0 |       0 |       0 | 1-77              
+  ...te-handler.ts |       0 |        0 |       0 |       0 | 1-74              
+  ...rt-handler.ts |       0 |        0 |       0 |       0 | 1-150             
+  index.ts         |       0 |        0 |       0 |       0 | 1-4               
+  ...on-promote.ts |       0 |        0 |       0 |       0 | 1-184             
+ ...ages/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...ages/src/utils |   36.11 |    68.75 |     100 |   36.11 |                   
+  ...m-fullslug.ts |       0 |      100 |     100 |       0 | 3-28              
+  ...from-slugs.ts |   90.69 |    64.28 |     100 |   90.69 | 29-32             
+  ...-to-schema.ts |       0 |      100 |     100 |       0 | 4-65              
+ plugin-redis/src  |       0 |       40 |      40 |       0 |                   
+  adapter.ts       |       0 |      100 |     100 |       0 | 2-65              
+  constants.ts     |       0 |        0 |       0 |       0 | 1-2               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-22              
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ plugin-resend/src |       0 |        0 |       0 |       0 |                   
+  constants.ts     |       0 |        0 |       0 |       0 | 1-4               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-101             
+ ...rc/controllers |       0 |        0 |       0 |       0 |                   
+  webhook.ts       |       0 |        0 |       0 |       0 | 1-61              
+ ...end/src/routes |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-16              
+ ...end/src/schema |       0 |        0 |       0 |       0 |                   
+  webhook.ts       |       0 |        0 |       0 |       0 | 1-76              
+ ...d/src/services |       0 |        0 |       0 |       0 |                   
+  webhook.ts       |       0 |        0 |       0 |       0 | 1-175             
+ ...send/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...send/src/utils |       0 |        0 |       0 |       0 |                   
+  is-valid-data.ts |       0 |        0 |       0 |       0 | 1-11              
+ plugin-s3/src     |       0 |       25 |      25 |       0 |                   
+  adapter.ts       |       0 |      100 |     100 |       0 | 2-31              
+  constants.ts     |       0 |        0 |       0 |       0 | 1-4               
+  index.ts         |       0 |        0 |       0 |       0 | 1-5               
+  plugin.ts        |       0 |        0 |       0 |       0 | 1-24              
+ ...s3/src/clients |       0 |        0 |       0 |       0 |                   
+  aws-client.ts    |       0 |        0 |       0 |       0 | 1-14              
+ ...3/src/services |       0 |      100 |     100 |       0 |                   
+  ...e-multiple.ts |       0 |      100 |     100 |       0 | 3-59              
+  delete-single.ts |       0 |      100 |     100 |       0 | 3-50              
+  get-metadata.ts  |       0 |      100 |     100 |       0 | 3-67              
+  ...signed-url.ts |       0 |      100 |     100 |       0 | 3-51              
+  rename.ts        |       0 |      100 |     100 |       0 | 3-87              
+  steam.ts         |       0 |      100 |     100 |       0 | 4-108             
+  upload-single.ts |       0 |      100 |     100 |       0 | 3-62              
+ ...n-s3/src/types |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ plugin-sdk/src    |       0 |      100 |     100 |       0 |                   
+  builder.ts       |       0 |      100 |     100 |       0 | 266-494           
+  index.ts         |       0 |      100 |     100 |       0 | 16                
+ ...es-adapter/src |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-225             
+ ...pter/src/utils |       0 |      100 |     100 |       0 |                   
+  ...ault-value.ts |       0 |      100 |     100 |       0 | 3-47              
+  ...-on-delete.ts |       0 |      100 |     100 |       0 | 3-7               
+  ...-on-update.ts |       0 |      100 |     100 |       0 | 3-7               
+  format-type.ts   |       0 |      100 |     100 |       0 | 3-18              
+ ...te-adapter/src |       0 |        0 |       0 |       0 |                   
+  index.ts         |       0 |        0 |       0 |       0 | 1-258             
+ ...pter/src/utils |       0 |      100 |     100 |       0 |                   
+  ...ault-value.ts |       0 |      100 |     100 |       0 | 3-36              
+  ...-on-delete.ts |       0 |      100 |     100 |       0 | 3-7               
+  ...-on-update.ts |       0 |      100 |     100 |       0 | 3-7               
+  format-type.ts   |       0 |      100 |     100 |       0 | 3-7               
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 22.75% ( 15417/67756 )
+Branches     : 64.91% ( 1064/1639 )
+Functions    : 28.25% ( 384/1359 )
+Lines        : 22.75% ( 15417/67756 )
+================================================================================
+ERROR: Coverage for lines (22.75%) does not meet global threshold (80%)
+ERROR: Coverage for functions (28.25%) does not meet global threshold (80%)
+ERROR: Coverage for statements (22.75%) does not meet global threshold (80%)
+ERROR: Coverage for branches (64.91%) does not meet global threshold (80%)

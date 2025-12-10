@@ -36,7 +36,7 @@ const getSettings: ServiceFn<[], SettingsResponse> = async (context) => {
                 processedImageCount: processedImageCountRes.data,
                 licenseKeyLast4: licenseKeyLast4Res?.valueText ?? null,
                 mediaAdapterEnabled: mediaAdapter?.enabled || false,
-                pluginManifests: pluginManifestsRes.data,
+                pluginManifests: pluginManifestsRes.data || [],
             },
             config: context.config,
         }),

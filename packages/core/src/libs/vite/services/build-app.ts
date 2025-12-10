@@ -84,7 +84,12 @@ const generatePluginManifest = async (outputPath: string) => {
             const pluginDir = path.join(outputPath, pluginKey);
             const files = await fs.readdir(pluginDir);
 
-            const pluginManifest = {
+            const pluginManifest: {
+                key: string;
+                bundleUrl?: string;
+                cssUrl?: string;
+                assets: string[];
+            } = {
                 key: pluginKey,
                 assets: files,
             };
