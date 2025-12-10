@@ -1,6 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
 import { createPlugin } from "../src/builder.js";
-import type { LucidPlugin } from "@lucidcms/core/libs/plugins/types.js";
 
 describe("Plugin SDK", () => {
     describe("createPlugin", () => {

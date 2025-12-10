@@ -9,8 +9,8 @@ export type {
     ServiceResponse,
     AdapterRuntimeContext,
     EmailAdapterInstance,
-} from "@lucidcms/core/libs/plugins/types.js";
-export type { LucidHonoGeneric } from "@lucidcms/core/types/hono.js";
+    LucidHonoGeneric,
+} from "@lucidcms/core/types.js";
 
 // Plugin builder API
 export {

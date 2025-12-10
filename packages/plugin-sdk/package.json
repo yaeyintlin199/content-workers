@@ -17,6 +17,8 @@
     },
     "scripts": {
         "build": "tsc && tsdown",
+        "build:workers": "tsc && tsdown",
+        "type-check": "tsc --noEmit",
         "dev": "tsdown --watch --no-clean",
         "format": "biome format ./src",
         "format:fix": "biome format --write ./src",
