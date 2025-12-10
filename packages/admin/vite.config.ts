@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
 	build: {
 		minify: true,
-		outDir: "../core/admin",
+		outDir: "dist",
 		emptyOutDir: true,
 	},
 	plugins: [
