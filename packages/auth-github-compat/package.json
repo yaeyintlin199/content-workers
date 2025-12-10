@@ -1,0 +1,19 @@
+{
+    "name": "@lucidcms/auth-github",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Compatibility workspace alias for @content-workers/auth-github.",
+    "lucidWorkspaceAliasTarget": "@content-workers/auth-github",
+    "scripts": {
+        "build": "node ../../scripts/workspace-alias-proxy.mjs",
+        "dev": "node ../../scripts/workspace-alias-proxy.mjs",
+        "format": "node ../../scripts/workspace-alias-proxy.mjs",
+        "format:fix": "node ../../scripts/workspace-alias-proxy.mjs",
+        "lint": "node ../../scripts/workspace-alias-proxy.mjs",
+        "lint:fix": "node ../../scripts/workspace-alias-proxy.mjs",
+        "type-check": "node ../../scripts/workspace-alias-proxy.mjs",
+        "test": "node ../../scripts/workspace-alias-proxy.mjs",
+        "test:watch": "node ../../scripts/workspace-alias-proxy.mjs",
+        "test:coverage": "node ../../scripts/workspace-alias-proxy.mjs"
+    }
+}
