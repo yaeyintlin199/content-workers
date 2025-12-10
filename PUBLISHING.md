@@ -76,7 +76,7 @@ The admin SPA is now published as `@content-workers/admin` and consumed by `@con
 This guarantees that `lucidcms build` can always pull `public/admin` from the installed dependency, even if the local admin workspace hasn't been built.
 
 > [!NOTE]
-> Legacy tooling may still reference the old `@lucidcms/*` workspace names. Private compatibility workspaces proxy those commands to their `@content-workers/*` counterparts, but all new packages must continue to use the `@content-workers/*` scope.
+> All npm commands must target the `@content-workers/*` workspace names. The legacy `@lucidcms/*` scope is no longer supported and should be updated in every script.
 
 ### Manual Publishing
 

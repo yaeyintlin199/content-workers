@@ -101,38 +101,20 @@ function verifyPackageJson(filePath) {
 
         // Check package name
         if (pkg.name && pkg.name.startsWith("@")) {
-            const aliasTarget =
-                typeof pkg.lucidWorkspaceAliasTarget === "string"
-                    ? pkg.lucidWorkspaceAliasTarget
-                    : undefined;
-            const isAliasPackage = Boolean(aliasTarget);
-
-            if (isAliasPackage && aliasTarget && !aliasTarget.startsWith(EXPECTED_SCOPE)) {
-                violations.push({
-                    context: relativePath,
-                    type: "invalid-alias-target",
-                    name: pkg.name,
-                    message: `Alias target must start with ${EXPECTED_SCOPE}`,
-                });
-            }
-
             // Check for forbidden patterns in name
-            if (!isAliasPackage) {
-                for (const pattern of FORBIDDEN_PATTERNS) {
-                    if (pkg.name.includes(pattern)) {
-                        violations.push({
-                            context: relativePath,
-                            type: "forbidden-package-name",
-                            name: pkg.name,
-                            message: `Package name contains forbidden pattern "${pattern}"`,
-                        });
-                    }
+            for (const pattern of FORBIDDEN_PATTERNS) {
+                if (pkg.name.includes(pattern)) {
+                    violations.push({
+                        context: relativePath,
+                        type: "forbidden-package-name",
+                        name: pkg.name,
+                        message: `Package name contains forbidden pattern "${pattern}"`,
+                    });
                 }
             }
 
             // Check if it uses the correct scope (only for scoped packages)
             if (
-                !isAliasPackage &&
                 !pkg.name.startsWith(EXPECTED_SCOPE) &&
                 pkg.name.startsWith("@lucidcms")
             ) {
