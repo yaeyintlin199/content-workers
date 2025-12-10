@@ -1,9 +1,9 @@
 import { PLUGIN_KEY, LUCID_VERSION } from "./constants.js";
-import { LucidError } from "@lucidcms/core";
+import { LucidError } from "@content-workers/core";
 import type {
 	LucidPlugin,
 	RuntimeBuildArtifactCustom,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import type { PluginOptions } from "./types.js";
 import cloudflareQueuesAdapter from "./adapter.js";
 import {
@@ -16,7 +16,7 @@ import type {
 	CloudflareWorkerExportArtifact,
 	CloudflareWorkerImport,
 	CloudflareWorkerExport,
-} from "@lucidcms/cloudflare-adapter/types";
+} from "@content-workers/cloudflare-adapter/types";
 
 const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
 	return {
@@ -30,11 +30,11 @@ const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
 						default: "config",
 					},
 					{
-						path: "@lucidcms/core/helpers",
+						path: "@content-workers/core/helpers",
 						exports: ["processConfig"],
 					},
 					{
-						path: "@lucidcms/core/queue-adapter",
+						path: "@content-workers/core/queue-adapter",
 						exports: [
 							"passthroughQueueAdapter",
 							"logScope",
@@ -42,11 +42,11 @@ const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
 						],
 					},
 					{
-						path: "@lucidcms/core/kv-adapter",
+						path: "@content-workers/core/kv-adapter",
 						exports: ["getKVAdapter"],
 					},
 					{
-						path: "@lucidcms/core",
+						path: "@content-workers/core",
 						exports: ["logger"],
 					},
 					{

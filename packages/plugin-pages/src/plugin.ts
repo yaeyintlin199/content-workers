@@ -1,8 +1,8 @@
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 import T from "./translations/index.js";
 import type { PluginOptions } from "./types/types.js";
 import { PLUGIN_KEY, LUCID_VERSION } from "./constants.js";
-import { logger } from "@lucidcms/core";
+import { logger } from "@content-workers/core";
 import { registerFields, pluginOptions } from "./services/index.js";
 import {
     beforeUpsertHandler,

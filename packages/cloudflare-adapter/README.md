@@ -9,7 +9,7 @@ Using this adapter is by far the simplest way to deploy Lucid CMS.
 ## Installation
 
 ```bash
-npm install @lucidcms/cloudflare-adapter
+npm install @content-workers/cloudflare-adapter
 ```
 
 ## Setup
@@ -17,7 +17,7 @@ npm install @lucidcms/cloudflare-adapter
 To use the Cloudflare adapter, you must export the adapter from your `lucid.config.ts` file as well as default exporting the config with the `defineConfig` function.
 
 ```typescript
-import { cloudflareAdapter, defineConfig } from "@lucidcms/cloudflare-adapter";
+import { cloudflareAdapter, defineConfig } from "@content-workers/cloudflare-adapter";
 
 export const adapter = cloudflareAdapter();
 
@@ -63,8 +63,8 @@ cwd = "./"
 Due to the nature of Cloudflare Workers, they don't support file system operations. Because of this, you'll want to avoid the [LocalStorage](https://lucidjs.build/en/cms/docs/plugins/localstorage) plugin. Instead, we recommend using the [S3](https://lucidjs.build/en/cms/docs/plugins/s3) plugin along with Cloudflare R2 or other S3-compatible storage.
 
 ```typescript
-import { cloudflareAdapter, defineConfig } from "@lucidcms/cloudflare-adapter";
-import LucidS3 from "@lucidcms/plugin-s3";
+import { cloudflareAdapter, defineConfig } from "@content-workers/cloudflare-adapter";
+import LucidS3 from "@content-workers/plugin-s3";
 
 export const adapter = cloudflareAdapter();
 
@@ -89,8 +89,8 @@ export default defineConfig((env) => ({
 By default, media is streamed via the `cdn` endpoint. This supports image processing via presets and fallback images. However, as Sharp isn't supported on Workers, image processing won't work. To fix this, you'll need to explicitly tell Lucid CMS to bypass the image processor:
 
 ```typescript
-import { cloudflareAdapter, defineConfig } from "@lucidcms/cloudflare-adapter";
-import { passthroughImageProcessor } from "@lucidcms/core";
+import { cloudflareAdapter, defineConfig } from "@content-workers/cloudflare-adapter";
+import { passthroughImageProcessor } from "@content-workers/core";
 
 export const adapter = cloudflareAdapter();
 
@@ -109,8 +109,8 @@ If you request an image via the CDN endpoint now and try to pass a preset, it wi
 If you want to support image processing and don't want to handle this at build time, you can configure Cloudflare Images. To do this, you'll need to configure the URL strategy along with configuring your R2 bucket to have a custom domain and enabling Cloudflare Images for that domain.
 
 ```typescript
-import { cloudflareAdapter, defineConfig } from "@lucidcms/cloudflare-adapter";
-import { passthroughImageProcessor } from "@lucidcms/core";
+import { cloudflareAdapter, defineConfig } from "@content-workers/cloudflare-adapter";
+import { passthroughImageProcessor } from "@content-workers/core";
 
 export const adapter = cloudflareAdapter();
 

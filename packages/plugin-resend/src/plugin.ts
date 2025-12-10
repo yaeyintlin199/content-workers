@@ -6,7 +6,7 @@ import {
 	PLUGIN_IDENTIFIER,
 } from "./constants.js";
 import isValidData from "./utils/is-valid-data.js";
-import type { EmailAdapterInstance, LucidPlugin } from "@lucidcms/core/types";
+import type { EmailAdapterInstance, LucidPlugin } from "@content-workers/core/types";
 import type { PluginOptions } from "./types/types.js";
 import routes from "./routes/index.js";
 

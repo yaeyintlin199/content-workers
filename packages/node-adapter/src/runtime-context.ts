@@ -1,7 +1,7 @@
 import type {
 	LucidHonoContext,
 	AdapterRuntimeContext,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import { getConnInfo } from "@hono/node-server/conninfo";
 import constants, { ADAPTER_KEY } from "./constants.js";
 

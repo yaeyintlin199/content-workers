@@ -5,7 +5,7 @@ import {
 	updateFullSlugFields,
 } from "../index.js";
 import constants from "../../constants.js";
-import type { LucidHookDocuments } from "@lucidcms/core/types";
+import type { LucidHookDocuments } from "@content-workers/core/types";
 import type { PluginOptionsInternal } from "../../types/types.js";
 
 const afterUpsertHandler =

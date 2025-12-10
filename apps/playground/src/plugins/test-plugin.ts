@@ -1,4 +1,4 @@
-import type { LucidPlugin } from "@lucidcms/core/types";
+import type { LucidPlugin } from "@content-workers/core/types";
 
 interface TestPluginOptions {
 	name?: string;

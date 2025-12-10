@@ -1,11 +1,11 @@
-import { DatabaseAdapter } from "@lucidcms/core/db-adapter";
+import { DatabaseAdapter } from "@content-workers/core/db-adapter";
 import type {
 	DatabaseConfig,
 	InferredTable,
 	InferredColumn,
 	OnUpdate,
 	OnDelete,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 import {
 	SqliteDialect,
 	ParseJSONResultsPlugin,

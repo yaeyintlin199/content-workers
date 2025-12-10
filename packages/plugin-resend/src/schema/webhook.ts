@@ -1,5 +1,5 @@
-import { z } from "@lucidcms/core";
-import type { ControllerSchema } from "@lucidcms/core/types";
+import { z } from "@content-workers/core";
+import type { ControllerSchema } from "@content-workers/core/types";
 
 export const controllerSchemas = {
 	webhook: {

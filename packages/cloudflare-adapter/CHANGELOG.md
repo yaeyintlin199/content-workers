@@ -1,4 +1,4 @@
-# @lucidcms/cloudflare-adapter
+# @content-workers/cloudflare-adapter
 
 ## 1.1.0
 

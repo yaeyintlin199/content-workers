@@ -7,7 +7,7 @@ The Lucid CMS Nodemailer plugin registers the email strategy config and uses Nod
 ## Installation
 
 ```bash
-npm install @lucidcms/plugin-nodemailer
+npm install @content-workers/plugin-nodemailer
 ```
 
 ## Setup
@@ -15,8 +15,8 @@ npm install @lucidcms/plugin-nodemailer
 To use the Nodemailer plugin, you need to add it to your Lucid CMS config file. You'll need to provide the from email configuration and a Nodemailer transporter instance.
 
 ```typescript
-import { nodeAdapter, defineConfig } from "@lucidcms/node-adapter";
-import LucidNodemailer from "@lucidcms/plugin-nodemailer";
+import { nodeAdapter, defineConfig } from "@content-workers/node-adapter";
+import LucidNodemailer from "@content-workers/plugin-nodemailer";
 
 export const adapter = nodeAdapter();
 
@@ -56,7 +56,7 @@ If you're a plugin developer looking to migrate your own plugins to use the SDK,
 The plugin now uses a closure pattern to properly capture plugin options:
 
 ```typescript
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 
 const createPluginInstance = (pluginOptions: PluginOptions) => {
   return createPlugin<PluginOptions>()
@@ -99,7 +99,7 @@ export default createPluginInstance;
 Instead of the previous format:
 
 ```typescript
-import type { LucidPlugin } from "@lucidcms/core/types";
+import type { LucidPlugin } from "@content-workers/core/types";
 
 const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
   return {

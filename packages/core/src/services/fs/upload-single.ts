@@ -1,5 +1,5 @@
 import { mkdir, writeFile } from "node:fs/promises";
-import type { ServiceFn } from "@lucidcms/core/types";
+import type { ServiceFn } from "@content-workers/core/types";
 import constants from "../../constants/constants.js";
 import { keyPaths } from "../../libs/media-adapter/adapters/file-system/helpers.js";
 import type { FileSystemMediaAdapterOptions } from "../../libs/media-adapter/types.js";

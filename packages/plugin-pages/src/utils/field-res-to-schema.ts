@@ -1,4 +1,4 @@
-import type { FieldInputSchema } from "@lucidcms/core/types";
+import type { FieldInputSchema } from "@content-workers/core/types";
 import type { VersionFieldsQueryResponse } from "../services/get-document-version-fields.js";
 
 const fieldResToSchema = (

@@ -1,30 +1,30 @@
-import { z } from "@lucidcms/core";
+import { z } from "@content-workers/core";
 import {
 	passthroughQueueAdapter,
 	workerQueueAdapter,
-} from "@lucidcms/core/queue-adapter";
-import { fileSystemMediaAdapter } from "@lucidcms/core/media-adapter";
-import { passthroughEmailAdapter } from "@lucidcms/core/email-adapter";
-import { passthroughImageProcessor } from "@lucidcms/core/image-processor";
+} from "@content-workers/core/queue-adapter";
+import { fileSystemMediaAdapter } from "@content-workers/core/media-adapter";
+import { passthroughEmailAdapter } from "@content-workers/core/email-adapter";
+import { passthroughImageProcessor } from "@content-workers/core/image-processor";
 import Database from "better-sqlite3";
 import { describeRoute } from "hono-openapi";
 import transporter from "./src/services/email-transporter.js";
 // Adapters
-import { defineConfig, nodeAdapter } from "@lucidcms/node-adapter";
-// import { cloudflareAdapter, defineConfig } from "@lucidcms/cloudflare-adapter";
+import { defineConfig, nodeAdapter } from "@content-workers/node-adapter";
+// import { cloudflareAdapter, defineConfig } from "@content-workers/cloudflare-adapter";
 // Plugins
-import LibSQLAdapter from "@lucidcms/libsql-adapter";
-import NodemailerPlugin from "@lucidcms/plugin-nodemailer";
-import PagesPlugin from "@lucidcms/plugin-pages";
-import ResendPlugin from "@lucidcms/plugin-resend";
-import PostgresAdapter from "@lucidcms/postgres-adapter";
-import SQLiteAdapter from "@lucidcms/sqlite-adapter";
-// import CloudflareQueuesPlugin from "@lucidcms/plugin-cloudflare-queues";
-// import RedisPlugin from "@lucidcms/plugin-redis";
-// import CloudflareKVPlugin from "@lucidcms/plugin-cloudflare-kv";
-import GitHubAuth from "@lucidcms/auth-github";
-import GoogleAuth from "@lucidcms/auth-google";
-import MicrosoftAuth from "@lucidcms/auth-microsoft";
+import LibSQLAdapter from "@content-workers/libsql-adapter";
+import NodemailerPlugin from "@content-workers/plugin-nodemailer";
+import PagesPlugin from "@content-workers/plugin-pages";
+import ResendPlugin from "@content-workers/plugin-resend";
+import PostgresAdapter from "@content-workers/postgres-adapter";
+import SQLiteAdapter from "@content-workers/sqlite-adapter";
+// import CloudflareQueuesPlugin from "@content-workers/plugin-cloudflare-queues";
+// import RedisPlugin from "@content-workers/plugin-redis";
+// import CloudflareKVPlugin from "@content-workers/plugin-cloudflare-kv";
+import GitHubAuth from "@content-workers/auth-github";
+import GoogleAuth from "@content-workers/auth-google";
+import MicrosoftAuth from "@content-workers/auth-microsoft";
 // Collections
 import PageCollection from "./src/collections/pages.js";
 import SettingsCollection from "./src/collections/settings.js";

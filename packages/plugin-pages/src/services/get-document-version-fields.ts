@@ -6,8 +6,8 @@ import type {
 	LucidDocumentTableName,
 	LucidVersionTableName,
 	LucidBrickTableName,
-} from "@lucidcms/core/types";
-import { prefixGeneratedColName } from "@lucidcms/core/helpers";
+} from "@content-workers/core/types";
+import { prefixGeneratedColName } from "@content-workers/core/helpers";
 
 export type VersionFieldsQueryResponse = {
 	locale: string;

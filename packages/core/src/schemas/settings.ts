@@ -12,7 +12,7 @@ const settingsResponseSchema = z.object({
 			.object({
 				email: z.email().meta({
 					description: "The default from address",
-					example: "admin@lucidcms.io",
+					example: "admin@content-workers.io",
 				}),
 				name: z.string().meta({
 					description: "The default from name",

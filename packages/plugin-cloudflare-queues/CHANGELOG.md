@@ -1,4 +1,4 @@
-# @lucidcms/plugin-cloudflare-queues
+# @content-workers/plugin-cloudflare-queues
 
 ## 1.0.0
 

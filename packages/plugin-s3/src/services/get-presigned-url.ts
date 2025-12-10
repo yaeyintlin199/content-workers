@@ -1,4 +1,4 @@
-import type { MediaAdapterServiceGetPresignedUrl } from "@lucidcms/core/types";
+import type { MediaAdapterServiceGetPresignedUrl } from "@content-workers/core/types";
 import type { AwsClient } from "aws4fetch";
 import { PRESIGNED_URL_EXPIRY } from "../constants.js";
 import T from "../translations/index.js";

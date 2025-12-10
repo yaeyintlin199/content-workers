@@ -1,4 +1,4 @@
-# @lucidcms/plugin-cloudflare-kv
+# @content-workers/plugin-cloudflare-kv
 
 ## 1.0.0
 

@@ -1,4 +1,4 @@
-# @lucidcms/auth-google
+# @content-workers/auth-google
 
 ## 1.0.0
 

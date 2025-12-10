@@ -1,4 +1,4 @@
-# @lucidcms/node-adapter
+# @content-workers/node-adapter
 
 ## 1.0.1
 

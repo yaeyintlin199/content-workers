@@ -9,5 +9,5 @@ export default defineConfig({
 	clean: true,
 	treeshake: true,
 	minify: false,
-	external: ["@lucidcms/core", "hono"],
+	external: ["@content-workers/core", "hono"],
 });

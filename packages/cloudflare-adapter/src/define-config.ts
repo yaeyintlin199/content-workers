@@ -2,7 +2,7 @@ import type {
 	ExtendedAdapterDefineConfig,
 	LucidConfig,
 	RenderedTemplates,
-} from "@lucidcms/core/types";
+} from "@content-workers/core/types";
 
 type CloudfalreConfigFactory = ExtendedAdapterDefineConfig<
 	[

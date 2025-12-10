@@ -1,4 +1,4 @@
-import type { FieldInputSchema, ServiceResponse } from "@lucidcms/core/types";
+import type { FieldInputSchema, ServiceResponse } from "@content-workers/core/types";
 import constants from "../../constants.js";
 import T from "../../translations/index.js";
 

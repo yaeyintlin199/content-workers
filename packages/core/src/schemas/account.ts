@@ -46,7 +46,7 @@ export const controllerSchemas = {
 		body: z.object({
 			email: z.email().meta({
 				description: "Your email address",
-				example: "admin@lucidcms.io",
+				example: "admin@content-workers.io",
 			}),
 		}),
 		query: {
@@ -118,7 +118,7 @@ export const controllerSchemas = {
 				.email()
 				.meta({
 					description: "your new email address",
-					example: "admin@lucidcms.io",
+					example: "admin@content-workers.io",
 				})
 				.optional(),
 			currentPassword: z

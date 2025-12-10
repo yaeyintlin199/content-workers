@@ -1,6 +1,6 @@
 {
-    "name": "@lucidcms/plugin-pages",
-    "version": "0.3.3",
+    "name": "@content-workers/plugin-pages",
+    "version": "0.3.4",
     "description": "The official Pages plugin for Lucid CMS",
     "type": "module",
     "types": "./dist/index.d.ts",
@@ -29,16 +29,16 @@
     "keywords": ["CMS", "Lucid CMS", "Lucid", "Pages", "Plugin", "Slug"],
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
-        "@lucidcms/config": "*",
-        "@lucidcms/core": "*",
-        "@lucidcms/plugin-sdk": "*",
+        "@content-workers/config": "*",
+        "@content-workers/core": "*",
+        "@content-workers/plugin-sdk": "*",
         "@types/node": "^22.15.2",
         "tsdown": "^0.15.7",
         "typescript": "^5.8.3"
     },
     "peerDependencies": {
-        "@lucidcms/core": "^0.12.0-alpha.1",
-        "@lucidcms/plugin-sdk": "^0.1.0"
+        "@content-workers/core": "^0.12.1-alpha.1",
+        "@content-workers/plugin-sdk": "^0.1.0"
     },
     "volta": {
         "node": "24.11.1"

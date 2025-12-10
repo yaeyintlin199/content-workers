@@ -1,5 +1,5 @@
 {
-	"name": "@lucidcms/plugin-forms",
+	"name": "@content-workers/plugin-forms",
 	"private": true,
 	"description": "The official Forms plugin for Lucid CMS",
 	"type": "module",
@@ -27,15 +27,15 @@
 		"directory": "packages/plugin-forms"
 	},
 	"devDependencies": {
-		"@lucidcms/config": "*",
-		"@lucidcms/core": "*",
+		"@content-workers/config": "*",
+		"@content-workers/core": "*",
 		"@types/node": "^22.15.2",
 		"@biomejs/biome": "^1.9.4",
 		"tsdown": "^0.12.5",
 		"typescript": "^5.8.3"
 	},
 	"peerDependencies": {
-		"@lucidcms/core": "^0.1.0"
+		"@content-workers/core": "^0.1.0"
 	},
 	"dependencies": {},
     "volta": {

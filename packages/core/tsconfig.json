@@ -1,5 +1,5 @@
 {
-    "extends": "@lucidcms/config/tsconfig.base.json",
+    "extends": "@content-workers/config/tsconfig.base.json",
     "exclude": [
         "./coverage",
         "./dist",
@@ -18,10 +18,10 @@
         "rootDir": "./src",
         "outDir": "./dist",
         "paths": {
-            "@lucidcms/sqlite-adapter": [
+            "@content-workers/sqlite-adapter": [
                 "../sqlite-adapter/src"
             ],
-            "@lucidcms/node-adapter": [
+            "@content-workers/node-adapter": [
                 "../node-adapter/src"
             ]
         }

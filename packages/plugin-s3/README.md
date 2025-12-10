@@ -7,7 +7,7 @@ The Lucid CMS S3 plugin registers the required media strategy functions to strea
 ## Installation
 
 ```bash
-npm install @lucidcms/plugin-s3
+npm install @content-workers/plugin-s3
 ```
 
 ## Setup
@@ -15,8 +15,8 @@ npm install @lucidcms/plugin-s3
 To use the S3 plugin, you need to add it to your Lucid CMS config file. You'll need to provide your S3 endpoint, bucket name, and client configuration.
 
 ```typescript
-import { nodeAdapter, defineConfig } from "@lucidcms/node-adapter";
-import LucidS3 from "@lucidcms/plugin-s3";
+import { nodeAdapter, defineConfig } from "@content-workers/node-adapter";
+import LucidS3 from "@content-workers/plugin-s3";
 
 export const adapter = nodeAdapter();
 
@@ -103,7 +103,7 @@ If you're a plugin developer looking to migrate your own plugins to use the SDK,
 The plugin now uses a closure pattern to properly capture plugin options:
 
 ```typescript
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 
 const createPluginInstance = (pluginOptions: PluginOptions) => {
   return createPlugin<PluginOptions>()
@@ -127,7 +127,7 @@ export default createPluginInstance;
 Instead of the previous format:
 
 ```typescript
-import type { LucidPlugin } from "@lucidcms/core/types";
+import type { LucidPlugin } from "@content-workers/core/types";
 
 const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
   return {

@@ -1,4 +1,4 @@
-# @lucidcms/plugin-redis
+# @content-workers/plugin-redis
 
 ## 1.0.0
 

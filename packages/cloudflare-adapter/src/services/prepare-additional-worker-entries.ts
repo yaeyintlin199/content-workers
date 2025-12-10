@@ -4,7 +4,7 @@ import type {
 	CloudflareWorkerImport,
 	CloudflareWorkerEntryArtifact,
 } from "../types.js";
-import type { RuntimeBuildArtifactCustom } from "@lucidcms/core/types";
+import type { RuntimeBuildArtifactCustom } from "@content-workers/core/types";
 import constants from "../constants.js";
 
 /**

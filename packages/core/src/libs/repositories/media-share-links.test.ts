@@ -1,4 +1,4 @@
-import SQLiteAdapter from "@lucidcms/sqlite-adapter";
+import SQLiteAdapter from "@content-workers/sqlite-adapter";
 import Database from "better-sqlite3";
 import { afterAll, describe, expect, test } from "vitest";
 import MediaShareLinksRepository from "./media-share-links";

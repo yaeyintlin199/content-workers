@@ -1,6 +1,6 @@
 {
-	"name": "@lucidcms/postgres-adapter",
-	"version": "1.0.2",
+	"name": "@content-workers/postgres-adapter",
+	"version": "1.0.3",
 	"private": false,
 	"description": "The official Postgres adapter for Lucid CMS",
 	"type": "module",
@@ -30,8 +30,8 @@
 	"keywords": ["CMS", "Lucid CMS", "Lucid", "Postgres", "DB Adapter"],
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@lucidcms/config": "*",
-		"@lucidcms/core": "*",
+		"@content-workers/config": "*",
+		"@content-workers/core": "*",
 		"@types/node": "^22.15.2",
 		"@types/pg": "^8.11.14",
 		"tsdown": "^0.15.7",
@@ -43,7 +43,7 @@
 		"postgres": "^3.4.7"
 	},
 	"peerDependencies": {
-		"@lucidcms/core": "^0.12.0-alpha.1"
+		"@content-workers/core": "^0.12.1-alpha.1"
 	},
     "volta": {
         "node": "24.11.1"

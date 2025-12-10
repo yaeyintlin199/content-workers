@@ -1,4 +1,4 @@
-# @lucidcms/postgres-adapter
+# @content-workers/postgres-adapter
 
 ## 1.0.2
 

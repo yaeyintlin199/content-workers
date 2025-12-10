@@ -1,4 +1,4 @@
-# @lucidcms/plugin-nodemailer
+# @content-workers/plugin-nodemailer
 
 ## 1.1.2 (UNRELEASED)
 
@@ -78,7 +78,7 @@
 ### Patch Changes
 
 - Updated dependencies.
-- @lucidcms/core@0.1.0.
+- @content-workers/core@0.1.0.
 
 ## 0.1.0
 

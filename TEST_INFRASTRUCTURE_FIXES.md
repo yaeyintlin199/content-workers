@@ -5,11 +5,11 @@
 ### 1. Missing Adapter Package Builds
 **Problem**: Test failures due to missing `dist` directories in adapter packages  
 **Solution**: Built all adapter packages:
-- `@lucidcms/sqlite-adapter`
-- `@lucidcms/postgres-adapter`
-- `@lucidcms/libsql-adapter`
-- `@lucidcms/node-adapter`
-- `@lucidcms/cloudflare-adapter`
+- `@content-workers/sqlite-adapter`
+- `@content-workers/postgres-adapter`
+- `@content-workers/libsql-adapter`
+- `@content-workers/node-adapter`
+- `@content-workers/cloudflare-adapter`
 
 ### 2. TypeScript Compilation Errors
 **Problem**: Multiple TS errors preventing builds  

@@ -13,7 +13,7 @@ import {
 	setFullSlug,
 } from "../index.js";
 import type { PluginOptionsInternal } from "../../types/types.js";
-import type { LucidHookDocuments } from "@lucidcms/core/types";
+import type { LucidHookDocuments } from "@content-workers/core/types";
 import type { ParentPageQueryResponse } from "../get-parent-fields.js";
 
 const beforeUpsertHandler =

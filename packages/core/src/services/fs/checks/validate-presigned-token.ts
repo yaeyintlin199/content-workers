@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import type { ServiceFn } from "@lucidcms/core/types";
+import type { ServiceFn } from "@content-workers/core/types";
 import constants from "../../../constants/constants.js";
 import T from "../../../translations/index.js";
 

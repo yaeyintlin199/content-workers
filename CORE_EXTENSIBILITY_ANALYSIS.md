@@ -1,7 +1,7 @@
 # Lucid CMS Core - Extensibility & Feature Analysis
 
 ## 📋 Overview
-Lucid CMS is a **TypeScript-first headless CMS** with extensive extensibility built-in. Version: **0.12.0-alpha.1**
+Lucid CMS is a **TypeScript-first headless CMS** with extensive extensibility built-in. Version: **0.12.1-alpha.1**
 
 ---
 
@@ -231,12 +231,12 @@ draft.customFields['myCustomField'] = {
 ### Creating a Simple Plugin
 
 ```typescript
-import type { LucidPlugin } from "@lucidcms/core/types";
+import type { LucidPlugin } from "@content-workers/core/types";
 
 const myPlugin: LucidPlugin<MyPluginOptions> = (options) => {
   return {
     key: "my-plugin",
-    lucid: "^0.12.0",
+    lucid: "^0.12.1",
     recipe: (draft) => {
       // Mutate config here
       // Example: Add custom hooks

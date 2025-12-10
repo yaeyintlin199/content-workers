@@ -6,11 +6,11 @@ import {
 	LucidAPIError,
 	honoOpenAPIResponse,
 	honoOpenAPIRequestBody,
-} from "@lucidcms/core/api";
+} from "@content-workers/core/api";
 import type { PluginOptions } from "../types/types.js";
 import { createFactory } from "hono/factory";
 import { describeRoute } from "hono-openapi";
-import type { LucidHonoContext } from "@lucidcms/core/types";
+import type { LucidHonoContext } from "@content-workers/core/types";
 
 const factory = createFactory();
 

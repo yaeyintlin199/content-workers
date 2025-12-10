@@ -1,4 +1,4 @@
-import type { MediaAdapterServiceDeleteMultiple } from "@lucidcms/core/types";
+import type { MediaAdapterServiceDeleteMultiple } from "@content-workers/core/types";
 import type { AwsClient } from "aws4fetch";
 import T from "../translations/index.js";
 import type { PluginOptions } from "../types/types.js";

@@ -17,7 +17,7 @@ The intended use case for this plugin is to enable easy document fetching for fr
 ## Installation
 
 ```bash
-npm install @lucidcms/plugin-pages
+npm install @content-workers/plugin-pages
 ```
 
 ## Setup
@@ -25,8 +25,8 @@ npm install @lucidcms/plugin-pages
 To use the Pages plugin, you need to add it to your Lucid CMS config file. You will need to provide it with the necessary configuration options, such as a list of collections to enable the plugin on.
 
 ```typescript
-import { nodeAdapter, defineConfig } from "@lucidcms/node-adapter";
-import LucidPages from "@lucidcms/plugin-pages";
+import { nodeAdapter, defineConfig } from "@content-workers/node-adapter";
+import LucidPages from "@content-workers/plugin-pages";
 
 export const adapter = nodeAdapter();
 
@@ -75,7 +75,7 @@ If you're a plugin developer looking to migrate your own plugins to use the SDK,
 The plugin now uses:
 
 ```typescript
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 
 const plugin = createPlugin<PluginOptions>()
   .metadata((metadata) =>
@@ -95,7 +95,7 @@ const plugin = createPlugin<PluginOptions>()
 Instead of the previous format:
 
 ```typescript
-import type { LucidPlugin } from "@lucidcms/core/types";
+import type { LucidPlugin } from "@content-workers/core/types";
 
 const plugin: LucidPlugin<PluginOptions> = () => {
   return {

@@ -31,7 +31,7 @@ Once these blockers are resolved, the system is **production-ready** with focuse
 - Acceptance Criteria:
   - [ ] Branch successfully merged without conflicts
   - [ ] All 329 SDK tests passing
-  - [ ] SDK exports available in `@lucidcms/plugin-sdk`
+  - [ ] SDK exports available in `@content-workers/plugin-sdk`
   - [ ] No new linting errors introduced
 
 **Task 1.2: Update Plugin Registry Integration**

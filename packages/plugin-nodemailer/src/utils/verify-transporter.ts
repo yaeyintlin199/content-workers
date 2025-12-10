@@ -1,5 +1,5 @@
 import T from "../translations/index.js";
-import { logger } from "@lucidcms/core";
+import { logger } from "@content-workers/core";
 import { PLUGIN_KEY } from "../constants.js";
 import type { Transporter } from "nodemailer";
 

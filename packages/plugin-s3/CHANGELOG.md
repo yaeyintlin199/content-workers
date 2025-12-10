@@ -1,4 +1,4 @@
-# @lucidcms/plugin-s3
+# @content-workers/plugin-s3
 
 ## 2.1.0
 
@@ -89,7 +89,7 @@
 ### Patch Changes
 
 - Updated dependencies.
-- @lucidcms/core@0.1.0.
+- @content-workers/core@0.1.0.
 
 ## 0.1.0
 

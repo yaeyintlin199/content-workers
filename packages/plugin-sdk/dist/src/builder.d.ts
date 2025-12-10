@@ -1,5 +1,5 @@
 import type { Hono } from "hono";
-import type { LucidPlugin, LucidPluginLifecycleContext, LucidPluginRecipe, AdapterRuntimeContext, Config, ServiceResponse, LucidHonoGeneric } from "@lucidcms/core/types.js";
+import type { LucidPlugin, LucidPluginLifecycleContext, LucidPluginRecipe, AdapterRuntimeContext, Config, ServiceResponse, LucidHonoGeneric } from "@content-workers/core/types.js";
 /**
  * Simple plugin builder for creating Lucid plugins with a fluent API.
  */

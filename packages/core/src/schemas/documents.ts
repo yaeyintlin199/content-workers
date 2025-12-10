@@ -20,7 +20,7 @@ const documentResponseUserSchema = z.object({
 	}),
 	email: z.email().nullable().meta({
 		description: "The email address of the user",
-		example: "admin@lucidcms.io",
+		example: "admin@content-workers.io",
 	}),
 	firstName: z.string().nullable().meta({
 		description: "The first name of the user",

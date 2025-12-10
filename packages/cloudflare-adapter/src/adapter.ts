@@ -3,13 +3,13 @@ import { unlink } from "node:fs/promises";
 import { relative } from "node:path";
 import { serve } from "@hono/node-server";
 import { serveStatic } from "@hono/node-server/serve-static";
-import lucid from "@lucidcms/core";
+import lucid from "@content-workers/core";
 import {
 	getBuildPaths,
 	stripAdapterExportPlugin,
 	stripImportsPlugin,
-} from "@lucidcms/core/helpers";
-import type { LucidHonoGeneric, RuntimeAdapter } from "@lucidcms/core/types";
+} from "@content-workers/core/helpers";
+import type { LucidHonoGeneric, RuntimeAdapter } from "@content-workers/core/types";
 import { Hono } from "hono";
 import {
 	type GetPlatformProxyOptions,

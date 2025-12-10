@@ -1,4 +1,4 @@
-import { createPlugin } from "@lucidcms/plugin-sdk";
+import { createPlugin } from "@content-workers/plugin-sdk";
 import s3MediaAdapter from "./adapter.js";
 import { LUCID_VERSION, PLUGIN_KEY } from "./constants.js";
 import type { PluginOptions } from "./types/types.js";

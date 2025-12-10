@@ -1,5 +1,5 @@
 import { PLUGIN_KEY, LUCID_VERSION } from "./constants.js";
-import type { LucidPlugin } from "@lucidcms/core/types";
+import type { LucidPlugin } from "@content-workers/core/types";
 import type { PluginOptions } from "./types/types.js";
 import path, { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
