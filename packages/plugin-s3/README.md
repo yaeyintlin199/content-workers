@@ -88,3 +88,58 @@ As Lucid CMS uses presigned URLs to upload media from the client, you will need 
     }
 ]
 ```
+
+## Migration to Plugin SDK
+
+This plugin has been updated to use the Lucid CMS Plugin SDK. If you're integrating this plugin in your project, no changes are required - the API remains exactly the same.
+
+If you're a plugin developer looking to migrate your own plugins to use the SDK, you can see the migration by examining the source code. The main changes are:
+
+1. **Import changes**: Changed from importing `LucidPlugin` directly to using the SDK
+2. **Fluent API**: Used the builder pattern instead of returning an object directly
+3. **Type safety**: Leveraged the SDK's comprehensive TypeScript support
+4. **Closure pattern**: Used closure to capture plugin options properly
+
+The plugin now uses a closure pattern to properly capture plugin options:
+
+```typescript
+import { createPlugin } from "@lucidcms/plugin-sdk";
+
+const createPluginInstance = (pluginOptions: PluginOptions) => {
+  return createPlugin<PluginOptions>()
+    .metadata((metadata) =>
+      metadata
+        .key(PLUGIN_KEY)
+        .name("S3 Plugin")
+        .description("Plugin for integrating with AWS S3 for media storage")
+        .version("0.2.0")
+        .lucid(LUCID_VERSION)
+    )
+    .recipe((draft) => {
+      draft.media.adapter = s3MediaAdapter(pluginOptions);
+    })
+    .build();
+};
+
+export default createPluginInstance;
+```
+
+Instead of the previous format:
+
+```typescript
+import type { LucidPlugin } from "@lucidcms/core/types";
+
+const plugin: LucidPlugin<PluginOptions> = (pluginOptions) => {
+  return {
+    key: PLUGIN_KEY,
+    lucid: LUCID_VERSION,
+    recipe: (draft) => {
+      draft.media.adapter = s3MediaAdapter(pluginOptions);
+    },
+  };
+};
+
+export default plugin;
+```
+
+This migration provides better type safety, IDE support, and follows Lucid CMS's modern plugin development patterns while maintaining backward compatibility with the existing plugin API.

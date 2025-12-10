@@ -61,3 +61,51 @@ If set to `true`, the plugin will enable translations for the `slug` and `fullSl
 ### displayFullSlug
 
 If set to `true`, the plugin will make the `fullSlug` field visible in the documents page builder, along with making it filterable and listable in the document listing. This is mostly intended for testing and development purposes, though there is no reason it can't be used in production. Please note, however, that the `fullSlug` field is always calculated, meaning it is not possible to edit this via the document page builder, and even if this option is set to `true`, the field will be disabled.
+
+## Migration to Plugin SDK
+
+This plugin has been updated to use the Lucid CMS Plugin SDK. If you're integrating this plugin in your project, no changes are required - the API remains exactly the same.
+
+If you're a plugin developer looking to migrate your own plugins to use the SDK, you can see the migration by examining the source code. The main changes are:
+
+1. **Import changes**: Changed from importing `LucidPlugin` directly to using the SDK
+2. **Fluent API**: Used the builder pattern instead of returning an object directly
+3. **Type safety**: Leveraged the SDK's comprehensive TypeScript support
+
+The plugin now uses:
+
+```typescript
+import { createPlugin } from "@lucidcms/plugin-sdk";
+
+const plugin = createPlugin<PluginOptions>()
+  .metadata((metadata) =>
+    metadata
+      .key(PLUGIN_KEY)
+      .name("Pages Plugin")
+      .description("Plugin for managing page collections with slug fields")
+      .version("0.3.3")
+      .lucid(LUCID_VERSION)
+  )
+  .recipe((draft) => {
+    // Recipe logic here
+  })
+  .build();
+```
+
+Instead of the previous format:
+
+```typescript
+import type { LucidPlugin } from "@lucidcms/core/types";
+
+const plugin: LucidPlugin<PluginOptions> = () => {
+  return {
+    key: PLUGIN_KEY,
+    lucid: LUCID_VERSION,
+    recipe: (draft) => {
+      // Recipe logic here
+    }
+  };
+};
+```
+
+This migration provides better type safety, IDE support, and follows Lucid CMS's modern plugin development patterns.
