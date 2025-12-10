@@ -62,3 +62,7 @@ To get started you can follow the [Getting Started](https://lucidcms.io/getting-
 ## 🖥️ Lucid UI
 
 Still under development, Lucid UI is an Astro and TailwindCSS based UI library that is built to be used with Lucid CMS. It's not quite ready for prime time yet, but you can expect to see it launch down the line.
+
+## 📦 Publishing
+
+For information on publishing packages to the `@content-workers` scope, including NPM token setup and scope verification, see the [Publishing Guide](PUBLISHING.md).
