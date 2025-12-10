@@ -1,0 +1,19 @@
+{
+    "name": "@lucidcms/core",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Compatibility workspace alias for @content-workers/core.",
+    "lucidWorkspaceAliasTarget": "@content-workers/core",
+    "scripts": {
+        "build": "npm run build --workspace=@content-workers/core",
+        "dev": "npm run dev --workspace=@content-workers/core",
+        "format": "npm run format --workspace=@content-workers/core",
+        "format:fix": "npm run format:fix --workspace=@content-workers/core",
+        "lint": "npm run lint --workspace=@content-workers/core",
+        "lint:fix": "npm run lint:fix --workspace=@content-workers/core",
+        "type-check": "npm run type-check --workspace=@content-workers/core",
+        "test": "npm run test --workspace=@content-workers/core",
+        "test:watch": "npm run test:watch --workspace=@content-workers/core",
+        "test:coverage": "npm run test:coverage --workspace=@content-workers/core"
+    }
+}

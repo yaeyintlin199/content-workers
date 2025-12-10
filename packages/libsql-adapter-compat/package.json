@@ -1,0 +1,19 @@
+{
+    "name": "@lucidcms/libsql-adapter",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Compatibility workspace alias for @content-workers/libsql-adapter.",
+    "lucidWorkspaceAliasTarget": "@content-workers/libsql-adapter",
+    "scripts": {
+        "build": "npm run build --workspace=@content-workers/libsql-adapter",
+        "dev": "npm run dev --workspace=@content-workers/libsql-adapter",
+        "format": "npm run format --workspace=@content-workers/libsql-adapter",
+        "format:fix": "npm run format:fix --workspace=@content-workers/libsql-adapter",
+        "lint": "npm run lint --workspace=@content-workers/libsql-adapter",
+        "lint:fix": "npm run lint:fix --workspace=@content-workers/libsql-adapter",
+        "type-check": "npm run type-check --workspace=@content-workers/libsql-adapter",
+        "test": "npm run test --workspace=@content-workers/libsql-adapter",
+        "test:watch": "npm run test:watch --workspace=@content-workers/libsql-adapter",
+        "test:coverage": "npm run test:coverage --workspace=@content-workers/libsql-adapter"
+    }
+}

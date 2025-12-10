@@ -6,6 +6,12 @@ import { join, resolve } from "node:path";
 const EXPECTED_SCOPE = "@content-workers";
 const FORBIDDEN_PATTERNS = ["@lucidcms", "file:"];
 
+const getAliasTarget = (pkg) => {
+    return typeof pkg.lucidWorkspaceAliasTarget === "string"
+        ? pkg.lucidWorkspaceAliasTarget
+        : undefined;
+};
+
 function findPackageJsonFiles(baseDir) {
     const packageJsonFiles = [];
     const workspaceDirs = ["packages", "apps", "examples"];
@@ -101,20 +107,35 @@ function verifyPackageJson(filePath) {
 
         // Check package name
         if (pkg.name && pkg.name.startsWith("@")) {
-            // Check for forbidden patterns in name
-            for (const pattern of FORBIDDEN_PATTERNS) {
-                if (pkg.name.includes(pattern)) {
-                    violations.push({
-                        context: relativePath,
-                        type: "forbidden-package-name",
-                        name: pkg.name,
-                        message: `Package name contains forbidden pattern "${pattern}"`,
-                    });
+            const aliasTarget = getAliasTarget(pkg);
+            const isAliasPackage = Boolean(aliasTarget);
+
+            if (isAliasPackage && aliasTarget && !aliasTarget.startsWith(EXPECTED_SCOPE)) {
+                violations.push({
+                    context: relativePath,
+                    type: "invalid-alias-target",
+                    name: pkg.name,
+                    message: `Alias target must start with ${EXPECTED_SCOPE}`,
+                });
+            }
+
+            // Check for forbidden patterns in name (skip aliases)
+            if (!isAliasPackage) {
+                for (const pattern of FORBIDDEN_PATTERNS) {
+                    if (pkg.name.includes(pattern)) {
+                        violations.push({
+                            context: relativePath,
+                            type: "forbidden-package-name",
+                            name: pkg.name,
+                            message: `Package name contains forbidden pattern "${pattern}"`,
+                        });
+                    }
                 }
             }
 
             // Check if it uses the correct scope (only for scoped packages)
             if (
+                !isAliasPackage &&
                 !pkg.name.startsWith(EXPECTED_SCOPE) &&
                 pkg.name.startsWith("@lucidcms")
             ) {
