@@ -64,6 +64,17 @@ This command checks that:
 5. ✅ Update version numbers in package.json files
 6. ✅ Update CHANGELOG.md
 
+## Package Build Order
+
+The admin SPA is now published as `@content-workers/admin` and consumed by `@content-workers/core`. When preparing a release:
+
+1. Build the admin workspace: `npm run build -w @content-workers/admin`
+2. Optionally inspect the tarball with `npm pack -w @content-workers/admin --dry-run` to verify the `dist` folder is included
+3. Build and publish `@content-workers/core`, which now depends on the published admin bundle
+4. Continue with the remaining packages as needed
+
+This guarantees that `lucidcms build` can always pull `public/admin` from the installed dependency, even if the local admin workspace hasn't been built.
+
 ### Manual Publishing
 
 From the package directory:
